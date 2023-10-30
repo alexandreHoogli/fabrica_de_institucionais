@@ -1,0 +1,10 @@
+<script src="assets/js/jquery-3.6.0.min.js"> </script>
+<script src="assets/js/bootstrap.min.js"> </script>
+<script src="assets/js/video_link.js"></script>
+<script src="assets/js/video.js"></script>
+<script src="assets/js/counter.js"></script>
+<script src="assets/js/owl.carousel.js"></script>
+<script src="assets/js/custom-carousel.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/animation_links.js"></script>
+<script src="assets/js/animation.js"></script>

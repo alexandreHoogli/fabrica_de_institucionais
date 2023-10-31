@@ -1,11 +1,11 @@
 <?php
-$contador_sequencia = 1;
 function gerarHtml($name, $body, $desc)
 {
 
     global $contador, $contador_sequencia, $nomes_aleatorios;
+    $contador_sequencia = 1;
     require_once('./simple_html_dom.php');
-    include('backend.php');
+    require_once('backend.php');
     $nomes_aleatorios = [];
     $novos_campos = ["\$meta_title", "\$meta_keywords", "\$meta_description"];
     array_unshift($nomes_aleatorios, ...$novos_campos);
@@ -14,15 +14,10 @@ function gerarHtml($name, $body, $desc)
     $className = ucfirst($tabelaName);
     $texto_html = $body;
 
-    // Carregue o texto HTML
     $texto_html_sem_comentarios = removeComentariosHTML($texto_html);
-
-    // Carregue o texto HTML sem comentários
     $html = str_get_html($texto_html_sem_comentarios);
-
     $sections = $html->find('section');
 
-    // Itere sobre as tags <section>
     foreach ($sections as $index => $section) {
         $nomeVariavel = '$section_' . ($index + 1) . '_';
         $tags = $section->find('p, a, span, h1, h2, h3, h4, h5, img,strong,button');
@@ -43,38 +38,37 @@ function gerarHtml($name, $body, $desc)
 
         }
     }
-
-
-    // Obtenha o HTML resultante preservando a formatação
     $novo_html = $html->root->innertext;
-    // Salve o HTML em um novo arquivo
     $nome_arquivo = $className . 'new.php';
     $classArquivo = './Class/' . $tabelaName . '.class.php';
-    $add = './painel/add-' . $tabelaName . '.php';
+    if ($desc == 'sim') {
+        $add = './painel/add-' . $tabelaName . '.php';
+        $painel = './painel/' . $tabelaName . '.php';
+    }
     $edit = './painel/editar-' . $tabelaName . '.php';
-    $painel = './painel/' . $tabelaName . '.php';
-    // Excluir o arquivo existente, se existir
+
     if (file_exists($nome_arquivo)) {
         unlink($nome_arquivo);
     }
     if (file_exists($classArquivo)) {
         unlink($classArquivo);
     }
-    if (file_exists($add)) {
-        unlink($add);
+    if ($desc == 'sim') {
+        if (file_exists($add)) {
+            unlink($add);
+        }
+        if (file_exists($painel)) {
+            unlink($painel);
+        }
     }
     if (file_exists($edit)) {
         unlink($edit);
     }
-    if (file_exists($painel)) {
-        unlink($painel);
-    }
+
     file_put_contents($nome_arquivo, $novo_html);
     file_put_contents($classArquivo, '');
 
     $nome_arquivo_config = $classArquivo;
-
-    // Abra o arquivo para escrita
     $arquivo_config = fopen($nome_arquivo_config, 'w');
     if ($arquivo_config) {
         // Escreva o cabeçalho do arquivo
@@ -166,149 +160,136 @@ function gerarHtml($name, $body, $desc)
 
 
         //add
-        fwrite($arquivo_config, 'function add($redireciona=\'\') {' . PHP_EOL);
-        fwrite($arquivo_config, '    if(isset($_POST[\'acao\']) && $_POST[\'acao\'] == \'add' . $className . '\') {' . PHP_EOL);
-        foreach ($nomes_aleatorios as $nome_aleatorio) {
-            $nome_variavel = substr($nome_aleatorio, 1);
+        if ($desc == 'sim') {
+            fwrite($arquivo_config, 'function add($redireciona=\'\') {' . PHP_EOL);
+            fwrite($arquivo_config, '    if(isset($_POST[\'acao\']) && $_POST[\'acao\'] == \'add' . $className . '\') {' . PHP_EOL);
+            foreach ($nomes_aleatorios as $nome_aleatorio) {
+                $nome_variavel = substr($nome_aleatorio, 1);
 
-            if (strpos($nome_variavel, 'img') !== false) {
-                continue;
+                if (strpos($nome_variavel, 'img') !== false) {
+                    continue;
+                }
+                $linha = $nome_aleatorio . ' = (isset($_POST[\'' . $nome_variavel . '\']) && !empty($_POST[\'' . $nome_variavel . '\'])) ? $_POST[\'' . $nome_variavel . '\'] : \'\' ;';
+                $linha .= PHP_EOL;
+                fwrite($arquivo_config, $linha);
             }
-            $linha = 'if(isset($_POST[\'' . $nome_variavel . '\']) && !empty($_POST[\'' . $nome_variavel . '\'])){';
-            $linha .= PHP_EOL;
-            $linha .= '    ' . $nome_aleatorio . ' = $_POST[\'' . $nome_variavel . '\'];';
-            $linha .= PHP_EOL;
-            $linha .= '}else{';
-            $linha .= PHP_EOL;
-            $linha .= '    ' . $nome_aleatorio . ' = \'\';';
-            $linha .= PHP_EOL;
-            $linha .= '}';
-            $linha .= PHP_EOL;
-            fwrite($arquivo_config, $linha);
-        }
-        $linhaumemeio = " \$pagina_individual = filter_input(INPUT_POST, 'pagina_individual');
-        ";
-        $linhaumemeio = " \$maximo = 180000;";
-        fwrite($arquivo_config, $linhaumemeio);
-        foreach ($nomes_aleatorios as $nome_aleatorio) {
-            $nome_variavel = substr($nome_aleatorio, 1);
+            $linhaumemeio = "  if (isset(\$_POST['pagina_individual']) && !empty(\$_POST['pagina_individual'])) {";
+            $linhaumemeio .= " \$pagina_individual = \$_POST['pagina_individual']; ";
+            $linhaumemeio .= " } else { ";
+            $linhaumemeio .= "  \$pagina_individual = gerarTituloSEO('.$nomes_aleatorios[3].');";
+            $linhaumemeio .= "  }";
+            $linhaumemeio .= " \$maximo = 180000;";
+            fwrite($arquivo_config, $linhaumemeio);
+            foreach ($nomes_aleatorios as $nome_aleatorio) {
+                $nome_variavel = substr($nome_aleatorio, 1);
 
-            if (strpos($nome_variavel, 'img') !== false) {
-                fwrite($arquivo_config, 'if ($_FILES["' . $nome_variavel . '"]["size"] > $maximo) {');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    echo "Erro! O arquivo enviado por você ultrapassa o ";');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    $valorKb = $maximo / 1000;');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    $tamanhoFoto = $_FILES["' . $nome_variavel . '"]["size"] / 1000;');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    echo "<script>');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    alert(\'limite máximo de " . $valorKb . " KB! Envie outro arquivo. Sua imagem tem " . $tamanhoFoto . " KB\');');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    history.back();');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    </script>";');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '    exit;');
-                fwrite($arquivo_config, PHP_EOL);
-                fwrite($arquivo_config, '}');
-                fwrite($arquivo_config, PHP_EOL);
+                if (strpos($nome_variavel, 'img') !== false) {
+                    fwrite($arquivo_config, 'if ($_FILES["' . $nome_variavel . '"]["size"] > $maximo) {');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    echo "Erro! O arquivo enviado por você ultrapassa o ";');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    $valorKb = $maximo / 1000;');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    $tamanhoFoto = $_FILES["' . $nome_variavel . '"]["size"] / 1000;');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    echo "<script>');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    alert(\'limite máximo de " . $valorKb . " KB! Envie outro arquivo. Sua imagem tem " . $tamanhoFoto . " KB\');');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    history.back();');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    </script>";');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '    exit;');
+                    fwrite($arquivo_config, PHP_EOL);
+                    fwrite($arquivo_config, '}');
+                    fwrite($arquivo_config, PHP_EOL);
+                }
             }
-        }
 
 
-        $linha2 = "    try { 
+            $linha2 = "    try { 
         if(file_exists('Connection/conexao.php')) {
             \$pastaArquivos = 'img';
         } else {
             \$pastaArquivos = '../img';
         }
     ";
-        fwrite($arquivo_config, $linha2);
-        $linha3 = "        \$sql = \"INSERT INTO tbl_" . $tabelaName . " (";
-        foreach ($nomes_aleatorios as $nome_aleatorio) {
-            $nome_variavel = substr($nome_aleatorio, 1);
-            $coluna_tabela = $nome_variavel;
-
-            // Adicione a coluna e o placeholder à string SQL
-            $linha3 .= $coluna_tabela . ", ";
-        }
-        // Remova a vírgula extra no final da string SQL
-        $linha3 = rtrim($linha3, ", ");
-        $linha3 .= ")";
-        fwrite($arquivo_config, $linha3);
-        // Adicione a condição WHERE com o placeholder do ID
-
-        $linha4 = " VALUES (";
-        foreach ($nomes_aleatorios as $nome_aleatorio) {
-            $linha4 .= " ?, ";
-        }
-        // Remova a vírgula extra no final da string SQL
-        $linha4 = rtrim($linha4, ", ");
-
-        // Adicione a condição WHERE com o placeholder do ID
-        $linha4 .= ")\";";
-        fwrite($arquivo_config, $linha4);
-        $contador = 1;
-        fwrite($arquivo_config, '        $stm = $this->pdo->prepare($sql);' . PHP_EOL);
-        // Bind das variáveis geradas aos placeholders
-        foreach ($nomes_aleatorios as $nome_aleatorio) {
-            $nome_variavel = substr($nome_aleatorio, 1);
-            if (strpos($nome_variavel, 'img') !== false) {
-                fwrite($arquivo_config, '        $stm->bindValue(' . $contador . ', upload("' . $nome_variavel . '",$pastaArquivos, "N"));' . PHP_EOL);
-                $contador++;
-            } else {
-                fwrite($arquivo_config, '        $stm->bindValue(' . $contador . ', ' . $nome_aleatorio . ');' . PHP_EOL);
-                $contador++;
+            fwrite($arquivo_config, $linha2);
+            $linha3 = "        \$sql = \"INSERT INTO tbl_" . $tabelaName . " (";
+            foreach ($nomes_aleatorios as $nome_aleatorio) {
+                $nome_variavel = substr($nome_aleatorio, 1);
+                $coluna_tabela = $nome_variavel;
+                $linha3 .= $coluna_tabela . ", ";
             }
+            $linha3 = rtrim($linha3, ", ");
+            $linha3 .= ")";
+            fwrite($arquivo_config, $linha3);
+            // Adicione a condição WHERE com o placeholder do ID
 
+            $linha4 = " VALUES (";
+            foreach ($nomes_aleatorios as $nome_aleatorio) {
+                $linha4 .= " ?, ";
+            }
+            // Remova a vírgula extra no final da string SQL
+            $linha4 = rtrim($linha4, ", ");
+
+            // Adicione a condição WHERE com o placeholder do ID
+            $linha4 .= ")\";";
+            fwrite($arquivo_config, $linha4);
+            $contador = 1;
+            fwrite($arquivo_config, '        $stm = $this->pdo->prepare($sql);' . PHP_EOL);
+            // Bind das variáveis geradas aos placeholders
+            foreach ($nomes_aleatorios as $nome_aleatorio) {
+                $nome_variavel = substr($nome_aleatorio, 1);
+                if (strpos($nome_variavel, 'img') !== false) {
+                    fwrite($arquivo_config, '        $stm->bindValue(' . $contador . ', upload("' . $nome_variavel . '",$pastaArquivos, "N"));' . PHP_EOL);
+                    $contador++;
+                } else {
+                    fwrite($arquivo_config, '        $stm->bindValue(' . $contador . ', ' . $nome_aleatorio . ');' . PHP_EOL);
+                    $contador++;
+                }
+
+            }
+            // Execute a consulta SQL
+            fwrite($arquivo_config, '        $stm->execute();' . PHP_EOL);
+            fwrite($arquivo_config, '$idBanner = $this->pdo->lastInsertId();' . PHP_EOL);
+
+
+
+            fwrite($arquivo_config, '    } catch(PDOException $erro){' . PHP_EOL);
+            fwrite($arquivo_config, '        echo $erro->getMessage();' . PHP_EOL);
+            fwrite($arquivo_config, '    }' . PHP_EOL);
+
+            fwrite($arquivo_config, '  }' . PHP_EOL);
+            fwrite($arquivo_config, '}' . PHP_EOL);
         }
-        // Execute a consulta SQL
-        fwrite($arquivo_config, '        $stm->execute();' . PHP_EOL);
-        fwrite($arquivo_config, '$idBanner = $this->pdo->lastInsertId();' . PHP_EOL);
-
-
-
-        fwrite($arquivo_config, '    } catch(PDOException $erro){' . PHP_EOL);
-        fwrite($arquivo_config, '        echo $erro->getMessage();' . PHP_EOL);
-        fwrite($arquivo_config, '    }' . PHP_EOL);
-
-        fwrite($arquivo_config, '  }' . PHP_EOL);
-        fwrite($arquivo_config, '}' . PHP_EOL);
-
-
-
-
         //editar
-        fwrite($arquivo_config, 'function editar($redireciona=\'' . $tabelaName . '.php\') {' . PHP_EOL);
+        if ($desc == 'sim') {
+            fwrite($arquivo_config, 'function editar($redireciona=\'' . $tabelaName . '.php\') {' . PHP_EOL);
+        } else {
+            fwrite($arquivo_config, 'function editar($redireciona=\'editar-' . $tabelaName . '.php?pi=S&id=1\') {' . PHP_EOL);
+        }
         fwrite($arquivo_config, '    if(isset($_POST[\'acao\']) && $_POST[\'acao\'] == \'edita' . $className . '\') {' . PHP_EOL);
 
-        // Loop para gerar as atribuições dos valores
         foreach ($nomes_aleatorios as $nome_aleatorio) {
 
             $nome_variavel = substr($nome_aleatorio, 1);
             if (strpos($nome_variavel, 'img') !== false) {
                 continue;
             }
-            $linha = 'if(isset($_POST[\'' . $nome_variavel . '\']) && !empty($_POST[\'' . $nome_variavel . '\'])){';
-            $linha .= PHP_EOL;
-            $linha .= '    ' . $nome_aleatorio . ' = $_POST[\'' . $nome_variavel . '\'];';
-            $linha .= PHP_EOL;
-            $linha .= '}else{';
-            $linha .= PHP_EOL;
-            $linha .= '    ' . $nome_aleatorio . ' = \'\';';
-            $linha .= PHP_EOL;
-            $linha .= '}';
+            $linha = $nome_aleatorio . ' = (isset($_POST[\'' . $nome_variavel . '\']) && !empty($_POST[\'' . $nome_variavel . '\'])) ? $_POST[\'' . $nome_variavel . '\'] : \'\' ;';
             $linha .= PHP_EOL;
             fwrite($arquivo_config, $linha);
         }
         $linhaumemeio = " \$id = filter_input(INPUT_POST, 'id');
 ";
-        $linhaumemeio .= " \$pagina_individual = filter_input(INPUT_POST, 'pagina_individual');
-    \$maximo = 180000;
-    ";
-
+        $linhaumemeio .= "  if (isset(\$_POST['pagina_individual']) && !empty(\$_POST['pagina_individual'])) {";
+        $linhaumemeio .= " \$pagina_individual = \$_POST['pagina_individual']; ";
+        $linhaumemeio .= " } else { ";
+        $linhaumemeio .= "  \$pagina_individual = gerarTituloSEO(" . $nomes_aleatorios[3] . ");";
+        $linhaumemeio .= "  } ";
+        $linhaumemeio .= "\$maximo = 180000;";
         fwrite($arquivo_config, $linhaumemeio);
         foreach ($nomes_aleatorios as $nome_aleatorio) {
             $nome_variavel = substr($nome_aleatorio, 1);
@@ -400,10 +381,9 @@ function gerarHtml($name, $body, $desc)
         fwrite($arquivo_config, '  exit;' . PHP_EOL);
         fwrite($arquivo_config, '}' . PHP_EOL);
 
-
+        fwrite($arquivo_config, '}' . PHP_EOL);
 
         // Feche a função
-        fwrite($arquivo_config, '}' . PHP_EOL);
         fwrite($arquivo_config, '}' . PHP_EOL);
         // Função excluir
         fwrite($arquivo_config, 'function excluir() {' . PHP_EOL);
@@ -425,52 +405,31 @@ function gerarHtml($name, $body, $desc)
         fwrite($arquivo_config, '}' . PHP_EOL);
         fwrite($arquivo_config, '  }' . PHP_EOL);
         fwrite($arquivo_config, '}' . PHP_EOL);
-        // Feche o arquivo
         fwrite($arquivo_config, '?>' . PHP_EOL);
         fclose($arquivo_config);
-
         $verifica = './painel/verifica.php';
         $nomeClass = $tabelaName . '.class.php';
-
-        // Conteúdo a ser concatenado
         $itemConcatenado = 'include "../Class/' . $nomeClass . '";' . PHP_EOL;
         $itemConcatenado .= '$' . $tabelaName . ' = ' . $className . '::getInstance(Conexao::getInstance());' . PHP_EOL;
-
-        // Abra o arquivo verifica.php para leitura
         $arquivo = fopen($verifica, 'r');
 
         if ($arquivo) {
-            // Leia o conteúdo do arquivo
             $conteudo = fread($arquivo, filesize($verifica));
-
-            // Encontre a posição da função get_url()
             $posicaoGetUrl = strpos($conteudo, 'function get_url()');
-
             if ($posicaoGetUrl !== false) {
-                // Divida o conteúdo em duas partes
                 $parteAntesGetUrl = substr($conteudo, 0, $posicaoGetUrl);
                 $parteDepoisGetUrl = substr($conteudo, $posicaoGetUrl);
-
-                // Combine as partes com o item concatenado no meio
                 $conteudoModificado = $parteAntesGetUrl . $itemConcatenado . $parteDepoisGetUrl;
             } else {
                 echo 'Função get_url() não encontrada no arquivo.';
                 exit;
             }
-
-            // Feche o arquivo
             fclose($arquivo);
-
-            // Abra o arquivo novamente para escrita
             $arquivo = fopen($verifica, 'w');
 
             if ($arquivo) {
-                // Escreva o conteúdo modificado de volta no arquivo
                 fwrite($arquivo, $conteudoModificado);
-
-                // Feche o arquivo novamente
                 fclose($arquivo);
-
                 echo 'Item concatenado antes da função get_url() com sucesso!';
             } else {
                 echo 'Erro ao abrir o arquivo para escrita.';
@@ -485,29 +444,41 @@ function gerarHtml($name, $body, $desc)
     }
     echo "O novo arquivo HTML foi gerado como '$nome_arquivo'.";
 
+    if ($desc == 'sim') {
+        $formularioAdd = gerarAddDinamico($nomes_aleatorios, $tabelaName);
+        file_put_contents($add, $formularioAdd);
+        $formulariopainel = principal($tabelaName);
+        file_put_contents($painel, $formulariopainel);
+    }
 
-    $formularioAdd = gerarAddDinamico($nomes_aleatorios, $tabelaName);
-    file_put_contents($add, $formularioAdd);
     $formularioEdit = gerarEditDinamico($nomes_aleatorios, $tabelaName);
     file_put_contents($edit, $formularioEdit);
-    $formulariopainel = principal($tabelaName);
-    file_put_contents($painel, $formulariopainel);
+
     $menuLateralFile = './painel/inc-menu-lateral.php';
 
-    $itemAdicionado = '
-    <li class="sidebar-item"> 
-        <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-            <i data-feather="file-text" class="feather-icon"></i>
-            <span class="hide-menu">' . $className . '</span>
-        </a>
-        <ul aria-expanded="false" class="collapse first-level base-level-line">
-            <li class="sidebar-item"><a href="' . $tabelaName . '.php" class="sidebar-link"><span class="hide-menu">
-                Listar ' . $className . '</span></a></li>
-            <li class="sidebar-item"><a href="add-' . $tabelaName . '.php" class="sidebar-link"><span class="hide-menu">
-                Adicionar ' . $tabelaName . '</span></a></li>
-        </ul>
-    </li>
-    ';
+    if ($desc == 'sim') {
+        $itemAdicionado = '
+        <li class="sidebar-item"> 
+            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                <i data-feather="file-text" class="feather-icon"></i>
+                <span class="hide-menu">' . $className . '</span>
+            </a>
+            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                <li class="sidebar-item"><a href="' . $tabelaName . '.php" class="sidebar-link"><span class="hide-menu">
+                    Listar ' . $className . '</span></a></li>
+                <li class="sidebar-item"><a href="add-' . $tabelaName . '.php" class="sidebar-link"><span class="hide-menu">
+                    Adicionar ' . $tabelaName . '</span></a></li>
+            </ul>
+        </li>
+        ';
+    } else {
+        $itemAdicionado = '
+        <li class="sidebar-item"> <a class="sidebar-link" href="editar-' . $tabelaName . '.php?pi=S&id=1"> 
+            <i data-feather="file-text" class="feather-icon"></i>' . $className . '</a>
+        </li>
+
+        ';
+    }
 
     // Abra o arquivo inc-menu-lateral.php para leitura
     $menuLateralContent = file_get_contents($menuLateralFile);
@@ -534,6 +505,7 @@ function gerarHtml($name, $body, $desc)
     }
 
     gerarB($tabelaName, $nomes_aleatorios);
+
 }
 function substituirConteudoPorPHP($tag, $tabelaName, $section)
 {
@@ -617,11 +589,8 @@ function substituirTagImg($tag, $tabelaName, $section)
 {
     $img = substituirConteudoPorPHP($tag, $tabelaName, $section);
     $aria_label = substituirConteudoPorPHP('img_alt', $tabelaName, $section);
-
-    // Verifique se a classe original está presente na tag
     $classe_original = $tag->getAttribute('class');
     $classe_adicional = '';
-
     if (!empty($classe_original)) {
         $classe_adicional = $classe_original;
     }
@@ -633,9 +602,11 @@ function removeComentariosHTML($html)
 {
     return preg_replace('/<!--(.|\s)*?-->/', '', $html);
 }
+require_once('./Connection/con-pdo.php');
+
 function gerarB($tabelaName, $nomes_aleatorios)
 {
-    require_once('./Connection/con-pdo.php');
+    global $conn;
     try {
         // Nome da tabela a ser criada
         $table_name = "tbl_" . $tabelaName . "";
@@ -665,4 +636,5 @@ function gerarB($tabelaName, $nomes_aleatorios)
         echo "Erro: " . $e->getMessage() . "<br>";
     }
 }
+
 ?>

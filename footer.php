@@ -1,180 +1,141 @@
-<footer class="site-footer">
-  <div class="site-footer__middle">
-    <div class="site-footer-shape" style="background-image: url(assets/images/shapes/site-footer-shape.png)"></div>
+<!-- back to top start -->
+<div class="back-to-top-wrapper">
+  <button id="back_to_top" type="button" class="back-to-top-btn">
+    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+</div>
+<!-- back to top end -->
+<footer>
+
+  <!-- footer area start -->
+  <div class="tp-footer-area pt-120 pb-120 p-relative z-index-3 black-bg">
+    <div class="tp-footer-shape-1 d-none d-lg-block">
+      <img src="assets/img/footer/shape-1-1.png" alt="">
+    </div>
+    <div class="tp-footer-shape-2 d-none d-lg-block">
+      <img src="assets/img/footer/shape-1-2.png" alt="">
+    </div>
     <div class="container">
-      <div class="site-footer__middle-inner">
-        <div class="row">
-          <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-            <div class="footer-widget__column footer-widget__about">
-              <h3 class="footer-widget__title">Sobre</h3>
-              <div class="footer-widget__about-text-box">
-                <p class="footer-widget__about-text">É simples: você precisa de soluções assertivas e com resultados
-                  claros.<br><strong>E a Hoogli entrega.</strong></p>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-50 wow tpfadeUp" data-wow-duration=".9s"
+          data-wow-delay=".3s">
+          <div class="tp-footer-widget footer-cols-1">
+            <div class="tp-footer-logo">
+              <a href="index.html"><img src="assets/img/logo/white-logo.png" alt=""></a>
+            </div>
+            <div class="tp-footer-text">
+              <p>Desires to obtain pain of it because it is pain but occasionally circum We work with a passion of
+                challenges </p>
+            </div>
+            <div class="tp-footer-contact">
+              <a href="mailto:biddutcompany@gmail.com"><i class="flaticon-mail-1"></i>biddutcompany@gmail.com</a>
+              <a href="#"><i class="flaticon-pin"></i>Division San fransico , USA </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 mb-50 wow tpfadeUp" data-wow-duration=".9s"
+          data-wow-delay=".5s">
+          <div class="tp-footer-widget footer-cols-2">
+            <h4 class="tp-footer-title">Usefull Links</h4>
+            <div class="tp-footer-list">
+              <ul>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>About Biddut</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Our Team</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Our Portfolio</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Testimonials</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Blog Details</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50 wow tpfadeUp" data-wow-duration=".9s"
+          data-wow-delay=".7s">
+          <div class="tp-footer-widget footer-cols-3">
+            <h4 class="tp-footer-title">Services</h4>
+            <div class="tp-footer-list">
+              <ul>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Air Conditioning</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Electrical Panels</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Security System</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i>Indoor Lighting</a></li>
+                <li><a href="#"><i class="fa-sharp fa-solid fa-plus"></i> Electrical Services</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50 wow tpfadeUp" data-wow-duration=".9s"
+          data-wow-delay=".9s">
+          <div class="tp-footer-widget footer-cols-4">
+            <h4 class="tp-footer-title">Instagram</h4>
+            <div class="tp-footer-thumb-wrap">
+              <div class="tp-footer-thumb-box d-flex">
+                <div class="tp-footer-thumb p-relative">
+                  <img src="assets/img/footer/footer-1-1.jpg" alt="">
+                  <div class="tp-footer-thumb-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="tp-footer-thumb p-relative">
+                  <img src="assets/img/footer/footer-1-2.jpg" alt="">
+                  <div class="tp-footer-thumb-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="tp-footer-thumb p-relative">
+                  <img src="assets/img/footer/footer-1-3.jpg" alt="">
+                  <div class="tp-footer-thumb-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+                </div>
               </div>
-
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-            <div class="footer-widget__column footer-widget__links clearfix">
-              <h3 class="footer-widget__title">Site Map</h3>
-              <ul class="footer-widget__links-list list-unstyled clearfix">
-                <li class="dropdown current megamenu">
-                  <a href="<?php echo SITE_URL ?>">Home</a>
-                </li>
-                <li class="dropdown">
-                  <a href="<?php echo SITE_URL; ?>/sobre">Sobre</a>
-                </li>
-                <li class="dropdown">
-                  <a href="<?php echo SITE_URL; ?>/projetos">Cases de sucesso</a>
-                </li>
-                <li class="dropdown">
-                  <a href="<?php echo SITE_URL; ?>/blog">Blog</a>
-                </li>
-                <li><a href="<?php echo SITE_URL; ?>/contato">Contato</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-            <div class="footer-widget__column footer-widget__explore clearfix">
-              <h3 class="footer-widget__title">Localização</h3>
-              <ul class="footer-widget__about-contact list-unstyled">
-                <li>
-                  <div class="icon">
-                    <i class="fas fa-phone-square-alt"></i>
+              <div class="tp-footer-thumb-box d-flex">
+                <div class="tp-footer-thumb p-relative">
+                  <img src="assets/img/footer/footer-1-4.jpg" alt="">
+                  <div class="tp-footer-thumb-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
                   </div>
-                  <div class="text">
-                    <a href="tel:<?php echo $infoSistema->telefone1; ?>"
-                      aria-label="Link de encaminhamento para o Telefone da <?php echo $infiSistema->nome_empresa ?>">
-                      <?php echo $infoSistema->telefone1; ?>
-                    </a>
+                </div>
+                <div class="tp-footer-thumb p-relative">
+                  <img src="assets/img/footer/footer-1-5.jpg" alt="">
+                  <div class="tp-footer-thumb-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
                   </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="tp-footer-thumb p-relative">
+                  <img src="assets/img/footer/footer-1-6.jpg" alt="">
+                  <div class="tp-footer-thumb-icon">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
                   </div>
-                  <div class="text">
-                    <a href="mailto:<?php echo $infoSistema->email1; ?>">Contato via e-mail</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="text">
-                    <p>
-                      <?php echo $infoSistema->endereco; ?>
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-6 col-md-6 " data-wow-delay="400ms">
-            <div class="footer-widget__column footer-widget__services clearfix">
-              <h3 class="footer-widget__title">Redes Sociais</h3>
-              <div class="site-footer__top-right-social">
-                <?php if (isset($infoSistema->instagram) && !empty($infoSistema->instagram)) { ?>
-                  <a href="<?php echo $infoSistema->instagram; ?>"
-                    aria-label="Link de encaminhamento para o Instagram da <?php echo $infiSistema->nome_empresa ?>"
-                    target="_blank" class="ico-instagram"><i class="fab fa-instagram"></i></a>
-                <?php } ?>
-                <?php if (isset($infoSistema->youtube) && !empty($infoSistema->youtube)) { ?>
-                  <a href="<?php echo $infoSistema->youtube; ?>"
-                    aria-label="Link de encaminhamento para o Youtube da <?php echo $infiSistema->nome_empresa ?>"
-                    target="_blank" class="ico-youtube"><i class="fab fa-youtube"></i></a>
-                <?php } ?>
-                <?php if (isset($infoSistema->twitter) && !empty($infoSistema->twitter)) { ?>
-                  <a href="<?php echo $infoSistema->twitter; ?>"
-                    aria-label="Link de encaminhamento para o Twitter da <?php echo $infiSistema->nome_empresa ?>"
-                    target="_blank" class="ico-twitter"><i class="fab fa-twitter"></i></a>
-                <?php } ?>
-                <?php if (isset($infoSistema->facebook) && !empty($infoSistema->facebook)) { ?>
-                  <a href="<?php echo $infoSistema->facebook; ?>"
-                    aria-label="Link de encaminhamento para o Facebook da <?php echo $infiSistema->nome_empresa ?>"
-                    target="_blank" class="ico-facebook"><i class="fab fa-facebook-square"></i></a>
-                <?php } ?>
-                <?php if (isset($infoSistema->linkedln) && !empty($infoSistema->linkedln)) { ?>
-                  <a href="<?php echo $infoSistema->linkedln; ?>"
-                    aria-label="Link de encaminhamento para o Linkedin da <?php echo $infiSistema->nome_empresa ?>"
-                    target="_blank" class="ico-linkedin"><i class="fab fa-linkedin"></i></a>
-                <?php } ?>
-                <?php if (isset($infoSistema->pinterest) && !empty($infoSistema->pinterest)) { ?>
-                  <a href="<?php echo $infoSistema->pinterest; ?>"
-                    aria-label="Link de encaminhamento para o Pinterest da <?php echo $infiSistema->nome_empresa ?>"
-                    target="_blank" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a>
-                <?php } ?>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-copyright wow fadeInDown bg-color-three copyright-two">
-        <?php include "copy.php" ?>
+    </div>
+  </div>
+  <!-- footer area end -->
+
+  <!-- copy-right area start -->
+  <div class="tp-copyright-area tp-copyright-space black-bg-2">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+          <div class="tp-copyright-left text-center text-md-start">
+            <p>© Copyright 2023 by <a href="#">Biddut.com</a></p>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+          <div class="tp-copyright-social text-center text-md-end">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
 </footer>
-
-<div class="mobile-nav__wrapper">
-  <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-  <div class="mobile-nav__content">
-    <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-    <div class="logo-box">
-      <a href="<?php echo SITE_URL; ?>"><img width="176" height="69" loading="lazy"
-          src="<?php echo SITE_URL; ?>/img/<?php echo $infoSistema->logo_principal; ?>" alt="Logo Principal"></a>
-    </div>
-    <div class="mobile-nav__container"></div>
-
-    <ul class="mobile-nav__contact list-unstyled">
-      <li>
-        <i class="fa fa-envelope"></i>
-        <a href="mailto:<?php echo $infoSistema->email1; ?>">Contato via e-mail</a>
-      </li>
-      <li>
-        <i class="fa fa-phone-alt"></i>
-        <a href="tel:<?php echo $infoSistema->telefone1; ?>"
-          aria-label="Link de encaminhamento para o Telefone da <?php echo $infiSistema->nome_empresa ?>">
-          <?php echo $infoSistema->telefone1; ?>
-        </a>
-      </li>
-    </ul>
-    <div class="mobile-nav__top">
-      <div class="mobile-nav__social">
-        <?php if (isset($infoSistema->instagram) && !empty($infoSistema->instagram)) { ?>
-          <a href="<?php echo $infoSistema->instagram; ?>"
-            aria-label="Link de encaminhamento para o Instagram da <?php echo $infiSistema->nome_empresa ?>"
-            target="_blank" class="ico-instagram"><i class="fab fa-instagram"></i></a>
-        <?php } ?>
-        <?php if (isset($infoSistema->youtube) && !empty($infoSistema->youtube)) { ?>
-          <a href="<?php echo $infoSistema->youtube; ?>"
-            aria-label="Link de encaminhamento para o Youtube da <?php echo $infiSistema->nome_empresa ?>" target="_blank"
-            class="ico-youtube"><i class="bx bxl-youtube"></i></a>
-        <?php } ?>
-        <?php if (isset($infoSistema->twitter) && !empty($infoSistema->twitter)) { ?>
-          <a href="<?php echo $infoSistema->twitter; ?>"
-            aria-label="Link de encaminhamento para o Twitter da <?php echo $infiSistema->nome_empresa ?>" target="_blank"
-            class="ico-twitter"><i class="fab fa-twitter"></i></a>
-        <?php } ?>
-        <?php if (isset($infoSistema->facebook) && !empty($infoSistema->facebook)) { ?>
-          <a href="<?php echo $infoSistema->facebook; ?>"
-            aria-label="Link de encaminhamento para o Facebook da <?php echo $infiSistema->nome_empresa ?>"
-            target="_blank" class="ico-facebook"><i class="fab fa-facebook-square"></i></a>
-        <?php } ?>
-        <?php if (isset($infoSistema->linkedln) && !empty($infoSistema->linkedln)) { ?>
-          <a href="<?php echo $infoSistema->linkedln; ?>"
-            aria-label="Link de encaminhamento para o Linkedin da <?php echo $infiSistema->nome_empresa ?>"
-            target="_blank" class="ico-linkedin"><i class="bx bxl-linkedin"></i></a>
-        <?php } ?>
-        <?php if (isset($infoSistema->pinterest) && !empty($infoSistema->pinterest)) { ?>
-          <a href="<?php echo $infoSistema->pinterest; ?>"
-            aria-label="Link de encaminhamento para o Pinterest da <?php echo $infiSistema->nome_empresa ?>"
-            target="_blank" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a>
-        <?php } ?>
-      </div>
-    </div>
-  </div>
-</div>

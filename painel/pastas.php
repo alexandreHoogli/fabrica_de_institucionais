@@ -54,6 +54,26 @@ $editaConfig = $infoSistema->rsDados(1);
       width: 20px;
       height: 20px;
     }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      /* Cor de fundo */
+      color: white;
+      /* Cor do texto */
+      border: 2px solid #4CAF50;
+      /* Borda */
+      padding: 5px 20px;
+      /* Preenchimento interno */
+      border-radius: 5px;
+      /* Borda arredondada */
+      cursor: pointer;
+      /* Cursor do mouse */
+    }
+
+    /* Estilo quando o mouse passa por cima do botão */
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 
@@ -92,40 +112,38 @@ $editaConfig = $infoSistema->rsDados(1);
           <div class="col-12">
             <div class="card">
               <div class="card-body">
+                <?php
+                $dir = '../linkagem';
+                echo '<table>';
+                echo '<tr>';
+                echo '<th>Selecionar</th>';
+                echo '<th>Arquivo</th>';
+                echo '<th>Dropdown</th>';
+                echo '</tr>';
+                if (is_dir($dir)) {
+                  $files = scandir($dir);
 
-                <table>
-                  <tr>
-                    <th>Selecionar</th>
-                    <th>Arquivo</th>
-                    <th>Pagina desc?</th>
-                  </tr>
-                  <?php
-                  $dir = '../linkagem';
-
-                  if (is_dir($dir)) {
-                    $files = scandir($dir);
-
-                    echo '<form method="post" action="../teste.php">';
-
-                    foreach ($files as $file) {
-                      if ($file != '.' && $file != '..' && pathinfo($file, PATHINFO_EXTENSION) == 'html') {
-                        echo '<tr>';
-                        echo '<td><input type="checkbox" name="arquivos_selecionados[]" value="' . $file . '"></td>';
-                        echo '<td>' . $file . '</td>';
-
-                        echo '<td><select name="arquivos_dropdown[]">';
-                        echo '<option value="sim">Sim</option>';
-                        echo '<option value="nao">Não</option>';
-                        echo '</select></td>';
-                        echo '</tr>';
-                      }
+                  echo '<form method="post" action="../teste.php">';
+                  foreach ($files as $file) {
+                    if ($file != '.' && $file != '..' && pathinfo($file, PATHINFO_EXTENSION) == 'html') {
+                      echo '<tr>';
+                      echo '<td><input type="checkbox" name="arquivos_selecionados[' . $file . ']" value="' . $file . '"></td>';
+                      echo '<td>' . $file . '</td>';
+                      echo '<td><select name="arquivos_dropdown[' . $file . ']">';
+                      echo '<option value="sim">Sim</option>';
+                      echo '<option value="nao">Não</option>';
+                      echo '</select></td>';
+                      echo '</tr>';
                     }
-                    echo '<input type="submit" value="Enviar">';
-                    echo '</form>';
-                  } else {
-                    echo "O diretório não existe.";
                   }
-                  ?>
+                  echo '</table>';
+                  echo '<input type="submit" value="Enviar">';
+                  echo '</form>';
+
+                } else {
+                  echo "O diretório não existe.";
+                }
+                ?>
                 </table>
               </div>
             </div>

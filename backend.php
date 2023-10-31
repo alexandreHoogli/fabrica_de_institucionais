@@ -1,7 +1,6 @@
 <?php
 function gerarAddDinamico($campos, $nome)
 {
-
   $html = '<?php include "verifica.php";' . PHP_EOL;
   $html .= '$' . $nome . '->add();' . PHP_EOL;
   $html .= '?>' . PHP_EOL;
@@ -54,24 +53,33 @@ function gerarAddDinamico($campos, $nome)
   $html .= '<form method="POST" enctype="multipart/form-data">' . PHP_EOL;
   $html .= '<div class="form-body">' . PHP_EOL;
 
+  $grupoCampos = array(); // Array multidimensional
+
   foreach ($campos as $campo) {
     if (preg_match('/section_(\d+)_(.*?)_(\d+)/', $campo, $matches)) {
-      $numeroFinal = $matches[3];
       $inicio = $matches[1];
       $nomeCampo = $matches[2];
+      $chaveGrupo = "section_{$inicio}";
 
-      $chaveGrupo = "section_{$inicio}_{$numeroFinal}";
+      if (!isset($grupoCampos[$chaveGrupo])) {
+        $grupoCampos[$chaveGrupo] = array(); // Inicializa um subarray se a chave ainda não existir
+      }
 
-      $chaveCampo = "campo_{$nomeCampo}";
-
-      $grupoCampos[$chaveGrupo][$chaveCampo] = $campo;
+      $grupoCampos[$chaveGrupo][] = $campo; // Adiciona o campo ao subarray correspondente
     }
-
   }
 
-  $html .= '<div class="form-group row">' . PHP_EOL;
-  foreach ($grupoCampos as $chaveGrupo => $camposGrupo) {
 
+  foreach ($grupoCampos as $chaveGrupo => $camposGrupo) {
+    $text = $chaveGrupo;
+    $text = str_replace('_', ' ', $text);
+    $text = ucwords($text);
+    $html .= '<br>' . PHP_EOL;
+    $html .= '<hr>' . PHP_EOL;
+    $html .= '<h4 class="card-title">' . $text . '</h4>' . PHP_EOL;
+    $html .= '<hr>' . PHP_EOL;
+    $html .= '<br>' . PHP_EOL;
+    $html .= '<div class="form-group row">' . PHP_EOL;
     foreach ($camposGrupo as $campo) {
       $campoName = substr($campo, 1);
       $nomeCampo = str_replace('_', ' ', $campoName);
@@ -117,11 +125,11 @@ function gerarAddDinamico($campos, $nome)
         $html .= '  </div>' . PHP_EOL;
       }
     }
-
+    $html .= '</div>' . PHP_EOL;
 
 
   }
-  $html .= '</div>' . PHP_EOL;
+
   $html .= '<div class="clearfix"></div>' . PHP_EOL;
   $html .= ' <div class="form-group row">' . PHP_EOL;
   $html .= '<div class="col-md-12">' . PHP_EOL;
@@ -187,13 +195,6 @@ function gerarAddDinamico($campos, $nome)
 
   return $html;
 }
-
-
-
-
-
-
-
 function gerarEditDinamico($campos, $nome)
 {
 
@@ -261,21 +262,31 @@ function gerarEditDinamico($campos, $nome)
   $html .= '<div class="card-body">' . PHP_EOL;
   $html .= '<form method="POST" enctype="multipart/form-data">' . PHP_EOL;
   $html .= '<div class="form-body">' . PHP_EOL;
-
+  $grupoCampos = array(); // Array multidimensional
   foreach ($campos as $campo) {
     if (preg_match('/section_(\d+)_(.*?)_(\d+)/', $campo, $matches)) {
-      $numeroFinal = $matches[3];
       $inicio = $matches[1];
       $nomeCampo = $matches[2];
-      $chaveGrupo = "section_{$inicio}_{$numeroFinal}";
-      $chaveCampo = "campo_{$nomeCampo}";
-      $grupoCampos[$chaveGrupo][$chaveCampo] = $campo;
+      $chaveGrupo = "section_{$inicio}";
+
+      if (!isset($grupoCampos[$chaveGrupo])) {
+        $grupoCampos[$chaveGrupo] = array(); // Inicializa um subarray se a chave ainda não existir
+      }
+
+      $grupoCampos[$chaveGrupo][] = $campo; // Adiciona o campo ao subarray correspondente
     }
-
   }
-  $html .= '<div class="form-group row">' . PHP_EOL;
-  foreach ($grupoCampos as $chaveGrupo => $camposGrupo) {
 
+  foreach ($grupoCampos as $chaveGrupo => $camposGrupo) {
+    $text = $chaveGrupo;
+    $text = str_replace('_', ' ', $text);
+    $text = ucwords($text);
+    $html .= '<br>' . PHP_EOL;
+    $html .= '<hr>' . PHP_EOL;
+    $html .= '<h4 class="card-title">' . $text . '</h4>' . PHP_EOL;
+    $html .= '<hr>' . PHP_EOL;
+    $html .= '<br>' . PHP_EOL;
+    $html .= '<div class="form-group row">' . PHP_EOL;
     foreach ($camposGrupo as $campo) {
 
       $campoName = substr($campo, 1);
@@ -345,8 +356,8 @@ function gerarEditDinamico($campos, $nome)
       }
 
     }
+    $html .= '</div>' . PHP_EOL;
   }
-  $html .= '</div>' . PHP_EOL;
   $html .= '<div class="clearfix"></div>' . PHP_EOL;
   $html .= ' <div class="form-group row">' . PHP_EOL;
   $html .= '<div class="col-md-12">' . PHP_EOL;
@@ -355,7 +366,7 @@ function gerarEditDinamico($campos, $nome)
   $html .= ' </div>' . PHP_EOL;
   foreach ($campos as $campo) {
     $campoName = substr($campo, 1);
-    if ($campo == '$meta_description') {
+    if ($campo == 'meta_description') {
       $html .= '<div class="form-group row">' . PHP_EOL;
       $html .= '<div class="col-md-12">' . PHP_EOL;
       $html .= '<div class="form-group">' . PHP_EOL;
@@ -364,7 +375,7 @@ function gerarEditDinamico($campos, $nome)
       $html .= '</div>' . PHP_EOL;
       $html .= '</div> ' . PHP_EOL;
       $html .= '</div>' . PHP_EOL;
-    } elseif ($campo == '$meta_keywords') {
+    } elseif ($campo == 'meta_keywords') {
       $html .= '<div class="form-group row">' . PHP_EOL;
       $html .= '<div class="col-md-12">' . PHP_EOL;
       $html .= '<div class="form-group">' . PHP_EOL;
@@ -373,7 +384,7 @@ function gerarEditDinamico($campos, $nome)
       $html .= '</div>' . PHP_EOL;
       $html .= '  </div>' . PHP_EOL;
       $html .= '</div>' . PHP_EOL;
-    } elseif ($campo == '$meta_title') {
+    } elseif ($campo == 'meta_title') {
       $html .= '<div class="form-group row">' . PHP_EOL;
       $html .= ' <div class="col-md-12">' . PHP_EOL;
       $html .= '<div class="form-group">' . PHP_EOL;
@@ -384,7 +395,7 @@ function gerarEditDinamico($campos, $nome)
       $html .= '</div>' . PHP_EOL;
     }
   }
-  $html .= '</div>' . PHP_EOL;
+
   $html .= '</div>' . PHP_EOL;
   $html .= '<div class="form-actions">' . PHP_EOL;
   $html .= '<div class="text-right">' . PHP_EOL;
@@ -403,6 +414,8 @@ function gerarEditDinamico($campos, $nome)
     }
   }
   $html .= '</form>' . PHP_EOL;
+  $html .= '</div>' . PHP_EOL;
+  $html .= '</div>' . PHP_EOL;
   $html .= '</div>' . PHP_EOL;
   $html .= '</div>' . PHP_EOL;
   $html .= '</div>' . PHP_EOL;
@@ -495,7 +508,7 @@ function principal($nome)
   $html .= '                                            foreach($puxa' . $className . ' as $' . $nome . '){?>' . PHP_EOL;
   $html .= '                                            <tr>' . PHP_EOL;
   $html .= '                                              <td>' . PHP_EOL;
-  $html .= '                                            <a href="edita-' . $nome . '.php?id=<?php echo $' . $nome . '->id; ?>" class="btn btn-success btn-circle">' . PHP_EOL;
+  $html .= '                                            <a href="editar-' . $nome . '.php?id=<?php echo $' . $nome . '->id; ?>" class="btn btn-success btn-circle">' . PHP_EOL;
   $html .= '                                             <i class="fas fa-pencil-alt"></i></a>' . PHP_EOL;
   $html .= '                                            <a href="javascript:;" class="btn btn-warning btn-circle" onclick="excluir(\'' . $nome . '.php\', <?php echo $' . $nome . '->id; ?>, \'excluir' . $className . '\')">' . PHP_EOL;
   $html .= '                                            <i class="fa fa-times"></i></a>' . PHP_EOL;

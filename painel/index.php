@@ -1,4 +1,4 @@
-<?php include "verifica.php";?> 
+<?php include "verifica.php"; ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="pt-br">
 
@@ -25,13 +25,15 @@
     </div>
     <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
         data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
-        <?php include "header.php";?>
-        <?php include "inc-menu-lateral.php";?>
+        <?php include "header.php"; ?>
+        <?php include "inc-menu-lateral.php"; ?>
         <div class="page-wrapper">
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Bom dia <?php echo $dadosUsuarioLogado->nome;?>!</h3>
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Bom dia
+                            <?php echo $dadosUsuarioLogado->nome; ?>!
+                        </h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
@@ -53,7 +55,7 @@
                 </div>
             </div>
             <div class="container-fluid">
-               <!--  <div class="card-group">
+                <!--  <div class="card-group">
                     <div class="card border-right">
                         <div class="card-body">
                             <div class="d-flex d-lg-flex d-md-block align-items-center">
@@ -116,10 +118,10 @@
                             </div>
                         </div>
                     </div>
-                </div>  -->              
+                </div>  -->
             </div>
-            <?php include "footer.php";?>
-       </div>
+            <?php include "footer.php"; ?>
+        </div>
     </div>
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
@@ -137,4 +139,5 @@
     <script src="assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
     <script src="dist/js/pages/dashboards/dashboard1.min.js"></script>
 </body>
+
 </html>

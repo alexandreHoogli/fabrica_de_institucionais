@@ -1,1057 +1,104 @@
-<!DOCTYPE html>
-<html lang="zxx">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <?php include 'head.php'; ?>
 
+
 <body>
-  <!-- Header  -->
-  <div class="banner_outer">
-    <header class="header">
-      <div class="main-header">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="./index.html">
-              <figure class="mb-0 banner-logo"><img src="./assets/images/logo.png" alt="" class="img-fluid"></figure>
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-              data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              <span class="navbar-toggler-icon"></span>
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./about.html">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./service.html">Services</a>
-                </li>
-                <li class="nav-space nav-item dropdown">
-                  <a class="nav-link dropdown-toggle dropdown-color navbar-text-color" href="#" id="navbarDropdownMenu"
-                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Blog </a>
-                  <div class="dropdown-menu drop-down-content">
-                    <ul class="list-unstyled drop-down-pages">
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="single-post.html">Single Post</a>
-                      </li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="infinite-scroll.html">Infinite
-                          Scroll</a></li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="load-more.html">Load More</a></li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="one-column.html">One Column</a></li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="two-column.html">Two Column</a></li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="three-column.html">Three Column</a>
-                      </li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="three-colum-sidbar.html">Three Column
-                          Sidebar</a></li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="four-column.html">Four Column</a>
-                      </li>
-                      <li class="nav-item"><a class="dropdown-item nav-link" href="six-colum-full-wide.html">Six
-                          Column</a></li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-space nav-item dropdown">
-                  <a class="nav-link dropdown-toggle dropdown-color navbar-text-color" href="#" id="navbarDropdownmain"
-                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pages </a>
-                  <div class="dropdown-menu drop-down-content">
-                    <ul class="list-unstyled drop-down-pages">
-                      <li class="nav-item">
-                        <a class="dropdown-item nav-link" href="./project.html">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="dropdown-item nav-link" href="./pricing.html">Pricing</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="dropdown-item nav-link" href="./team.html">Teams</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-space nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-              </ul>
-              <div class="last_list">
-                <figure class="nav-phoneimage mb-0"><img class="img-fluid" src="./assets/images/nav-phoneimage.png"
-                    alt=""></figure>
-                <div class="content">
-                  <p class="text-size-18 text-white">Call Anytime:</p>
-                  <a class="text-decoration-none last_list_atag" href="tel:+012(345)6789">+012 (345) 6789</a>
+
+  <?php include 'header.php'; ?>
+
+  <main>
+
+    <!-- hero area start -->
+    <div class="tp-slider-3-area  black-bg p-relative">
+      <div class="tp-scroll-bottom smooth d-none d-md-block">
+        <a href="#feature-box">SCROLL DOWN</a>
+      </div>
+      <div class="tp-slider-3-wrapper fix p-relative">
+        <div class="tp-slider-3-arrow-box">
+          <button class="slider-prev active">
+            <i class="fa-regular fa-arrow-left-long"></i>
+          </button>
+          <button class="slider-next">
+            <i class="fa-regular fa-arrow-right-long"></i>
+          </button>
+        </div>
+        <div class="tp-slider-dots dots-color"></div>
+        <div class="swiper-container tp-slider-3-active">
+          <div class="swiper-wrapper">
+            <div class="tp-slider-3-shape-2 d-none d-sm-block">
+              <img src="assets/img/hero/shape-3-2.png" alt="">
+            </div>
+            <div class="tp-slider-3-shape-3 d-none d-md-block">
+              <img src="assets/img/hero/shape-3-3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <div class="tp-slider-3-height p-relative">
+                <div class="tp-slider-3-shape-1 d-none d-xl-block">
+                  <img src="assets/img/hero/shape-3-1.png" alt="">
                 </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <figure class="banner-layerright mb-0">
-      <img src="./assets/images/banner-layerright.png" class="img-fluid" alt="">
-    </figure>
-    <section class="banner-section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-5 col-md-12 col-sm-12 col-12" data-aos="fade-right">
-            <div class="social-icons position-relative" data-aos="fade-up">
-              <ul class="list-unstyled position-absolute">
-                <li><a href="" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a>
-                </li>
-                <li><a href="" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a>
-                </li>
-                <li><a href="" class="text-decoration-none"><i
-                      class="fa-brands fa-google-plus-g social-networks"></i></a></li>
-                <li><a href="" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="banner_content">
-              <figure class="banner-line mb-0"><img src="./assets/images/banner-line.png" alt="" class="img-fluid">
-              </figure>
-              <h6 class="text-white">WE PROVIDE OUTSOURCED</h6>
-              <h1 class="text-white">IT Services & Solutions</h1>
-              <p>Doidunt eget semper nec ruam sed hendrerit morbi ac feliseao augue pellentesue morbi acer.</p>
-              <a class="get_started button1 text-white text-decoration-none" href="./contact.html">Get Started
-                <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
-              </a>
-              <a class="get_started button2 text-white text-decoration-none" href="./contact.html">Contact Us
-                <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
-              </a>
-              <figure class="banner-circleleft mb-0">
-                <img src="./assets/images/banner-circleleft.png" class="img-fluid" alt="">
-              </figure>
-              <figure class="banner-dotleft mb-0">
-                <img src="./assets/images/banner-dotleft.png" class="img-fluid" alt="">
-              </figure>
-            </div>
-          </div>
-          <div class="col-lg-7 col-md-12 col-sm-12 col-12">
-            <div class="banner_wrapper">
-              <figure class="mb-0 banner-image">
-                <img src="./assets/images/banner-image.jpg" alt="" class="img-fluid">
-              </figure>
-              <div class="position-relative">
-                <a class="popup-vimeo"
-                  href="https://video-previews.elements.envatousercontent.com/h264-video-previews/d1c81f1e-849f-4d45-ae57-b61c2f5db34a/25628048.mp4">
-                  <figure class="mb-0 banner-vedioimage">
-                    <img class="thumb img-fluid" style="cursor: pointer" src="./assets/images/banner-vedioimage.png"
-                      alt="">
-                  </figure>
-                </a>
-              </div>
-              <figure class="banner-circleright mb-0">
-                <img src="./assets/images/banner-circleright.png" class="img-fluid" alt="">
-              </figure>
-              <figure class="banner-dotright mb-0">
-                <img src="./assets/images/banner-dotright.png" class="img-fluid" alt="">
-              </figure>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- Service -->
-  <section class="service-section">
-    <figure class="service-leftlayer mb-0">
-      <img src="./assets/images/service-leftlayer.png" alt="" class="img-fluid">
-    </figure>
-    <figure class="service-dotimage mb-0">
-      <img src="./assets/images/service-dotimage.png" alt="" class="img-fluid">
-    </figure>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-          <div class="service_contentbox">
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="service-box box-mb">
-                  <figure class="service-marketicon">
-                    <img src="./assets/images/service-marketicon.png" alt="" class="img-fluid">
-                  </figure>
-                  <h4>Digital Marketing</h4>
-                  <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
-                  <a class="arrow text-decoration-none" href="./service.html"><i
-                      class="circle fa-thin fa-arrow-right"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="box-top">
-                  <div class="service-box box-mb">
-                    <figure class="service-producticon">
-                      <img src="./assets/images/service-producticon.png" alt="" class="img-fluid">
-                    </figure>
-                    <h4>Product Development</h4>
-                    <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
-                    <a class="arrow text-decoration-none" href="./service.html"><i
-                        class="circle fa-thin fa-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="service-box">
-                  <figure class="service-designicon">
-                    <img src="./assets/images/service-designicon.png" alt="" class="img-fluid">
-                  </figure>
-                  <h4>Ui/Ux Designing</h4>
-                  <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
-                  <a class="arrow text-decoration-none" href="./service.html"><i
-                      class="circle fa-thin fa-arrow-right"></i></a>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="box-top">
-                  <div class="service-box">
-                    <figure class="service-dataicon">
-                      <img src="./assets/images/service-dataicon.png" alt="" class="img-fluid">
-                    </figure>
-                    <h4>Data Analysis</h4>
-                    <p class="text-size-18">Nostrum exercitationem ae ullam corporis suscipit labo riosam aliruiea.</p>
-                    <a class="arrow text-decoration-none" href="./service.html"><i
-                        class="circle fa-thin fa-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-          <div class="service_content position-relative" data-aos="fade-right">
-            <figure class="service-rightcircle mb-0">
-              <img src="./assets/images/service-rightcircle.png" alt="" class="img-fluid">
-            </figure>
-            <h6>Our Services</h6>
-            <h2>BEST IT SOLUTION FOR YOUR BUSINESS</h2>
-            <p>Grursus mal suada faci lisis lorem ipsum dolarorit more ame
-              ion consectetur elit vesti at bulum nec odio aea the dumm ipsumm recreo that dolocons.</p>
-            <ul class="list-unstyled mb-0">
-              <li class="text"><i class="circle fa-duotone fa-check"></i>Quisquam est, rui dolorem ipsum quia dolor
-                corporis.</li>
-              <li class="text"><i class="circle fa-duotone fa-check"></i>Rem aperiam, eaque ipsa quae ab illo inventore
-                veritatis.</li>
-              <li class="text"><i class="circle fa-duotone fa-check"></i>Duis aute irure dolor in reprehenderit in
-                voluptate velio.</li>
-              <li class="text text1"><i class="circle fa-duotone fa-check"></i>Molestiae non recusandae itarue earum
-                rerum maio.</li>
-            </ul>
-            <a class="get_started text-white text-decoration-none" href="./service.html">Get Started
-              <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <figure class="service-rightlayer mb-0">
-      <img src="./assets/images/service-rightlayer.png" alt="" class="img-fluid">
-    </figure>
-  </section>
-  <!-- Offer -->
-  <section class="offer-section">
-    <figure class="offer-toplayer mb-0">
-      <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
-    </figure>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="offer_content" data-aos="fade-up">
-            <h6>what We Offer</h6>
-            <h2>Why You Should Choose Us</h2>
-            <p>Grursus mal suada faci lisis lorem ipsum dolarorit more ame ion consectetur elit vesti at bulum nec odio
-              aea the dumm recreo that dolocons.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row position-relative">
-        <figure class="offer-circleimage mb-0">
-          <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
-        </figure>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article_padding">
-          <div class="offer_boxcontent">
-            <div class="upper_portion">
-              <figure class="mb-0"><img src="./assets/images/offer-image1.jpg" class="article_img" alt=""></figure>
-              <div class="image_content">
-                <figure class="offer-icon">
-                  <img src="./assets/images/offer-icon1.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-            </div>
-            <div class="lower_portion_wrapper">
-              <div class="lower_portion">
-                <h4 class="mb-0">Perfect solutions that business demands</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article_padding">
-          <div class="offer_boxcontent">
-            <div class="upper_portion">
-              <figure class="mb-0"><img src="./assets/images/offer-image2.jpg" class="article_img" alt=""></figure>
-              <div class="image_content">
-                <figure class="offer-icon offer-icon2">
-                  <img src="./assets/images/offer-icon2.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-            </div>
-            <div class="lower_portion_wrapper">
-              <div class="lower_portion">
-                <h4 class="mb-0">We Provide Powerfull Product Strategy</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 article_padding">
-          <div class="offer_boxcontent mb-0">
-            <div class="upper_portion">
-              <figure class="mb-0"><img src="./assets/images/offer-image3.jpg" class="article_img" alt=""></figure>
-              <div class="image_content">
-                <figure class="offer-icon">
-                  <img src="./assets/images/offer-icon3.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-            </div>
-            <div class="lower_portion_wrapper">
-              <div class="lower_portion">
-                <h4 class="mb-0">Help your business grow worldwide</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <figure class="offer-bottomlayer mb-0">
-      <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
-    </figure>
-  </section>
-  <!-- About Us -->
-  <section class="about-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-2">
-          <div class="about_wrapper">
-            <figure class="mb-0 about-image1">
-              <img src="./assets/images/about-image1.jpg" alt="" class="">
-            </figure>
-            <figure class="mb-0 about-image2">
-              <img src="./assets/images/about-image2.jpg" alt="" class="img-fluid">
-            </figure>
-            <div class="image-circle">
-              <div class="years">
-                <span class="text-white value counter">30</span>
-                <sup class="text-white mb-0 plus">+</sup>
-                <span class="text-white text">Years of Experience</span>
-              </div>
-              <figure class="mb-0 about-imagecircle">
-                <img src="./assets/images/about-imagecircle.png" alt="" class="">
-              </figure>
-            </div>
-            <figure class="mb-0 about-dot">
-              <img src="./assets/images/about-dot.png" alt="" class="img-fluid">
-            </figure>
-            <figure class="mb-0 about-leftcircle">
-              <img src="./assets/images/about-leftcircle.png" alt="" class="img-fluid">
-            </figure>
-            <figure class="mb-0 about-layer">
-              <img src="./assets/images/about-layer.png" alt="" class="img-fluid">
-            </figure>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2 order-1">
-          <div class="about_content" data-aos="fade-right">
-            <h6>About us</h6>
-            <h2 class="text-white">We help clients invent their future.</h2>
-            <p class="text1">Grursus mal suada faci lisis lorem ipsum dolarorit more ae ion consectetur elit vesti at
-              bulum nec odio aea the dumo ipsumm recreo that dolocons.</p>
-            <p class="text2">Exercitationem ullam corporis suscipit laboriosam, nisi auali quid exear commodi
-              consequatur.</p>
-            <a class="read_more text-white text-decoration-none" href="./about.html">Read More
-              <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <figure class="mb-0 about-rightimage">
-      <img src="./assets/images/about-rightimage.png" alt="" class="img-fluid">
-    </figure>
-    <figure class="mb-0 about-rightcircle">
-      <img src="./assets/images/about-rightcircle.png" alt="" class="img-fluid">
-    </figure>
-  </section>
-  <!-- Achievements -->
-  <section class="achievement-section">
-    <figure class="service-rightlayer mb-0">
-      <img src="./assets/images/service-leftlayer.png" alt="" class="img-fluid">
-    </figure>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-          <div class="achievement_content" data-aos="fade-right">
-            <figure class="offer-circleimage mb-0">
-              <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
-            </figure>
-            <h6>Achievements</h6>
-            <h2>Some Number of Our Achievements</h2>
-            <p>Grursus mal suada faci lisis lorem ipsum dolarorit more
-              ion consectetur elit vesti at bulum nec odio aea the au ipsumm recreo that dolocons.</p>
-            <a class="get_started text-white text-decoration-none" href="./about.html">Get Started
-              <figure class="mb-0"><img src="./assets/images/button-arrow.png" alt="" class="img-fluid"></figure>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-12 col-sm-12 col-12">
-          <div class="achievement_wrapper">
-            <div class="achievement-box box1">
-              <figure class="icon achievement-icon">
-                <img src="./assets/images/achievement-clienticon.png" alt="" class="img-fluid">
-              </figure>
-              <div class="wrapper">
-                <h3>3,860</h3>
-                <p class="text-size-18 mb-0">Satisfied Clients</p>
-              </div>
-            </div>
-            <div class="achievement-box box2">
-              <figure class="icon1 achievement-icon">
-                <img src="./assets/images/achievement-projecticon.png" alt="" class="img-fluid">
-              </figure>
-              <div class="wrapper">
-                <h3>8,550</h3>
-                <p class="text-size-18 mb-0">Projects Completed</p>
-              </div>
-            </div>
-            <div class="achievement-box box3">
-              <figure class="icon achievement-icon">
-                <img src="./assets/images/achievement-teamicon.png" alt="" class="img-fluid">
-              </figure>
-              <div class="wrapper">
-                <div class="number number1">
-                  <h3 class="value counter">90</h3>
-                  <span class="plus">+</span>
-                </div>
-                <p class="text text-size-18 mb-0">Team Members</p>
-              </div>
-            </div>
-            <div class="achievement-box box4">
-              <figure class="icon1 achievement-icon">
-                <img src="./assets/images/achievement-awardicon.png" alt="" class="img-fluid">
-              </figure>
-              <div class="wrapper">
-                <div class="number">
-                  <h3 class="value counter">180</h3>
-                  <span class="plus">+</span>
-                </div>
-                <p class="text text-size-18 mb-0">Awards Win</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <figure class="service-leftlayer mb-0">
-      <img src="./assets/images/service-rightlayer.png" alt="" class="img-fluid">
-    </figure>
-  </section>
-  <!-- Project -->
-  <section class="project-section">
-    <figure class="offer-toplayer mb-0">
-      <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
-    </figure>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div class="project_content" data-aos="fade-right">
-            <h6>RECENT PROJECTS</h6>
-            <h2>Our Latest Case Studies</h2>
-            <p>Dursus mal suada faci lisis lorem ipsum dolarorit more ame ion consectetur elit vesti at bulum nec
-              odio aea the dumm recreo that dolocons.</p>
-            <figure class="offer-circleimage mb-0">
-              <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <div class="case-box1 case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image1.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Design</span>
-                <h5 class="text-white">Business Analysis</h5>
-                <p class="text-white text-size-18">Rerum hic tenetur sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image2.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Development</span>
-                <h5 class="text-white">Web Development</h5>
-                <p class="text-white text-size-18">Serum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box2 case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image3.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Marketing</span>
-                <h5 class="text-white">Digital Marketing</h5>
-                <p class="text-white text-size-18">Terum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image4.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Design</span>
-                <h5 class="text-white">Tech Solutions</h5>
-                <p class="text-white text-size-18">Uerum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image5.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Security</span>
-                <h5 class="text-white">Cyber Security</h5>
-                <p class="text-white text-size-18">Nerum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box1 case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image1.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Design</span>
-                <h5 class="text-white">Business Analysis</h5>
-                <p class="text-white text-size-18">Rerum hic tenetur sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image2.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Development</span>
-                <h5 class="text-white">Web Development</h5>
-                <p class="text-white text-size-18">Serum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box2 case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image3.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Marketing</span>
-                <h5 class="text-white">Digital Marketing</h5>
-                <p class="text-white text-size-18">Terum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image4.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Design</span>
-                <h5 class="text-white">Tech Solutions</h5>
-                <p class="text-white text-size-18">Uerum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image5.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Security</span>
-                <h5 class="text-white">Cyber Security</h5>
-                <p class="text-white text-size-18">Nerum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box1 case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image1.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Design</span>
-                <h5 class="text-white">Business Analysis</h5>
-                <p class="text-white text-size-18">Rerum hic tenetur sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image2.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Development</span>
-                <h5 class="text-white">Web Development</h5>
-                <p class="text-white text-size-18">Serum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box2 case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image3.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Marketing</span>
-                <h5 class="text-white">Digital Marketing</h5>
-                <p class="text-white text-size-18">Terum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image4.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Design</span>
-                <h5 class="text-white">Tech Solutions</h5>
-                <p class="text-white text-size-18">Uerum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="case-box overlay">
-              <div class="overlay-image">
-                <figure class="image mb-0">
-                  <img src="./assets/images/case-image5.jpg" alt="" class="">
-                </figure>
-              </div>
-              <div class="content">
-                <span class="text-white">Security</span>
-                <h5 class="text-white">Cyber Security</h5>
-                <p class="text-white text-size-18">Nerum hic tenetur a sapiente...</p>
-                <i class="circle fa-thin fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <figure class="offer-bottomlayer mb-0">
-      <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
-    </figure>
-  </section>
-  <!-- Testimonial -->
-  <section class="testimonial-section position-relative">
-    <figure class="service-leftlayer mb-0">
-      <img src="./assets/images/service-leftlayer.png" alt="" class="img-fluid">
-    </figure>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-          <div class="testimonial_wrapper position-relative" data-aos="fade-right">
-            <figure class="service-rightcircle mb-0">
-              <img src="./assets/images/service-rightcircle.png" alt="" class="img-fluid">
-            </figure>
-            <div class="circle_wrapper position-relative">
-              <div class="center-circle">
-                <figure class="testimonial-centerimage mb-0">
-                  <img src="./assets/images/testimonial-centerimage.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <figure class="testimonial-image1 position-absolute mb-0">
-                <img src="./assets/images/testimonial-image1.png" alt="" class="img-fluid">
-              </figure>
-              <figure class="testimonial-image2 position-absolute mb-0">
-                <img src="./assets/images/testimonial-image2.png" alt="" class="img-fluid">
-              </figure>
-              <figure class="testimonial-image3 position-absolute mb-0">
-                <img src="./assets/images/testimonial-image3.png" alt="" class="img-fluid">
-              </figure>
-              <figure class="testimonial-image4 position-absolute mb-0">
-                <img src="./assets/images/testimonial-image4.png" alt="" class="img-fluid">
-              </figure>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-7 col-md-12 col-sm-12 col-12">
-          <div class="testimonial_contentwrapper">
-            <div class="heading">
-              <h6>TESTIMONIALS</h6>
-              <h2>What Our Customers Have To Say</h2>
-            </div>
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="testimonial_content">
-                    <div class="content-box">
-                      <p>Nemo enim ipsam voluptatem quia voluptas sit asperna aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                        sequi nesciuntporro quisuam est, rui dolorem ipsum quia dolor sit amet,
-                        consectetur adieisci velit sed ruia.</p>
-                      <div class="content">
-                        <div class="circle">
-                          <figure class="testimonial-quote mb-0">
-                            <img src="./assets/images/testimonial-quote.png" alt="" class="img-fluid">
-                          </figure>
+                <div class="tp-slider-3-bg" data-background="assets/img/hero/hero-3-1.png"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <div class="tp-slider-3-content z-index-3">
+                        <div class="tp-slider-3-title-box">
+                          <span class="tp-slider-2-subtitle pb-5"><i>//</i>WE ARE BEST ELECTRIC SERVICE COMPANY</span>
+                          <h1 class="tp-slider-3-title mb-40">Electrical is All <br>About Electricians</h1>
                         </div>
-                        <div class="designation-outer">
-                          <span>Kevin James</span>
-                          <p class="text-size-18 mb-0">Happy Client</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="testimonial_content">
-                    <div class="content-box">
-                      <p>Nemo enim ipsam voluptatem quia voluptas sit asperna aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-                        sequi nesciuntporro quisuam est, rui dolorem ipsum quia dolor sit amet,
-                        consectetur adieisci velit sed ruia.</p>
-                      <div class="content">
-                        <div class="circle">
-                          <figure class="testimonial-quote mb-0">
-                            <img src="./assets/images/testimonial-quote.png" alt="" class="img-fluid">
-                          </figure>
-                        </div>
-                        <div class="designation-outer">
-                          <span>Kevin James</span>
-                          <p class="text-size-18 mb-0">Happy Client</p>
+                        <div class="tp-slider-3-button">
+                          <a class="tp-btn hover-2" href="about-us.html"><span>Discover More</span></a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="pagination-outer">
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <i class="fa-solid fa-arrow-left"></i>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <i class="fa-solid fa-arrow-right-long"></i>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <figure class="service-rightlayer mb-0">
-      <img src="./assets/images/service-rightlayer.png" alt="" class="img-fluid">
-    </figure>
-  </section>
-  <!-- Blog -->
-  <section class="blog-section">
-    <figure class="offer-toplayer mb-0">
-      <img src="./assets/images/offer-toplayer.png" alt="" class="img-fluid">
-    </figure>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="blog_content" data-aos="fade-right">
-            <h6>News and articles</h6>
-            <h2>our latest blog posts</h2>
-            <p>Grursus mal suada faci lisis lorem ipsum dolarorit more ame ion consectetur elit vesti at bulum nec
-              odio aea the dumm recreo that dolocons.</p>
-            <figure class="offer-circleimage mb-0">
-              <img src="./assets/images/offer-circleimage.png" alt="" class="img-fluid">
-            </figure>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <div class="blog_boxcontent">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image1.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">18</h3>
-                    <span class="text-white">March</span>
+            <div class="swiper-slide">
+              <div class="tp-slider-3-height p-relative">
+                <div class="tp-slider-3-shape-1 d-none d-xl-block">
+                  <img src="assets/img/hero/shape-3-1.png" alt="">
+                </div>
+                <div class="tp-slider-3-bg" data-background="assets/img/hero/hero-3-2.png"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <div class="tp-slider-3-content z-index-3">
+                        <div class="tp-slider-3-title-box">
+                          <span class="tp-slider-2-subtitle pb-5"><i>//</i>WE ARE BEST ELECTRIC SERVICE COMPANY</span>
+                          <h1 class="tp-slider-3-title mb-40">Electrical is All <br>About Electricians</h1>
+                        </div>
+                        <div class="tp-slider-3-button">
+                          <a class="tp-btn hover-2" href="about-us.html"><span>Discover More</span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>Useful Tips From Experts In Service.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image2.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">26</h3>
-                    <span class="text-white">April</span>
+            <div class="swiper-slide">
+              <div class="tp-slider-3-height p-relative">
+                <div class="tp-slider-3-shape-1 d-none d-xl-block">
+                  <img src="assets/img/hero/shape-3-1.png" alt="">
+                </div>
+                <div class="tp-slider-3-bg" data-background="assets/img/hero/hero-3-3.png"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <div class="tp-slider-3-content z-index-3">
+                        <div class="tp-slider-3-title-box">
+                          <span class="tp-slider-2-subtitle pb-5"><i>//</i>WE ARE BEST ELECTRIC SERVICE COMPANY</span>
+                          <h1 class="tp-slider-3-title mb-40">Electrical is All <br>About Electricians</h1>
+                        </div>
+                        <div class="tp-slider-3-button">
+                          <a class="tp-btn hover-2" href="about-us.html"><span>Discover More</span></a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>How Will Service Be In The Future.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent mb-0">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image3.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">09</h3>
-                    <span class="text-white">June</span>
-                  </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>How Service Can Ease Your Pain.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image1.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">18</h3>
-                    <span class="text-white">March</span>
-                  </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>Useful Tips From Experts In Service.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image2.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">26</h3>
-                    <span class="text-white">April</span>
-                  </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>How Will Service Be In The Future.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent mb-0">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image3.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">09</h3>
-                    <span class="text-white">June</span>
-                  </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>How Service Can Ease Your Pain.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image1.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">18</h3>
-                    <span class="text-white">March</span>
-                  </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>Useful Tips From Experts In Service.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image2.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">26</h3>
-                    <span class="text-white">April</span>
-                  </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>How Will Service Be In The Future.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="blog_boxcontent mb-0">
-              <div class="upper_portion">
-                <figure class="mb-0"><img src="./assets/images/blog-image3.jpg" class="article_img" alt=""></figure>
-                <div class="image_content">
-                  <div class="content">
-                    <h3 class="text-white counter">09</h3>
-                    <span class="text-white">June</span>
-                  </div>
-                </div>
-              </div>
-              <div class="lower_portion_wrapper">
-                <div class="lower_portion">
-                  <h4>How Service Can Ease Your Pain.</h4>
-                  <p class="text-size-18">Nostrum exercitationem aeullam
-                    corporis suscipit labo riosam aliruiea
-                    molestiae non recusandae...</p>
-                  <a class="read_more text-decoration-none" href="./single-post.html">Read More
-                    <figure class="arrow mb-0"><img src="./assets/images/blog-arrow.png" alt="" class="img-fluid">
-                    </figure>
-                  </a>
                 </div>
               </div>
             </div>
@@ -1059,128 +106,904 @@
         </div>
       </div>
     </div>
-    <figure class="offer-bottomlayer mb-0">
-      <img src="./assets/images/offer-bottomlayer.png" alt="" class="img-fluid">
-    </figure>
-  </section>
-  <!-- Footer -->
-  <section class="footer-section">
-    <div class="container">
-      <figure class="footer-leftimage mb-0">
-        <img src="./assets/images/footer-leftimage.png" alt="" class="img-fluid">
-      </figure>
-      <figure class="mb-0 about-leftcircle">
-        <img src="./assets/images/about-rightcircle.png" alt="" class="img-fluid">
-      </figure>
-      <div class="middle-portion">
-        <div class="row">
-          <div class="col-lg-4 col-md-5 col-sm-6 col-12">
-            <div class="first-column">
-              <a href="./index.html">
-                <figure class="footer-logo">
-                  <img src="./assets/images/logo.png" class="img-fluid" alt="">
-                </figure>
-              </a>
-              <p class="text-size-18 footer-text">Grursus mal suada faci lisis lorem ipsum dolaror
-                more ameion consectetur elit vesti at bulum ne odio aea the dumm ipsum dolocons.</p>
-              <div class="lower">
-                <div class="lower-content">
-                  <figure class="icon">
-                    <img src="./assets/images/footer-callicon.png" alt="" class="img-fluid">
-                  </figure>
-                  <div class="content">
-                    <span class="text-white">Call us:</span>
-                    <a class="text-size-18 mb-0 text text-decoration-none" href="tel:+6138376284">+61 3 837 6284</a>
-                  </div>
-                </div>
-                <div class="lower-content">
-                  <figure class="icon">
-                    <img src="./assets/images/footer-emailicon.png" alt="" class="img-fluid">
-                  </figure>
-                  <div class="content">
-                    <span class="text-white">Email us:</span>
-                    <a href="mailto:info@technofy.com"
-                      class="text-size-18 mb-0 text-decoration-none">info@technofy.com</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-3 col-sm-12 col-12 d-md-block d-none">
-            <div class="links list-pd">
-              <h4 class="heading text-white">Quick Links</h4>
-              <ul class="list-unstyled mb-0">
-                <li><a href="./index.html" class="text-size-18 text text-decoration-none">Home</a></li>
-                <li><a href="./about.html" class="text-size-18 text text-decoration-none">About</a></li>
-                <li><a href="./service.html" class="text-size-18 text text-decoration-none">Services</a></li>
-                <li><a href="./single-post.html" class="text-size-18 text text-decoration-none">Blog</a></li>
-                <li><a href="./contact.html" class="text-size-18 text text-decoration-none">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-12 col-12 d-lg-block d-none">
-            <div class="links">
-              <h4 class="heading text-white">Our Services</h4>
-              <ul class="list-unstyled mb-0">
-                <li><a href="./service.html" class="text-size-18 text text-decoration-none">Cloud Service</a></li>
-                <li><a href="index.html" class="text-size-18 text text-decoration-none">Testimonial</a></li>
-                <li><a href="./team.html" class="text-size-18 text text-decoration-none">Team</a></li>
-                <li><a href="./project.html" class="text-size-18 text text-decoration-none">Digital marketing</a></li>
-                <li><a href="./pricing.html" class="text-size-18 text text-decoration-none">Pricing</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-12 d-sm-block d-none">
-            <div class="icons">
-              <h4 class="heading mb-0 text-white">Subscribe to</h4>
-              <h4 class="heading text-white">Our Newsletter Today!</h4>
-              <p class="text-size-18 footer-text text-white">Exerci tation ullamcorper suscipit lobor nisl aliuie naro
-                commodo.</p>
-              <form id="contactpage1" method="POST" action="./contact-form.php">
-                <div class="form-group mb-0">
-                  <input type="text" class="form_style" placeholder="Enter Email Address:" name="email">
-                </div>
-                <button type="submit" class="subscribe_now text-white text-decoration-none">Subscribe Now
-                  <i class="circle fa-thin fa-arrow-right"></i>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
+    <!-- hero area end -->
+
+    <!-- feature area start -->
+    <div id="feature-box" class="tp-feature-2-area  p-relative grey-bg">
+      <div class="tp-feature-2-bg pt-120 pb-90" data-background="assets/img/feature/bg-1.png">
         <div class="container">
-          <div class="row copyright-border">
-            <div class="col-lg-6 col-md-6 col-sm-12 co-12 column">
-              <p class="text-size-16">Copyright ©2023 Technofy.com All Rights Reserved</p>
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+              <div class="tp-feature-2-item">
+                <div class="tp-feature-2-icon">
+                  <span><i class="flaticon-lowest-price"></i></span>
+                </div>
+                <div class="tp-feature-2-text">
+                  <h5 class="tp-feature-2-title">Affradable price</h5>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 co-12 d-md-block d-none">
-              <div class="social-icons position-relative">
-                <ul class="list-unstyled position-absolute">
-                  <li><a href="" class="text-decoration-none"><i
-                        class="fa-brands fa-facebook-f social-networks"></i></a></li>
-                  <li><a href="" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a>
-                  </li>
-                  <li><a href="" class="text-decoration-none"><i
-                        class="fa-brands fa-google-plus-g social-networks"></i></a></li>
-                  <li><a href="" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a>
-                  </li>
-                </ul>
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+              <div class="tp-feature-2-item">
+                <div class="tp-feature-2-icon">
+                  <span><i class="flaticon-guaranteed"></i></span>
+                </div>
+                <div class="tp-feature-2-text">
+                  <h5 class="tp-feature-2-title">100% Gurantee</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+              <div class="tp-feature-2-item active">
+                <div class="tp-feature-2-icon">
+                  <span><i class="flaticon-repair"></i></span>
+                </div>
+                <div class="tp-feature-2-text">
+                  <h5 class="tp-feature-2-title">24/7 Availabilty</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
+              <div class="tp-feature-2-item">
+                <div class="tp-feature-2-icon">
+                  <span><i class="flaticon-award"></i></span>
+                </div>
+                <div class="tp-feature-2-text">
+                  <h5 class="tp-feature-2-title">Award winning</h5>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <figure class="footer-dotimage mb-0">
-        <img src="./assets/images/footer-dotimage.png" alt="" class="img-fluid">
-      </figure>
-      <figure class="footer-leftlayer mb-0">
-        <img src="./assets/images/footer-leftlayer.png" alt="" class="img-fluid">
-      </figure>
     </div>
-  </section>
-  <!-- Latest compiled JavaScript -->
-  <?php /* include "footer.php" */?>
+    <!-- feature area end -->
+
+    <!-- about area start -->
+    <div class="tp-about-area p-relative pt-120 pb-120">
+      <div class="tp-about-shape-5 d-none d-xl-block">
+        <img src="assets/img/about/shape-3-1.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
+            <div class="tp-about-right-box text-end tp-about-right-wrap p-relative">
+              <div class="tp-about-2-thumb-text text-start d-none d-lg-block"
+                data-background="assets/img/about/bg-1.jpg">
+                <h6><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="35">0</i>+</h6>
+                <span>Years of experience</span>
+              </div>
+              <div class="tp-about-main-thumb">
+                <img src="assets/img/about/thumb-3-2.jpg" alt="">
+              </div>
+              <div class="tp-about-thumb-sm">
+                <img src="assets/img/about/thumb-3-1.jpg" alt="">
+              </div>
+              <div class="tp-about-shape-2  d-none d-lg-block">
+                <img src="assets/img/about/shape-1-3.png" alt="">
+              </div>
+              <div class="tp-about-shape-6 d-none d-xl-block">
+                <img src="assets/img/about/shape-3-2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
+            <div class="tp-about-left-box tp-about-ml">
+              <div class="tp-about-section-box mb-15">
+                <span class="tp-section-subtitle"><span>//</span> WE ARE BIDDUT ELECTRIC COMPANY</span>
+                <h4 class="tp-section-title">Produce your own clean save the environment</h4>
+              </div>
+              <div class="tp-about-text">
+                <p class="pb-15">Nullam eu nibh vitae est tempor molestie id sed ex. Quisque dignissim maximus ipsum,
+                  sed rutrum metus tincidunt et. Sed eget tincidunt
+                  ipsum. Eget tincidunt</p>
+                <div class="tp-about-icon-wrap p-relative d-flex justify-content-between mb-40">
+                  <div class="tp-about-icon-shape d-none d-xl-block">
+                    <img src="assets/img/about/shape-1-6.png" alt="">
+                  </div>
+                  <div class="tp-about-icon-box d-flex align-items-center mb-20">
+                    <div class="tp-about-icon icon-color">
+                      <span><i class="flaticon-electrician"></i></span>
+                    </div>
+                    <div class="tp-about-icon-text">
+                      <h5>Expert <br> electrician</h5>
+                    </div>
+                  </div>
+                  <div class="tp-about-icon-box d-flex align-items-center mb-20">
+                    <div class="tp-about-icon">
+                      <span><i class="flaticon-plug"></i></span>
+                    </div>
+                    <div class="tp-about-icon-text">
+                      <h5>Safety <br>assurance</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="tp-about-list mb-45">
+                  <ul>
+                    <li><i class="fa-light fa-badge-check"></i>At vero eos et accusamus et iusto odio.</li>
+                    <li><i class="fa-light fa-badge-check"></i>Sed ut perspiciatis unde omnis iste natus sit. </li>
+                    <li><i class="fa-light fa-badge-check"></i>Established fact that a reader will be distracted. </li>
+                  </ul>
+                </div>
+                <div class="tp-about-button-box d-flex align-items-center">
+                  <a class="tp-btn-black" href="about-us.html"><span>KNOW MORE</span></a>
+                  <img src="assets/img/about/shape-1-1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about area end -->
+
+    <!-- service area start -->
+    <div class="tp-service-3-area grey-bg p-relative fix pt-120 pb-90">
+      <div class="tp-service-3-shape-1 d-none d-xl-block">
+        <img src="assets/img/service/shape-3-1.png" alt="">
+      </div>
+      <div class="tp-service-3-shape-2 d-none d-xl-block">
+        <img src="assets/img/service/shape-3-3.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-service-3-section-title text-center mb-50">
+              <span class="tp-section-subtitle"><span>//</span>OUR BIDDUT SERVICES</span>
+              <h4 class="tp-section-title">Outstanding residential & <br>commercial services</h4>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+            <div class="tp-service-3-item fix" data-background="assets/img/service/sv-3-1.jpg">
+              <div class="tp-service-3-shape-3">
+                <img src="assets/img/service/shape-3-2.png" alt="">
+              </div>
+              <div class="tp-service-3-content z-index">
+                <div class="tp-service-3-icon pb-40">
+                  <span><i class="flaticon-creative"></i></span>
+                </div>
+                <div class="tp-service-3-text pb-30">
+                  <h4 class="tp-service-3-title pb-15"><a href="service-details.html">Indoor lighting</a></h4>
+                  <p>This box could corrode over time losse connection, dust</p>
+                </div>
+                <a href="service-details.html">
+                  <div class="tp-service-3-link d-flex justify-content-between">
+                    <span>Read More</span>
+                    <i class="flaticon-right-arrow"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+            <div class="tp-service-3-item active fix" data-background="assets/img/service/sv-3-1.jpg">
+              <div class="tp-service-3-shape-3">
+                <img src="assets/img/service/shape-3-2.png" alt="">
+              </div>
+              <div class="tp-service-3-content z-index">
+                <div class="tp-service-3-icon pb-40">
+                  <span><i class="flaticon-air-conditioner"></i></span>
+                </div>
+                <div class="tp-service-3-text pb-30">
+                  <h4 class="tp-service-3-title pb-15"><a href="service-details.html">Air Conditioning</a></h4>
+                  <p>This box could corrode over time losse connection, dust</p>
+                </div>
+                <a href="service-details.html">
+                  <div class="tp-service-3-link d-flex justify-content-between">
+                    <span>Read More</span>
+                    <i class="flaticon-right-arrow"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+            <div class="tp-service-3-item fix" data-background="assets/img/service/sv-3-1.jpg">
+              <div class="tp-service-3-shape-3">
+                <img src="assets/img/service/shape-3-2.png" alt="">
+              </div>
+              <div class="tp-service-3-content z-index">
+                <div class="tp-service-3-icon pb-40">
+                  <span><i class="flaticon-surveillance"></i></span>
+                </div>
+                <div class="tp-service-3-text pb-30">
+                  <h4 class="tp-service-3-title pb-15"><a href="service-details.html">Indoor lighting</a></h4>
+                  <p>This box could corrode over time losse connection, dust</p>
+                </div>
+                <a href="service-details.html">
+                  <div class="tp-service-3-link d-flex justify-content-between">
+                    <span>Read More</span>
+                    <i class="flaticon-right-arrow"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- service area end -->
+
+    <!-- choose area start -->
+    <div class="tp-choose-3-area p-relative black-bg-2 pt-120 pb-70">
+      <div class="tp-choose-3-bg" data-background="assets/img/choose/bg-3-1.jpg">
+        <div class="tp-choose-3-text d-none d-lg-block">
+          <span>For emmergency</span>
+          <a href="tel:+99934564234297">+999 345 6423 4297</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 offset-lg-6 offset-xl-6  wow tpfadeRight" data-wow-duration=".9s"
+            data-wow-delay=".7s">
+            <div class="tp-choose-content tp-choose-item-wrap z-index">
+              <div class="tp-choose-section-box mb-30">
+                <span class="tp-section-subtitle text-color"><span>//</span>WHY CHOOSE OUR BIDDUT</span>
+                <h4 class="tp-section-title text-white">Great reason for the people <br>choose our biddut</h4>
+              </div>
+              <div class="tp-choose-text mb-50">
+                <p>For more than a decade, we’ve been building the fueling network of the future. We have delivered more
+                  places to charge than anyone else, and people <br>count on us for charging systemtic</p>
+              </div>
+              <div class="tp-choose-wrap">
+                <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                    <div class="tp-choose-item d-flex align-items-center">
+                      <span><i class="flaticon-battery"></i></span>
+                      <h5 class="tp-choose-item-title">Custom support</h5>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                    <div class="tp-choose-item d-flex align-items-center">
+                      <span><i class="flaticon-electrician-1"></i></span>
+                      <h5 class="tp-choose-item-title">Insured expert</h5>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                    <div class="tp-choose-item d-flex align-items-center">
+                      <span><i class="flaticon-price-tag"></i></span>
+                      <h5 class="tp-choose-item-title">Flat rate</h5>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+                    <div class="tp-choose-item d-flex align-items-center">
+                      <span><i class="flaticon-service"></i></span>
+                      <h5 class="tp-choose-item-title">24/7 Available</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- choose area end -->
+
+    <!-- step area start -->
+    <div class="tp-step-area pt-120 pb-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-step-section-box text-center mb-50">
+              <span class="tp-section-subtitle"><span>//</span>OUR WORKING STEPS</span>
+              <h4 class="tp-section-title">We provide professional <br>electric services</h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 mb-60  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+            <div class="tp-step-item-box">
+              <div class="tp-step-item p-relative text-center">
+                <div class="tp-step-icon">
+                  <span><i class="flaticon-problem-solving"></i></span>
+                </div>
+                <div class="tp-step-text">
+                  <h5 class="tp-step-title"><a href="service-details.html">Identify problem</a></h5>
+                  <p>This box could corrode over losse connection, dust</p>
+                </div>
+                <div class="tp-step-number">
+                  <span>Step 01</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 mb-60  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+            <div class="tp-step-item-box active tp-step-item-box-pl">
+              <div class="tp-step-item p-relative text-center">
+                <div class="tp-step-icon">
+                  <span><i class="flaticon-plug-1"></i></span>
+                </div>
+                <div class="tp-step-text">
+                  <h5 class="tp-step-title"><a href="service-details.html">Provide time & cost</a></h5>
+                  <p>This box could corrode over losse connection, dust</p>
+                </div>
+                <div class="tp-step-number">
+                  <span>Step 02</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 mb-60  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+            <div class="tp-step-item-box">
+              <div class="tp-step-item p-relative text-center">
+                <div class="tp-step-icon">
+                  <span><i class="flaticon-service"></i></span>
+                </div>
+                <div class="tp-step-text">
+                  <h5 class="tp-step-title"><a href="service-details.html">Implement service</a></h5>
+                  <p>This box could corrode over losse connection, dust</p>
+                </div>
+                <div class="tp-step-number">
+                  <span>Step 03</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 mb-60  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
+            <div class="tp-step-item-box tp-step-item-box-pl">
+              <div class="tp-step-item p-relative text-center">
+                <div class="tp-step-icon">
+                  <span><i class="flaticon-creative"></i></span>
+                </div>
+                <div class="tp-step-text">
+                  <h5 class="tp-step-title"><a href="service-details.html">Identify problem</a></h5>
+                  <p>This box could corrode over losse connection, dust</p>
+                </div>
+                <div class="tp-step-number">
+                  <span>Step 04</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- step area end -->
+
+    <!-- video area start -->
+    <div class="tp-video-3-area tp-video-3-bg jarallax p-relative fix pt-140"
+      data-background="assets/img/video/bg-3-1.jpg">
+      <div class="tp-video-3-play-box d-none d-lg-block">
+        <a class="popup-video" href="https://www.youtube.com/watch?v=PO_fBTkoznc"><i class="fas fa-play"></i></a>
+      </div>
+      <div class="tp-video-3-shape-1 d-none d-xxl-block">
+        <img src="assets/img/video/text.png" alt="">
+      </div>
+      <div class="tp-video-3-shape-2 d-none d-xxl-block">
+        <img src="assets/img/video/shape-3-1.png" alt="">
+      </div>
+      <div class="tp-video-3-shape-3 d-none d-xl-block">
+        <img src="assets/img/video/shape-3-2.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6">
+            <div class="tp-video-3-content z-index">
+              <div class="tp-video-3-section-box mb-25">
+                <span class="tp-section-subtitle text-white"><span>//</span>CONTACT WITH BIDDUT</span>
+                <h4 class="tp-section-title text-white">Your best option electrical <br>contractors 24/7</h4>
+              </div>
+              <p class="text-white pb-40">For more than a decade, we’ve been building the fueling network of the future.
+                We have delivered more places to charge than anyone else, and people <br>count on us for charging
+                systemtic</p>
+              <div class="tp-video-3-btn-box">
+                <a class="tp-btn hover-2 mr-15" href="about-us.html"><span>Discover More</span></a>
+                <a class="tp-btn-border" href="contact.html"><span>FREE ESTIMATE</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- video area end -->
+
+    <!-- faq area start -->
+    <div class="tp-faq-area p-relative pt-120 pb-120">
+      <div class="tp-faq-thumb" data-background="assets/img/cta/faq-bg.jpg"></div>
+      <div class="tp-faq-text d-none d-xxl-block">
+        <h5>OUR FAQ’S</h5>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xxl-7 col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".s">
+            <div class="tp-custom-accordion">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-items tp-faq-active">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-buttons " type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Can I get your service wheAn I need
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
+                      Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
+                      at least 60 days from
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-items">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Can’t I just call a handyman to fix minor electrical problems?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
+                      Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
+                      at least 60 days from
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-items">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Do I need to be present when your team is working?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
+                      Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
+                      at least 60 days from
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-items">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      How do you handle emergency electrical issues?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
+                      Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
+                      at least 60 days from
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-items mb-0">
+                  <h2 class="accordion-header" id="headingFour4">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
+                      Are You Licensed and Insured?
+                    </button>
+                  </h2>
+                  <div id="collapseFour4" class="accordion-collapse collapse" aria-labelledby="headingFour4"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
+                      Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
+                      at least 60 days from
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- faq area end -->
+
+    <!-- testimonial area start -->
+    <div class="tp-testimonial-3-area tp-testimonial-3-space p-relative fix grey-bg">
+      <div class="tp-testimonial-3-shape-2 d-none d-xl-block">
+        <img src="assets/img/testimonial/shape-3-2.png" alt="">
+      </div>
+      <div class="tp-testimonial-3-shape-3">
+        <img src="assets/img/testimonial/shape-3-3.png" alt="">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-testimonial-3-section-box z-index text-center mb-50">
+              <span class="tp-section-subtitle"><span>//</span>OUR CLIENTS REVIEW</span>
+              <h4 class="tp-section-title">What they’re talking about <br>our biddut services</h4>
+            </div>
+          </div>
+          <div class="col-xl-12">
+            <div class="tp-testimonial-3-wrapper">
+              <div class="swiper-container tp-testimonial-3-active">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="tp-testimonial-3-item-wrap p-relative">
+                      <div class="tp-testimonial-3-item p-relative text-center">
+                        <div class="tp-testimonial-3-shape-1">
+                          <img src="assets/img/testimonial/shape-3-1.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-avata">
+                          <img src="assets/img/testimonial/author-1-3.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-content z-index-5">
+                          <div class="tp-testimonial-3-author-info pb-20">
+                            <h5 class="tp-testimonial-3-title">Jessica Robinson</h5>
+                            <span>Electrician</span>
+                          </div>
+                          <div class="tp-testimonial-3-text pb-5">
+                            <p>Our experienced electricians are highly trained aspects electrical and many security to
+                              emergency </p>
+                          </div>
+                          <div class="tp-testimonial-3-star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="tp-testimonial-3-item-wrap p-relative">
+                      <div class="tp-testimonial-3-item p-relative text-center">
+                        <div class="tp-testimonial-3-shape-1">
+                          <img src="assets/img/testimonial/shape-3-1.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-avata">
+                          <img src="assets/img/testimonial/author-1-4.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-content z-index-5">
+                          <div class="tp-testimonial-3-author-info pb-20">
+                            <h5 class="tp-testimonial-3-title">Alberta Infantio</h5>
+                            <span>Engineer</span>
+                          </div>
+                          <div class="tp-testimonial-3-text pb-5">
+                            <p>Our experienced electricians are highly trained aspects electrical and many security to
+                              emergency </p>
+                          </div>
+                          <div class="tp-testimonial-3-star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="tp-testimonial-3-item-wrap p-relative">
+                      <div class="tp-testimonial-3-item p-relative text-center">
+                        <div class="tp-testimonial-3-shape-1">
+                          <img src="assets/img/testimonial/shape-3-1.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-avata">
+                          <img src="assets/img/testimonial/author-1-5.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-content z-index-5">
+                          <div class="tp-testimonial-3-author-info pb-20">
+                            <h5 class="tp-testimonial-3-title">Robinson Cruze</h5>
+                            <span>Electrician</span>
+                          </div>
+                          <div class="tp-testimonial-3-text pb-5">
+                            <p>Our experienced electricians are highly trained aspects electrical and many security to
+                              emergency </p>
+                          </div>
+                          <div class="tp-testimonial-3-star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="tp-testimonial-3-item-wrap p-relative">
+                      <div class="tp-testimonial-3-item p-relative text-center">
+                        <div class="tp-testimonial-3-shape-1">
+                          <img src="assets/img/testimonial/shape-3-1.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-avata">
+                          <img src="assets/img/testimonial/author-1-1.png" alt="">
+                        </div>
+                        <div class="tp-testimonial-3-content z-index-5">
+                          <div class="tp-testimonial-3-author-info pb-20">
+                            <h5 class="tp-testimonial-3-title">Alberta Infantio</h5>
+                            <span>Engineer</span>
+                          </div>
+                          <div class="tp-testimonial-3-text pb-5">
+                            <p>Our experienced electricians are highly trained aspects electrical and many security to
+                              emergency </p>
+                          </div>
+                          <div class="tp-testimonial-3-star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- testimonial area end -->
+
+    <!-- brand area start -->
+    <div class="tp-brand-area">
+      <div class="container custom-container-4">
+        <div class="tp-brand-wrap theme-bg">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="tp-brand-wrapper">
+                <div class="swiper-container tp-brand-active">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tp-brand-item text-center">
+                        <img src="assets/img/brand/brand-1.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tp-brand-item text-center">
+                        <img src="assets/img/brand/brand-2.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tp-brand-item text-center">
+                        <img src="assets/img/brand/brand-3.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tp-brand-item text-center">
+                        <img src="assets/img/brand/brand-4.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tp-brand-item text-center">
+                        <img src="assets/img/brand/brand-5.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tp-brand-item text-center">
+                        <img src="assets/img/brand/brand-3.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- brand area end -->
+
+    <!-- team area start -->
+    <div class="tp-team-3-area fix pt-120 pb-120">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-team-3-section-box z-index text-center mb-50">
+              <span class="tp-section-subtitle"><span>//</span>OUR EXPERT TEAM</span>
+              <h4 class="tp-section-title">Meet our experienced <br>team people</h4>
+            </div>
+            <div class="tp-team-3-wrapper">
+              <div class="swiper-container tp-team-3-active">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="tp-team-3-item text-center p-relative">
+                      <div class="tp-team-3-thumb p-relative">
+                        <img src="assets/img/team/team-3-1.png" alt="">
+                        <div class="tp-team-3-social-box">
+                          <button><i class="fas fa-share-alt"></i></button>
+                          <div class="tp-team-3-social">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                          </div>
+                        </div>
+                        <div class="tp-team-3-thumb-shape-1">
+                          <img src="assets/img/team/shape-3-1.png" alt="">
+                        </div>
+                        <div class="tp-team-3-thumb-shape-2">
+                          <img src="assets/img/team/shape-3-2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="tp-team-3-text">
+                        <h5 class="tp-team-3-title"><a href="team-details.html">Alberta Infantino</a></h5>
+                        <span>Architect</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="tp-team-3-item text-center">
+                      <div class="tp-team-3-thumb p-relative">
+                        <img src="assets/img/team/team-3-2.png" alt="">
+                        <div class="tp-team-3-social-box">
+                          <button><i class="fas fa-share-alt"></i></button>
+                          <div class="tp-team-3-social">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                          </div>
+                        </div>
+                        <div class="tp-team-3-thumb-shape-1">
+                          <img src="assets/img/team/shape-3-1.png" alt="">
+                        </div>
+                        <div class="tp-team-3-thumb-shape-2">
+                          <img src="assets/img/team/shape-3-2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="tp-team-3-text">
+                        <h5 class="tp-team-3-title"><a href="team-details.html">Eric Johnson</a></h5>
+                        <span>Architect</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="tp-team-3-item text-center">
+                      <div class="tp-team-3-thumb p-relative">
+                        <img src="assets/img/team/team-3-3.png" alt="">
+                        <div class="tp-team-3-social-box">
+                          <button><i class="fas fa-share-alt"></i></button>
+                          <div class="tp-team-3-social">
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                          </div>
+                        </div>
+                        <div class="tp-team-3-thumb-shape-1">
+                          <img src="assets/img/team/shape-3-1.png" alt="">
+                        </div>
+                        <div class="tp-team-3-thumb-shape-2">
+                          <img src="assets/img/team/shape-3-2.png" alt="">
+                        </div>
+                      </div>
+                      <div class="tp-team-3-text">
+                        <h5 class="tp-team-3-title"><a href="team-details.html">Israel Brady</a></h5>
+                        <span>Architect</span>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- team area end -->
+
+    <!-- cta area start -->
+    <div class="tp-cta-3-area fix">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
+          <div class="col-xl-6 col-lg-6">
+            <div class="tp-cta-3-left-wrap theme-bg z-index-3 p-relative">
+              <div class="tp-cta-3-left-shape d-none d-xl-block">
+                <img src="assets/img/cta/shape-3-1.png" alt="">
+              </div>
+              <div class="tp-cta-3-left-box">
+                <div class="row align-items-center">
+                  <div class="col-xl-6 col-lg-6 col-md-5 d-none d-md-block">
+                    <div class="tp-cta-3-left-thumb">
+                      <img src="assets/img/cta/cta-3-1.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-7">
+                    <div class="tp-cta-3-left-text text-center text-md-start">
+                      <h5 class="tp-cta-3-left-title">We provide professional <br> electric services for <br> our
+                        customer</h5>
+                      <a class="tp-btn-black hover-2" href="about-us.html"><span>EXPLORE MORE</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6">
+            <div class="tp-cta-3-right-wrap black-bg">
+              <div class="tp-cta-3-right-box jarallax z-index" data-background="assets/img/cta/cta-3-2.jpg">
+                <h4 class="tp-section-title text-white text-center z-index-3">Outstanding residential & <br> commercial
+                  services <br> for your family</h4>
+                <div class="tp-cta-3-right-shape">
+                  <img src="assets/img/cta/shape-3-2.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cta area end -->
+
+    <!-- blog area start -->
+    <div class="tp-blog-3-area pt-120 pb-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-blog-3-section-box text-center mb-50">
+              <span class="tp-section-subtitle"><span>//</span>OUR ARTICLE AND BLOG</span>
+              <h4 class="tp-section-title">Latest news & articles <br>from the blog</h4>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+            <div class="tp-blog-3-item">
+              <div class="tp-blog-3-thumb p-relative">
+                <img src="assets/img/blog/blog-3-1.jpg" alt="">
+                <div class="tp-blog-3-icon">
+                  <a href="blog-details.html"><i class="flaticon-right-arrow"></i></a>
+                </div>
+              </div>
+              <div class="tp-blog-3-content text-center z-index">
+                <div class="tp-blog-meta pb-10">
+                  <span><i class="fa-light fa-circle-user"></i>By thempure</span>
+                  <span><i class="flaticon-price-tag"></i>Repair</span>
+                </div>
+                <h4 class="tp-blog-3-title"><a href="blog-details.html">Although the kitchen has been referred to as the
+                    heart of the home</a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+            <div class="tp-blog-3-item">
+              <div class="tp-blog-3-thumb p-relative">
+                <img src="assets/img/blog/blog-3-2.jpg" alt="">
+                <div class="tp-blog-3-icon">
+                  <a href="blog-details.html"><i class="flaticon-right-arrow"></i></a>
+                </div>
+              </div>
+              <div class="tp-blog-3-content text-center z-index">
+                <div class="tp-blog-meta pb-10">
+                  <span><i class="fa-light fa-circle-user"></i>By thempure</span>
+                  <span><i class="flaticon-price-tag"></i>Repair</span>
+                </div>
+                <h4 class="tp-blog-3-title"><a href="blog-details.html">How to Install a ceiling fan where no fixture
+                    exists in your room </a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30  wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+            <div class="tp-blog-3-item">
+              <div class="tp-blog-3-thumb p-relative">
+                <img src="assets/img/blog/blog-3-3.jpg" alt="">
+                <div class="tp-blog-3-icon">
+                  <a href="blog-details.html"><i class="flaticon-right-arrow"></i></a>
+                </div>
+              </div>
+              <div class="tp-blog-3-content text-center z-index">
+                <div class="tp-blog-meta pb-10">
+                  <span><i class="fa-light fa-circle-user"></i>By thempure</span>
+                  <span><i class="flaticon-price-tag"></i>Repair</span>
+                </div>
+                <h4 class="tp-blog-3-title"><a href="blog-details.html">If you notice an electrical outlet smoking, it’s
+                    a serious issue</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- blog area end -->
+
+
+  </main>
+
+  <?php include "footer.php" ?>
+
+
   <?php include "scripts.php" ?>
 </body>
 

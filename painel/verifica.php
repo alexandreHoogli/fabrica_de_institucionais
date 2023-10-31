@@ -13,28 +13,19 @@ $metastags = MetasTags::getInstance(Conexao::getInstance());
 include "../Class/menus.class.php";
 $menus = Menus::getInstance(Conexao::getInstance());
 
-include "../Class/categoriasvideos.class.php";
-$categoriasvideos = CategoriasVideos::getInstance(Conexao::getInstance());
 
 
 include "../Class/blogs.class.php";
 $blogs = Blogs::getInstance(Conexao::getInstance());
 
-
-include "../Class/newsletters.class.php";
-$newsletters = Newsletters::getInstance(Conexao::getInstance());
-
-
-include "../Class/convenios.class.php";
-$convenios = Convenios::getInstance(Conexao::getInstance());
-
-
-include "../Class/procedimentos.class.php";
-$procedimentos = Procedimentos::getInstance(Conexao::getInstance());
-
-
 $verificaRestrito->restritoAdmin();
 $dadosUsuarioLogado = $verificaRestrito->rsDados($_SESSION['dadosLogado']->id);
+
+
+include "../Class/home.class.php";
+$home = Home::getInstance(Conexao::getInstance());
+include "../Class/price.class.php";
+$price = Price::getInstance(Conexao::getInstance());
 
 function get_url()
 {

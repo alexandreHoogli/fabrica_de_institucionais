@@ -1,0 +1,107 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?823420e19e6ba78718cf4b318c2ae294") format("truetype"), url("./flaticon.woff?823420e19e6ba78718cf4b318c2ae294") format("woff"), url("./flaticon.woff2?823420e19e6ba78718cf4b318c2ae294") format("woff2"), url("./flaticon.eot?823420e19e6ba78718cf4b318c2ae294#iefix") format("embedded-opentype"), url("./flaticon.svg?823420e19e6ba78718cf4b318c2ae294#flaticon") format("svg");
+}
+i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-ship:before {
+  content: "";
+}
+
+.flaticon-disc-brake:before {
+  content: "";
+}
+
+.flaticon-steering-wheel:before {
+  content: "";
+}
+
+.flaticon-water-pump:before {
+  content: "";
+}
+
+.flaticon-house:before {
+  content: "";
+}
+
+.flaticon-24-hours:before {
+  content: "";
+}
+
+.flaticon-technician:before {
+  content: "";
+}
+
+.flaticon-customer-service:before {
+  content: "";
+}
+
+.flaticon-check-mark:before {
+  content: "";
+}
+
+.flaticon-car-engine:before {
+  content: "";
+}
+
+.flaticon-air-conditioner:before {
+  content: "";
+}
+
+.flaticon-oil:before {
+  content: "";
+}
+
+.flaticon-steering-wheel-1:before {
+  content: "";
+}
+
+.flaticon-wrench:before {
+  content: "";
+}
+
+.flaticon-technician-1:before {
+  content: "";
+}
+
+.flaticon-protection:before {
+  content: "";
+}
+
+.flaticon-domestic:before {
+  content: "";
+}
+
+.flaticon-customer-support:before {
+  content: "";
+}
+
+.flaticon-deadline:before {
+  content: "";
+}
+
+.flaticon-repair:before {
+  content: "";
+}
+
+.flaticon-maintenance:before {
+  content: "";
+}
+
+.flaticon-problem-solving:before {
+  content: "";
+}
+
+.flaticon-computer:before {
+  content: "";
+}

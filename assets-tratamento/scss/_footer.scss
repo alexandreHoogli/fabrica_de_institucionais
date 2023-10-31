@@ -1,0 +1,228 @@
+
+/*---==================
+    15. Footer css 
+=================----*/
+
+.footer-default{
+    color: #BFBFBF;
+}
+.footer-widget-wrapper{
+    & h4.widget-title{
+        margin-bottom: 30px;
+        color: #fff;
+    }
+    & .footer-nav-widget{
+        margin-left: 70px;
+        @media #{$lm}{
+            margin-left: 0;
+        }
+    }
+}
+.footer-about-widget{
+    & p{
+        margin-bottom: 40px;
+    }
+    & .emergency-box{
+        & h4{
+            color: $primary;
+            margin-bottom: 10px;
+        }
+        & h3{
+            color: #fff;
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+.footer-nav-widget-two{
+    .footer-content{
+        & .widget-nav{
+            display: flex;
+            flex-wrap: wrap;
+            & ul{
+                width: 50%;
+            }
+        }
+    }
+    
+}
+.footer-content{
+    & .widget-nav{
+        & ul{
+            & li{
+                margin-bottom: 10px;
+                & a{
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    & .contact-info-box{
+        margin-bottom: 15px;
+    }
+}
+
+
+.contact-info-box{
+    & .info{
+        & h6.title{
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        & p{
+            & a{
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.footer-project-widget{
+    & .project-row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -5px;
+        margin-right: -5px;
+        & li{
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 10px;
+            flex: 0 0 auto;
+            width: 30.1%;
+            position: relative;
+            overflow: hidden;
+            & img{
+                width: 100%;
+            }
+            &:hover{
+                & .overlay{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            & .overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+                opacity: 0;
+                background: linear-gradient(0deg, rgba(255, 94, 20, 0.8), rgba(255, 94, 20, 0.8));
+                @extend %flex-center;
+                @include transition(.3s);
+                & i{
+                    font-size: 20px;
+                    color: #fff
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.footer-newsletter{
+    background-color: #262626;
+    padding: 20px 50px 0px;
+    @media #{$lp}{
+        padding: 20px 30px 0px;         
+    }
+    @media #{$lg}{
+        padding: 20px 30px 0px;         
+    }
+    @media #{$xs}{
+        padding: 20px 30px 0px;
+    }
+    @media #{$xss}{
+        padding: 20px 15px 0px;
+    }
+    & .newsletter-from{
+        & .form_group{
+            & i{
+                position: absolute;
+                right: 30px;
+                top: 25px;
+                font-size: 15px;
+                color: $text-color;
+            }
+        }
+        & .form_control{
+            margin-bottom: 20px;
+        }
+        & .main-btn{
+            padding: 16px 25px;
+            border-radius: 0;
+            margin-bottom: 20px;
+            @media #{$lp}{
+                padding: 16px 15px;         
+            }
+        }
+    }
+}
+
+
+.footer-copyright{
+    & .copyright-text{
+        @media #{$xm}{
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        & p{
+            & span{
+                color: #fff;
+            }
+        }
+    }
+    & .social-box{
+        @media #{$xm}{
+            text-align: center;
+            margin-top: 25px;
+        }
+        & ul.social-link{
+            & li{
+                &:not(:first-child){
+                    margin-left: 5px;
+                    @media #{$xm}{
+                        margin-left: 2.5px;
+                        margin-right: 2.5px;
+                    }
+                }
+                & a{
+                    width: 45px;
+                    height: 45px;
+                    @extend %flex-center;
+                    background-color: #303030;
+                    color: #fff;
+                    &:hover{
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+.copyright-one{
+    padding: 40px 0;
+}
+.copyright-two{
+    padding: 23px 0;
+    & .social-box{
+        & ul.social-link{
+            & li{
+                & a{
+                    border-radius: 50%;
+                    &:hover{
+                        background-color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}

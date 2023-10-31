@@ -28,6 +28,9 @@ include "../Class/price.class.php";
 $price = Price::getInstance(Conexao::getInstance());
 
 
+include "../Class/blog.class.php";
+$blog = Blog::getInstance(Conexao::getInstance());
+
 function get_url()
 {
   return $_SERVER['SCRIPT_NAME'] . $_SERVER['REQUEST_URI'];

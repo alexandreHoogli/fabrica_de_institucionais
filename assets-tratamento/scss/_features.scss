@@ -1,0 +1,299 @@
+
+/*---==================
+    06. Features css 
+=================----*/
+
+
+.features-item{
+    & .icon{
+        width: 70px;
+        height: 70px;
+        @extend %flex-center;
+        background: #F4F4F4;
+        border-radius: 30px 30px 30px 0px;
+        margin-bottom: 20px;
+        @include transition(.3s);
+        & i{
+            font-size: 45px;
+        }
+    }
+    & .text{
+        & h4.title{
+            margin-bottom: 18px;
+        }
+    }
+    &:hover{
+        & .icon{
+            background-color: $primary;
+            & i{
+                color: #fff;
+            }
+        }
+    }
+}
+
+.features-left-box{
+    display: flex;
+    align-items: flex-start;
+    & .icon{
+        flex: 0 0 70px;
+        height: 70px;
+        @extend %flex-center;
+        background: $light-gray;
+        border-radius: 30px 30px 30px 0px;
+        margin-right: 25px;
+        & i{
+            font-size: 44px;
+            color: $heading;
+        }
+    }
+    & .text{
+        & h4.title{
+            margin-bottom: 15px;
+        }
+    }
+}
+.features-icon-box{
+    padding: 45px 40px;
+    background-color: #161616;
+    @media #{$lp}{
+        padding: 45px 30px;
+    }
+    @media #{$lm}{
+        padding: 45px 25px;
+    }
+    & .icon{
+        margin-bottom: 10px;
+        & i{
+            font-size: 56px;
+            color: #fff;
+        }
+    }
+    & .text{
+        & h5{
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            @media #{$lm}{
+                font-size: 18px;
+            }
+        }
+    }
+}
+.features-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    & .features-icon-box{
+        flex: 0 0 20%;
+        max-width: 20%;
+        &:not(:last-child){
+            border-right: 1px solid #4F4E4E;
+        }
+        @media #{$md}{
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+        }
+        @media #{$xs}{
+            flex: 0 0 50%;
+            max-width: 50%;
+            &:last-child{
+                border-top: 1px solid #4F4E4E;
+            }
+        }
+    }
+}
+
+/* Awards Section */ 
+
+.award-item-white{
+    & .text{
+        & span{
+            color: #fff;
+        }
+        & h4.title{
+            color: #fff;
+        }
+        & p{
+            color: #BFBFBF;
+        }
+    }
+}
+
+.award-item-box{
+    display: flex;
+    & .icon{
+        flex: 0 0 125px;
+        max-width: 125px;
+        margin-right: 30px;
+    }
+    & .text{
+        & span{
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        & h4.title{
+            color: #fff;
+            margin-bottom: 20px;
+        }
+    }
+}
+.award-one_img-box {
+    position: relative;
+    min-height: 570px;
+    & .award-img-one{
+        border: 8px solid #fff;
+        margin-top: 50px;
+    }
+    & .award-img-two{
+        border: 8px solid #fff;
+        position: absolute;
+        top: 0;
+        right: 55px;
+        @media #{$lm}{
+            right: 0;
+        }
+    }
+    & .award-img-three{
+        border: 8px solid #fff;
+        position: absolute;
+        bottom: 0;
+        right: 40px;
+        @media #{$lm}{
+            right: 0;
+        }
+    }
+}
+
+/* How We Work Section */ 
+
+.process-item{
+    padding: 0 55px;
+    position: relative;
+    z-index: 1;
+    &:not(:first-child){
+        &:after{
+            position: absolute;
+            top: -15px;
+            left: -55px;
+            content: '';
+            width: 140px;
+            height: 140px;
+            background: url(../images/arrow.png) no-repeat;
+            background-size: cover;
+            z-index: -1;
+            @media #{$xm}{
+                display: none;
+            }
+        }
+    }
+    @media #{$lm}{
+        padding: 0 30px;
+    }
+    .process-inner-item{
+        & .icon{
+            position: relative;
+            width: 120px;
+            height: 120px;
+            background: $light-gray;
+            border-radius: 35px 35px 35px 25px;
+            transform: rotate(-45deg);
+            @extend %flex-center;
+            display: inline-flex;
+            margin-bottom: 50px;
+            & i{
+                font-size: 60px;
+                color: $heading;
+                transform: rotate(45deg);
+            }
+            & span.number{
+                position: absolute;
+                top: 20px;
+                right: -25px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                @extend %flex-center;
+                border: 4px solid #FFFFFF;
+                background-color: $primary;
+                color: #FFF;
+                line-height: 27px;
+                font: 700 22px $cairo;
+                @include transform(rotate(45deg));
+            }
+        }
+        & .text{
+            & h4.title{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.process-item-two{
+    &:hover{
+        & .icon{
+            transform: rotate(0deg);
+            & i{
+                transform: rotate(0deg);
+            }
+        }
+    }
+    & .icon{
+        width: 110px;
+        height: 110px;
+        background: $primary;
+        border-radius: 25px;
+        transform: rotate(-45deg);
+        @extend %flex-center;
+        display: inline-flex;
+        margin-bottom: 50px;
+        @include transition(.3s);
+        @media #{$xs}{
+            margin-left: 15px;
+        }
+        & i{
+            font-size: 60px;
+            color: #fff;
+            transform: rotate(45deg);
+            @include transition(.4s);
+        }
+    }
+    & .text{
+        & h4.title{
+            margin-bottom: 22px;
+        }
+    }
+}
+
+.process-item-white{
+    & .text{
+        & h4.title{
+            color: #fff;
+        }
+        & p{
+            color: #BFBFBF;
+        }
+    }
+}
+
+.how-work-section-shape{
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        & span{
+            & img{
+                opacity: 0.18;
+            }
+        }
+        &.shape-1{
+            top: 125px;
+            left: 0;
+        }
+        &.shape-two{
+            top: 140px;
+            right: 0;
+        }
+    }
+}

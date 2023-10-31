@@ -1,0 +1,254 @@
+
+/*---==================
+    03. Hero css 
+=================----*/
+
+
+.banner-one{
+    padding: 100px 0 220px;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        &.shape-one{
+            top: 0;
+            left: 0;
+        }
+    }
+    & .hero-bg-wrap{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width:55%;
+        height: 100%;
+        @media #{$xm}{
+            display: none;
+        }
+        & .single-bg{
+            & img{
+                width: 100%;
+                height: 100ch;
+                object-fit: cover;
+                clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+            }
+        }
+        & .hero-arrows{
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            right: 70px;
+            display: flex;
+            flex-direction: column;
+            & .slick-arrow{
+                cursor: pointer;
+                z-index: 1;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                font-size: 20px;
+                @extend %flex-center;
+                background-color: rgba(255, 255, 255, .2);
+                @include transition(.3s);
+                &:hover{
+                    background-color: #fff;
+                    color: $primary;
+                }
+                &.prev{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    & .hero-content{
+        position: relative;
+        & h1{
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 80px;
+            line-height: 1.13em;
+            margin-bottom: 20px;
+            @media #{$lp}{
+                font-size: 70px;
+            }
+            @media #{$lm}{
+                font-size: 50px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }
+        & p{
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: 600;
+            font-family: $cairo;
+            color: $heading;
+            margin-bottom: 47px;
+        }
+    }
+}
+
+
+.banner-two{
+    & .single-slider{
+        padding: 190px 0 45px;
+        position: relative;
+        z-index: 3;
+        @media #{xm}{
+            padding: 120px 0 45px;
+        }
+        &:before{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 140px;
+            background: url(../images/hero/hero-shape.png)no-repeat center;
+            background-size: cover;
+        }
+        &:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(19, 19, 19, 0.6), rgba(19, 19, 19, 0.6));
+            mix-blend-mode: luminosity;
+            z-index: -1;
+        }
+        
+    }
+    & .hero-content{
+        @media #{$xm}{
+            margin-bottom: 50px;
+        }
+        & span.tag-line{
+            color: #fff;
+            line-height: 26px;
+            font: 700 22px $cairo;
+        }
+        & h1{
+            color: #fff;
+            font-size: 100px;
+            margin-bottom: 30px;
+            @media #{$lp}{
+                font-size: 70px;
+            }
+            @media #{$lm}{
+                font-size: 50px;
+            }
+            @media #{$xs}{
+                font-size: 40px;
+            }
+        }
+        & p{
+            color: #fff;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 40px;
+        }
+    }
+    .appointment-form-box-two{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.hero-slider-one{
+    & .slick-arrow{
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        cursor: pointer;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        @extend %flex-center;
+        color: #fff;
+        background-color:rgba(255, 255, 255, .2);
+        @include transition(.3s);
+        &:hover{
+            background-color: $secondary;
+        }
+        &.prev{
+            left: 70px;
+        }
+        &.next{
+            right: 70px;
+        }
+    }
+}
+
+
+.page-banner{
+    padding: 180px 0 185px;
+    text-align: center;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(19, 19, 19, 0.4), rgba(19, 19, 19, 0.4));
+        mix-blend-mode: luminosity;
+        z-index: -1;
+    }
+    & h1.page-title{
+        @media #{$lm}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }
+    }
+    & .page-breadcrumb{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: auto;
+        @include transform(translateX(-50%));
+        background-color: #fff;
+        padding: 0 8px;
+        clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+        @media #{$xs}{
+            width: 80%;
+        }
+        & ul{
+            padding: 23px 87px 20px;
+            background-color: $primary;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+            @media #{$xm}{
+                padding: 23px 30px 20px;
+            }
+            & li{
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 500;
+                & a{
+                    &:hover{
+                        color: $heading;
+                    }
+                }
+                &:not(:last-child){
+                    &:after{
+                        display: inline-block;
+                        content: '*';
+                        font-family: 'Font Awesome 5 Pro';
+                        font-weight: 600;
+                        margin-left: 10px;
+                        margin-right: 7px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}

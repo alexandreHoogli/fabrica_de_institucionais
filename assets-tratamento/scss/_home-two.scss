@@ -1,0 +1,35 @@
+
+
+.cta-wrapper-one{
+    background-color: $secondary;
+}
+.nav-right-item{
+    & .menu-icon{
+        & a{
+            & span.number{
+                background-color: $secondary;
+            }
+            &:hover{
+                color: $secondary;
+            }
+        }
+    }
+}
+.text-white{
+    &.section-title{
+        & .sub-title{
+            color: $secondary;
+            & span.line{
+                &:after,
+                &:before{
+                    background-color: $secondary;
+                }
+            }
+        }
+    }
+}
+.process-item-two{
+    & .icon{
+        background: $secondary;
+    }
+}

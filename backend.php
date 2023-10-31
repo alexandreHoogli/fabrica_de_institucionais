@@ -366,7 +366,7 @@ function gerarEditDinamico($campos, $nome)
   $html .= ' </div>' . PHP_EOL;
   foreach ($campos as $campo) {
     $campoName = substr($campo, 1);
-    if ($campo == 'meta_description') {
+    if ($campo == '$meta_description') {
       $html .= '<div class="form-group row">' . PHP_EOL;
       $html .= '<div class="col-md-12">' . PHP_EOL;
       $html .= '<div class="form-group">' . PHP_EOL;
@@ -375,7 +375,7 @@ function gerarEditDinamico($campos, $nome)
       $html .= '</div>' . PHP_EOL;
       $html .= '</div> ' . PHP_EOL;
       $html .= '</div>' . PHP_EOL;
-    } elseif ($campo == 'meta_keywords') {
+    } elseif ($campo == '$meta_keywords') {
       $html .= '<div class="form-group row">' . PHP_EOL;
       $html .= '<div class="col-md-12">' . PHP_EOL;
       $html .= '<div class="form-group">' . PHP_EOL;
@@ -384,7 +384,7 @@ function gerarEditDinamico($campos, $nome)
       $html .= '</div>' . PHP_EOL;
       $html .= '  </div>' . PHP_EOL;
       $html .= '</div>' . PHP_EOL;
-    } elseif ($campo == 'meta_title') {
+    } elseif ($campo == '$meta_title') {
       $html .= '<div class="form-group row">' . PHP_EOL;
       $html .= ' <div class="col-md-12">' . PHP_EOL;
       $html .= '<div class="form-group">' . PHP_EOL;

@@ -6,7 +6,7 @@
         </div>
         <div class="tpoffcanvas__logo">
             <a href="index.html">
-                <img src="assets/img/logo/white-logo.png" alt="">
+                <img src="<?php echo SITE_URL; ?>/assets/img/logo/white-logo.png" alt="">
             </a>
         </div>
         <div class="tpoffcanvas__title">
@@ -114,7 +114,7 @@
                     <div class="col-xl-2 col-lg-4 col-md-4 col-6">
                         <div class="tp-header-logo">
                             <a href="index.html">
-                                <img src="assets/img/logo/white-logo.png" alt="">
+                                <img src="<?php echo SITE_URL; ?>/assets/img/logo/white-logo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -123,10 +123,10 @@
                             <nav class="tp-main-menu-content">
                                 <ul>
                                     <li class="has-dropdown">
-                                        <a href="index.html">Home</a>
+                                        <a href="<?php echo SITE_URL; ?>">Home</a>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Sobre</a>
+                                        <a href="<?php echo SITE_URL; ?>/sobre">Sobre</a>
                                     </li>
                                     <li class="has-dropdown">
                                         <a href="service.html">Service</a>
@@ -154,15 +154,10 @@
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="blog.html">Blog</a>
-                                        <ul class="submenu tp-submenu">
-                                            <li><a href="blog.html">blog standard</a></li>
-                                            <li><a href="blog-sidebar.html">blog sidebar</a></li>
-                                            <li><a href="blog-details.html">blog details</a></li>
-                                        </ul>
+                                        <a href="blog">Blog</a>
                                     </li>
                                     <li>
-                                        <a href="contact.html">Contact</a>
+                                        <a href="<?php echo SITE_URL; ?>/contato">Contato</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -172,6 +167,5 @@
                 </div>
             </div>
         </div>
-        <!-- header area end -->
     </div>
 </header>

@@ -113,7 +113,7 @@ if (empty($BlogsInstanciada)) {
 			}
 
 			try {
-				$sql = "SELECT * FROM tbl_blog where 1=1 $sql $sqlOrdem $sqlLimite";
+				$sql = "SELECT * FROM tbl_blogs where 1=1 $sql $sqlOrdem $sqlLimite";
 				$stm = $this->pdo->prepare($sql);
 
 				for ($i = 1; $i <= $nCampos; $i++) {
@@ -135,7 +135,7 @@ if (empty($BlogsInstanciada)) {
 
 		function add($redireciona = '')
 		{
-			if (isset($_POST['acao']) && $_POST['acao'] == 'addBlog') {
+			if (isset($_POST['acao']) && $_POST['acao'] == 'addBlogs') {
 
 				$titulo = filter_input(INPUT_POST, 'titulo');
 				$titulo_cta1 = filter_input(INPUT_POST, 'titulo_cta1');
@@ -251,7 +251,7 @@ if (empty($BlogsInstanciada)) {
 						$pastaArquivos = '../img';
 					}
 
-					$sql = "INSERT INTO tbl_blog (foto, titulo, postado_por, conteudo, data_postagem, especialidade, breve, meta_title, meta_keywords, meta_description, foto1, url_amigavel, descricao_imagem, legenda_imagem, video, thumb, foto2, banner, foto_cta, titulo_cta1, titulo_cta2, titulo_cta_3, nome_botao_cta1, nome_botao_cta2, nome_botao_cta3, link_botao_cta1, link_botao_cta2, link_botao_cta3, legenda_imagem_cta, conteudo2, conteudo3, texto_ancora_cta1, breve_cta1, tem_cta1, tem_cta2, tem_cta3, texto_ancora2, texto_ancora3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+					$sql = "INSERT INTO tbl_blogs (foto, titulo, postado_por, conteudo, data_postagem, especialidade, breve, meta_title, meta_keywords, meta_description, foto1, url_amigavel, descricao_imagem, legenda_imagem, video, thumb, foto2, banner, foto_cta, titulo_cta1, titulo_cta2, titulo_cta_3, nome_botao_cta1, nome_botao_cta2, nome_botao_cta3, link_botao_cta1, link_botao_cta2, link_botao_cta3, legenda_imagem_cta, conteudo2, conteudo3, texto_ancora_cta1, breve_cta1, tem_cta1, tem_cta2, tem_cta3, texto_ancora2, texto_ancora3) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 					$stm = $this->pdo->prepare($sql);
 					$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));
 					$stm->bindValue(2, $titulo);
@@ -312,7 +312,7 @@ if (empty($BlogsInstanciada)) {
 
 		function editar($redireciona = 'blogs.php')
 		{
-			if (isset($_POST['acao']) && $_POST['acao'] == 'editaBlog') {
+			if (isset($_POST['acao']) && $_POST['acao'] == 'editaBlogs') {
 
 				$titulo = filter_input(INPUT_POST, 'titulo');
 				$titulo_cta1 = filter_input(INPUT_POST, 'titulo_cta1');
@@ -361,7 +361,7 @@ if (empty($BlogsInstanciada)) {
 						$pastaArquivos = '../img';
 					}
 
-					$sql = "UPDATE tbl_blog SET foto=?, titulo=?, postado_por=?, conteudo=?, data_postagem=?, especialidade=?, breve=?, meta_title=?, meta_keywords=?, meta_description=?, foto1=?, url_amigavel=?, descricao_imagem=?, legenda_imagem=?, video=?, thumb=?, foto2=?, banner=?, foto_cta=?, titulo_cta1=?, titulo_cta2=?, titulo_cta_3=?, nome_botao_cta1=?, nome_botao_cta2=?, nome_botao_cta3=?, link_botao_cta1=?, link_botao_cta2=?, link_botao_cta3=?, legenda_imagem_cta=?, conteudo2=?, conteudo3=?, texto_ancora_cta1=?, breve_cta1=?, tem_cta1=?, tem_cta2=?, tem_cta3=?, texto_ancora2=?, texto_ancora3=? WHERE id=?";
+					$sql = "UPDATE tbl_blogs SET foto=?, titulo=?, postado_por=?, conteudo=?, data_postagem=?, especialidade=?, breve=?, meta_title=?, meta_keywords=?, meta_description=?, foto1=?, url_amigavel=?, descricao_imagem=?, legenda_imagem=?, video=?, thumb=?, foto2=?, banner=?, foto_cta=?, titulo_cta1=?, titulo_cta2=?, titulo_cta_3=?, nome_botao_cta1=?, nome_botao_cta2=?, nome_botao_cta3=?, link_botao_cta1=?, link_botao_cta2=?, link_botao_cta3=?, legenda_imagem_cta=?, conteudo2=?, conteudo3=?, texto_ancora_cta1=?, breve_cta1=?, tem_cta1=?, tem_cta2=?, tem_cta3=?, texto_ancora2=?, texto_ancora3=? WHERE id=?";
 					$stm = $this->pdo->prepare($sql);
 					$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));
 					$stm->bindValue(2, $titulo);
@@ -415,10 +415,10 @@ if (empty($BlogsInstanciada)) {
 		}
 		function excluir()
 		{
-			if (isset($_GET['acao']) && $_GET['acao'] == 'excluirBlog') {
+			if (isset($_GET['acao']) && $_GET['acao'] == 'excluirBlogs') {
 
 				try {
-					$sql = "DELETE FROM tbl_blog WHERE id=? ";
+					$sql = "DELETE FROM tbl_blogs WHERE id=? ";
 					$stm = $this->pdo->prepare($sql);
 					$stm->bindValue(1, $_GET['id']);
 					$stm->execute();
@@ -436,7 +436,7 @@ if (empty($BlogsInstanciada)) {
 		{
 			if (isset($_GET['acao']) && $_GET['acao'] == 'addBlogServico') {
 				try {
-					$sql = "SELECT * FROM tbl_blog where 1=1";
+					$sql = "SELECT * FROM tbl_blogs where 1=1";
 					$stm = $this->pdo->prepare($sql);
 					$stm->execute();
 					$rsBox1 = $stm->fetchAll(PDO::FETCH_OBJ);

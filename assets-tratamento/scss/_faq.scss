@@ -1,0 +1,119 @@
+
+/*---==================
+    09. Faq css 
+=================----*/
+
+.faq-accordion-one{
+    & .accordion-card{
+        border: 1px solid #E4E4E4;
+        padding: 0 25px;
+        & .accordion-header{
+            cursor: pointer;
+            & h5{
+                padding: 24px 0;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                &:after{
+                    margin-left: auto;
+                    content: '\f107';
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-left: auto;
+                    color: $text-color;
+                }
+                &[aria-expanded=true]{
+                    &:after{
+                        content: '\f106';
+                    }
+                }
+            }
+        }
+        & .accordion-body{
+            padding: 0;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+
+.faq-accordion-two{
+    & h3.title{
+        margin-bottom: 20px;
+    }
+    & .accordion-card{
+        background-color: #F6F7F8;
+        padding: 0 25px;
+        @media #{$xss}{
+            padding: 0 15px;
+        }
+        & .accordion-header{
+            cursor: pointer;
+            & h5{
+                padding: 23px 0;
+                display: flex;
+                align-items: center;
+                &:after{
+                    margin-left: auto;
+                    content: '\f107';
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 400;
+                    font-size: 16px;
+                    margin-left: auto;
+                    color: $heading;
+                }
+                &[aria-expanded=true]{
+                    &:after{
+                        content: '\f106';
+                    }
+                }
+                &[aria-expanded=true]{
+                    border-bottom: 1px solid #E1E1E1;
+                }
+            }
+        }
+        & .accordion-body{
+            padding: 25px 0;
+        }
+    }
+}
+
+.faq-one_image-box{
+    max-width: 605px;
+    & .experience-badge{
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        left: -120px;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        border: 20px solid #fff;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @media #{$lm}{
+            display: none;
+        }
+        & .experience-content{
+            max-width: 150px;
+            & h2.number{
+                color: #fff;
+                font-size: 60px;
+                line-height: 60px;
+                & span.sign{
+                    font-size: 30px;
+                }
+                & span.duration{
+                    text-transform: uppercase;
+                    display: block;
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

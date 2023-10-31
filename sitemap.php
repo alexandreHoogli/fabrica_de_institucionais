@@ -2,10 +2,11 @@
 
 
 require_once('./Connection/conexao.php');
+include "includes.php";
 
 try {
   // Realiza a consulta no banco de todas as postagens ativas
-  $sql = "SELECT * FROM tbl_blog";
+  $sql = "SELECT * FROM tbl_blogs";
   $result = $conn->query($sql);
   $rows = $result->fetchAll(PDO::FETCH_ASSOC);
 
@@ -23,7 +24,7 @@ try {
 	        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	    <url>
-	        <loc>' .  SITE_URL . '</loc>
+	        <loc>' . SITE_URL . '</loc>
 	        <lastmod>' . $date . '</lastmod>
 	        <changefreq>weekly</changefreq>
 	        <priority>1.00</priority>
@@ -61,7 +62,7 @@ try {
   fclose($fp);
 
   // Envia para o Google o novo sitemap gerado
-  $urlSitemap = "http://www.google.com/webmasters/sitemaps/ping?sitemap=" . HOME . "/";
+  $urlSitemap = "http://www.google.com/webmasters/sitemaps/ping?sitemap=" . SITE_URL . "/";
   // Arquivos a serem enviados
   $Files = ['sitemap.xml', 'sitemap.xml.gz'];
 

@@ -17,15 +17,16 @@ $blogs->excluir();
 </head>
 
 <body>
-   <div class="preloader">
+    <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
     </div>
-    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
-      <?php include "header.php";?>
-       <?php include "inc-menu-lateral.php";?>
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <?php include "header.php"; ?>
+        <?php include "inc-menu-lateral.php"; ?>
         <div class="page-wrapper">
             <div class="page-breadcrumb">
                 <div class="row">
@@ -61,24 +62,35 @@ $blogs->excluir();
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php 
-                                            if(count($puxaBlogs) > 0){
-                                            foreach($puxaBlogs as $blog){?>
-                                            <tr>
-                                                <td><?php echo formataData($blog->data_postagem);?></td>
-                                                <td>
-                                                    <?php if(isset($blog->foto) && !empty($blog->foto)){?>
-                                                    <img src="../img/<?php echo $blog->foto;?>" width="50">
-                                                    <?php }?>
-                                                </td>
-                                                <td><?php echo $blog->titulo;?></td>
-                                                <td><?php echo $blog->breve;?></td>
-                                                <td>
-                                                    <a href="editar-blog.php?id=<?php echo $blog->id;?>" class="btn btn-success btn-circle"><i class="fas fa-pencil-alt"></i></a>
-                                                    <a href="javascript:;" class="btn btn-warning btn-circle" onclick="excluir('blogs.php', <?php echo $blog->id;?>, 'excluirBlog')"><i class="fa fa-times"></i></a>
-                                                </td>
-                                            </tr>
-                                            <?php } }?>
+                                            <?php
+                                            if (count($puxaBlogs) > 0) {
+                                                foreach ($puxaBlogs as $blog) { ?>
+                                                    <tr>
+                                                        <td>
+                                                            <?php echo formataData($blog->data_postagem); ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php if (isset($blog->foto) && !empty($blog->foto)) { ?>
+                                                                <img src="../img/<?php echo $blog->foto; ?>" width="50">
+                                                            <?php } ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $blog->titulo; ?>
+                                                        </td>
+                                                        <td>
+                                                            <?php echo $blog->breve; ?>
+                                                        </td>
+                                                        <td>
+                                                            <a href="editar-blogs.php?id=<?php echo $blog->id; ?>"
+                                                                class="btn btn-success btn-circle"><i
+                                                                    class="fas fa-pencil-alt"></i></a>
+                                                            <a href="javascript:;" class="btn btn-warning btn-circle"
+                                                                onclick="excluir('blogs.php', <?php echo $blog->id; ?>, 'excluirBlogs')"><i
+                                                                    class="fa fa-times"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                <?php }
+                                            } ?>
                                         </tbody>
                                         <tfoot>
                                             <tr>
@@ -96,7 +108,7 @@ $blogs->excluir();
                     </div>
                 </div>
             </div>
-        <?php include "footer.php";?>
+            <?php include "footer.php"; ?>
         </div>
     </div>
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
@@ -111,6 +123,7 @@ $blogs->excluir();
     <script src="assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>
     <script src="dist/js/scripts.js"></script>
-   
+
 </body>
+
 </html>

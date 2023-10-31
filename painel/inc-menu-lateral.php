@@ -23,34 +23,29 @@
                 </li>
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Configurações Site</span></li>
-                <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                            class="hide-menu">Blog </span></a>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i
+                            data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Blog </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
+
+                        <li class="sidebar-item"> <a class="sidebar-link" href="editar-blog.php?pi=S&id=1">
+                                <i data-feather="file-text" class="feather-icon"></i>Página Blog</a>
+                        </li>
                         <li class="sidebar-item"><a href="blogs.php" class="sidebar-link"><span class="hide-menu">
                                     Listar Blog
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="add-blog.php" class="sidebar-link"><span class="hide-menu">
+                        <li class="sidebar-item"><a href="add-blogs.php" class="sidebar-link"><span class="hide-menu">
                                     Adicionar Blog
                                 </span></a>
                         </li>
                     </ul>
                 </li>
-                
-        <li class="sidebar-item"> 
-            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                <i data-feather="file-text" class="feather-icon"></i>
-                <span class="hide-menu">Two-column</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                <li class="sidebar-item"><a href="two-column.php" class="sidebar-link"><span class="hide-menu">
-                    Listar Two-column</span></a></li>
-                <li class="sidebar-item"><a href="add-two-column.php" class="sidebar-link"><span class="hide-menu">
-                    Adicionar two-column</span></a></li>
-            </ul>
-        </li>
-        <li id="aqui" class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+
+
+
+
+                <li id="aqui" class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                         aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                             class="hide-menu">Configurações </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">

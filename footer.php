@@ -12,10 +12,10 @@
   <!-- footer area start -->
   <div class="tp-footer-area pt-120 pb-120 p-relative z-index-3 black-bg">
     <div class="tp-footer-shape-1 d-none d-lg-block">
-      <img src="assets/img/footer/shape-1-1.png" alt="">
+      <img src="<?php echo SITE_URL; ?>/assets/img/footer/shape-1-1.png" alt="">
     </div>
     <div class="tp-footer-shape-2 d-none d-lg-block">
-      <img src="assets/img/footer/shape-1-2.png" alt="">
+      <img src="<?php echo SITE_URL; ?>/assets/img/footer/shape-1-2.png" alt="">
     </div>
     <div class="container">
       <div class="row">
@@ -23,7 +23,7 @@
           data-wow-delay=".3s">
           <div class="tp-footer-widget footer-cols-1">
             <div class="tp-footer-logo">
-              <a href="index.html"><img src="assets/img/logo/white-logo.png" alt=""></a>
+              <a href="index.html"><img src="<?php echo SITE_URL; ?>/assets/img/logo/white-logo.png" alt=""></a>
             </div>
             <div class="tp-footer-text">
               <p>Desires to obtain pain of it because it is pain but occasionally circum We work with a passion of
@@ -78,13 +78,13 @@
                   </div>
                 </div>
                 <div class="tp-footer-thumb p-relative">
-                  <img src="assets/img/footer/footer-1-2.jpg" alt="">
+                  <img src="<?php echo SITE_URL; ?>/assets/img/footer/footer-1-2.jpg" alt="">
                   <div class="tp-footer-thumb-icon">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                   </div>
                 </div>
                 <div class="tp-footer-thumb p-relative">
-                  <img src="assets/img/footer/footer-1-3.jpg" alt="">
+                  <img src="<?php echo SITE_URL; ?>/assets/img/footer/footer-1-3.jpg" alt="">
                   <div class="tp-footer-thumb-icon">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                   </div>

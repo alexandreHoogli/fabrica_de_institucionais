@@ -1,161 +1,132 @@
-<?php
-include "includes.php";
+<?php include "includes.php"; 
 include "Class/blogs.class.php";
-$Blogs = Blogs::getInstance(Conexao::getInstance());
+
+$blogs = Blogs::getInstance(Conexao::getInstance());
+
 $id = '';
-if (isset($_GET['id'])) {
-    if (empty($_GET['id'])) {
-        header('Location: /');
-    } else {
-        $id = $_GET['id'];
+if(isset($_GET['id'])){
+    if(empty($_GET['id'])){
+        header('Location: '.SITE_URL);
+    }else{
+        $id = $_GET['id'];        
     }
-} else {
-    header('Location: /');
 }
-$puxaBlogs = $Blogs->rsDados('', '', '', '', '', $id);
 
+$descBlog    = $blogs->rsDados('', '', '', '', '', $id);
+$outrosBlog  = $blogs->rsDados('', 'rand()', '3', '', $descBlog->id);
 ?>
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<?php include 'head.php'; ?>
+    <head>
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/bootstrap.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/animate.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/swiper-bundle.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/slick.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/magnific-popup.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/flaticon_biddut.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/font-awesome-pro.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/spacing.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/custom-animation.css">
+<link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets/css/main.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL; ?>/assets-tratamento/css/style.css">
+    </head>
+    <body>
+        <?php include "header.php";?>     
 
-<body>
-    <div class="page-wrapper">
-    <?php include 'header.php'; ?>
-        <div class="stricky-header stricked-menu main-menu">
-          <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
-        <!--Page Header Start-->
-    <section class="page-header">
-      <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
-      </div>
-      <div class="page-header-border"></div>
-      <div class="page-header-border page-header-border-two"></div>
-      <div class="page-header-border page-header-border-three"></div>
-      <div class="page-header-border page-header-border-four"></div>
-      <div class="page-header-border page-header-border-five"></div>
-      <div class="page-header-border page-header-border-six"></div>
-
-      <div class="page-header-shape-1"></div>
-      <div class="page-header-shape-2"></div>
-      <div class="page-header-shape-3"></div>
-
-      <div class="container">
-        <div class="page-header__inner">
-          <ul class="thm-breadcrumb list-unstyled">
-            <li><a href="<?php echo SITE_URL ?>"
-                                            aria-label="Link de encaminhamento para a página principal do site">Home
-                                            /</a></li>
-            <li class="active"><a href="<?php echo SITE_URL ?>/blogs"
-                                            aria-label="Link de encaminhamento para a página de Blogs da Auto Baterias">Blogs
-                                            /</a></li>
-          </ul>
-          <h2><?php echo $puxaBlogs->titulo ?></h2>
-        </div>
-      </div>
-    </section>
-    <!--Page Header End-->
-    <section class="blog-details-section pt-50 pb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="blog-single-post-listing details mb--0">
-                        <div class="thumbnail">
-                            <img src="<?php echo SITE_URL . '/img/' . $puxaBlogs->banner ?>"
-                                alt="<?php echo $puxaBlogs->legenda_imagem ?>">
-                        </div>
-                        <div class="blog-listing-content">
-
-                            <h1 class="title title-blog-incial">
-                                <?php echo $puxaBlogs->titulo ?>
-                            </h1>
-                            <div class="user-info">
-                                <div class="single">
-                                    <i class="far fa-user-circle"></i>
-                                    <span>Por:
-                                        <?php echo $puxaBlogs->postado_por ?>
-                                    </span>
-                                </div>
-                                <div class="single">
-                                    <i class="far fa-clock"></i>
-                                    <span>
-                                        <?php echo formataData($puxaBlogs->data_postagem) ?>
-                                    </span>
-                                </div>
+        <section class="blog-details">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-12 col-md-12" style="padding: 9rem 0px;">
+                         <div class="blog-single-post-listing details mb--0">
+                            <div class="thumbnail">
+                                <img src="<?php echo SITE_URL.'/img/'.$descBlog->banner?>" alt="<?php echo $descBlog->descricao_imagem?>">
                             </div>
-                            <?php echo $puxaBlogs->conteudo ?>
-                            <?php if ($puxaBlogs->tem_cta1 == 'S') { ?>
+                            <div class="blog-listing-content">
+                                <div class="user-info">
+                                    <div class="single">
+                                        <i class="far fa-user-circle"></i>
+                                        <span>Por: <?php echo $descBlog->postado_por?></span>
+                                    </div>
+                                    <div class="single">
+                                        <i class="far fa-clock"></i>
+                                        <span><?php echo formataData($descBlog->data_postagem)?></span>
+                                    </div>
+                                </div>
+                                <h1 class="title"><?php echo $descBlog->titulo?></h1>
+                                <?php echo $descBlog->conteudo?>
+                                <?php if ($descBlog->video <> ""){
+                                    $embed = $descBlog->video;
+                                    $embed2 = substr($embed, 32);
+                                ?>
+                                <iframe width="560" height="550" src="https://www.youtube.com/embed/<?php echo $embed2?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <?php }?>
+                                <?php if ($descBlog->tem_cta1 == 'S'){?>
                                 <div class="contact-info-holder">
                                     <div class="left">
-                                        <h2>
-                                            <?php echo $puxaBlogs->titulo_cta1 ?>
-                                        </h2>
+                                        <h2><?php echo $descBlog->titulo_cta1?></h2>
                                     </div>
                                     <div class="right">
                                         <div class="contact-button">
-                                            <a href="<?php echo $puxaBlogs->link_botao_cta1 ?>"
-                                                aria-label="<?php echo $puxaBlogs->texto_ancora_cta1 ?>">
-                                                <?php echo $puxaBlogs->nome_botao_cta1 ?>
-                                            </a>
+                                            <a href="<?php echo $descBlog->link_botao_cta1?>" aria-label="<?php echo $descBlog->texto_ancora_cta1?>"><?php echo $descBlog->nome_botao_cta1?></a>
                                         </div>
-                                    </div>
+                                    </div>                       
                                 </div>
-                            <?php } ?>
-                            <?php echo $puxaBlogs->conteudo2 ?>
-                            <?php if ($puxaBlogs->tem_cta2 == 'S') { ?>
+                                <?php }?>
+                                <?php echo $descBlog->conteudo2?>
+                                <?php if ($descBlog->tem_cta2 == 'S'){?>
                                 <div class="contact-info-holder">
                                     <div class="left">
-                                        <h2>
-                                            <?php echo $puxaBlogs->titulo_cta2 ?>
-                                        </h2>
+                                        <h2><?php echo $descBlog->titulo_cta2?></h2>
                                     </div>
                                     <div class="right">
                                         <div class="contact-button">
-                                            <a href="<?php echo $puxaBlogs->link_botao_cta2 ?>"
-                                                aria-label="<?php echo $puxaBlogs->texto_ancora_cta2 ?>">
-                                                <?php echo $puxaBlogs->nome_botao_cta2 ?>
-                                            </a>
+                                            <a href="<?php echo $descBlog->link_botao_cta2?>" aria-label="<?php echo $descBlog->texto_ancora_cta2?>"><?php echo $descBlog->nome_botao_cta2?></a>
                                         </div>
-                                    </div>
+                                    </div>                       
                                 </div>
-                            <?php } ?>
-                            <?php echo $puxaBlogs->conteudo3 ?>
-                            <?php echo $puxaBlogs->conteudo3 ?>
-                            <?php if ($puxaBlogs->tem_cta3 == "S") { ?>
-                                <div class="row">
-                                    <div class="col-xl-12">
-                                        <div class="contact-info-holder-img">
-                                            <div class="left">
-                                                <img src="<?php echo SITE_URL . '/img/' . $puxaBlogs->foto_cta ?>"
-                                                    alt="<?php echo $puxaBlogs->legenda_imagem_cta ?>">
-                                            </div>
-                                            <div class="right width-cta">
-                                                <h2 class="h2-blog">
-                                                    <?php echo $puxaBlogs->titulo_cta_3 ?>
-                                                </h2>
-                                                <div class="contact-button">
-                                                    <a href="<?php echo $puxaBlogs->link_botao_cta2 ?>"
-                                                        aria-label="<?php echo $puxaBlogs->texto_ancora_cta3 ?>">
-                                                        <?php echo $puxaBlogs->nome_botao_cta3 ?>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                <?php }?>
+                                <?php echo $descBlog->conteudo3?>
 
+                                <?php if ($descBlog->tem_cta3 == "S"){?>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="contact-info-holder-img">
+                                                <div class="left">
+                                                    <img src="<?php echo SITE_URL.'/img/'.$descBlog->foto_cta?>" alt="<?php echo $descBlog->legenda_imagem_cta?>">
+                                                </div>
+                                                <div class="right width-cta">
+                                                        <h2 class="h2-blog"><?php echo $descBlog->titulo_cta_3?></h2>
+                                                    <div class="contact-button">
+                                                        <a href="<?php echo $descBlog->link_botao_cta3?>" aria-label="<?php echo $descBlog->texto_ancora_cta3?>"><?php echo $descBlog->nome_botao_cta3?></a>
+                                                    </div>
+                                                </div>    
+                                                
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php } ?>
+                                <?php }?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <?php include "footer.php" ?>
-     </div>
-    <?php include "scripts.php" ?>
-</body>
-
+        </section>
+        <?php include "footer.php";?>  
+        <!-- JS here -->
+<script src="<?php echo SITE_URL; ?>/assets/js/vendor/jquery.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/vendor/waypoints.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/bootstrap-bundle.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/swiper-bundle.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/slick.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/range-slider.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/magnific-popup.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/nice-select.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/purecounter.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/wow.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/isotope-pkgd.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/jarallax.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/imagesloaded-pkgd.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/ajax-form.js"></script>
+<script src="<?php echo SITE_URL; ?>/assets/js/main.js"></script>
+    </body>
 </html>

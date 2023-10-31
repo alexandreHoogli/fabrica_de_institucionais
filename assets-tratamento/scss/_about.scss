@@ -1,0 +1,245 @@
+
+/*---==================
+    04. About css 
+=================----*/
+
+
+.about-one_content-box{
+    padding:  0 65px;
+    @media #{$lm}{
+        padding:  0 15px;
+    }
+    & .about-button{
+        display: inline-flex;
+        @media #{$lg}{
+            flex-direction: column;
+        }
+        @media #{$xs}{
+            flex-direction: column;
+        }
+        & .call-button-box{
+            margin-right: 50px;
+            @media #{$lg}{
+                margin-bottom: 30px;
+            }
+            @media #{$xs}{
+                margin-bottom: 30px;
+            }
+        }
+        & .main-btn{
+            padding: 13px 30px;
+        }
+    }
+}
+.about-one_img-box{
+    position: relative;
+    @media #{$xm}{
+        margin-bottom: 40px;
+    }
+    & .experience-badge{
+        position: absolute;
+        top: -120px;
+        left: -100px;
+        @media #{$lm}{
+            display: none;
+        }
+    }
+}
+
+.about-two_content-box{
+    padding-right: 100px;
+    @media #{$lp}{
+        padding-right: 50px;
+    }
+    @media #{$lm}{
+        padding-right: 0;
+    }
+    & h4{
+        margin-bottom: 20px;
+    }
+    & .about-button{
+        display: inline-flex;
+        @media #{$lg}{
+            flex-direction: column;
+        }
+        @media #{$xs}{
+            flex-direction: column;
+        }
+        & .call-button-box{
+            margin-left: 50px;
+            @media #{$lg}{
+                margin-left: 0;
+            }
+            @media #{$xs}{
+                margin-left: 0;
+            }
+        }
+        & .main-btn{
+            padding: 13px 30px;
+            @media #{$lg}{
+                margin-bottom: 30px;
+            }
+            @media #{$xs}{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+.about-two_img-box{
+    position: relative;
+    z-index: 1;
+    min-height: 740px;
+    & .about-img-one{
+        width: 415px;
+        height: 415px;
+        border-radius: 50%;
+        @media #{$xss}{
+            height: 375px;
+        }
+    }
+    & .about-img-two{
+        position: absolute;
+        bottom: 0;
+        right: 60px;
+        width: 475px;
+        height: 475px;
+        border-radius: 50%;
+        border: 12px solid rgba(255, 255, 255, .7);
+        @media #{$xss}{
+            right: 0;
+            height: 405px;
+        }
+    }
+    & .about-img-three{
+        position: absolute;
+        top: 0;
+        right: 70px;
+        @media #{$xss}{
+            right: 0;
+        }
+    }
+}
+
+
+.call-button-box{
+    display: flex;
+    align-items: center;
+    & .icon{
+        flex: 0 0 50px;
+        max-width: 50px;
+        margin-right: 20px;
+        line-height: 0;
+        i{
+            font-size: 55px;
+            color: $heading;
+        }
+    }
+    & .text{
+        & span{
+            color: #525252;
+        }
+        & h5{
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+}
+
+.support-button{
+    display: flex;
+    align-items: center;
+    & .icon{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        @extend %flex-center;
+        border: 6px solid #FFFFFF;
+        background-color: $secondary;
+        font-size: 36px;
+        color: #fff;
+        margin-right: 20px;
+    }
+    & .text{
+        & span{
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.strategy-image-box{
+    & img{
+        max-width: 605px;
+        @media #{$lm}{
+            width: 100%;
+        }
+    }
+    &:after{
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: -30px;
+        width: 180px;
+        height: 180px;
+        border-radius: 3px;
+        background-color: $primary;
+        z-index: -1;
+        @media #{$lm}{
+            bottom: -20px;
+            right: 250px;
+        }
+        @media #{$xm}{
+            right: 0;
+        }
+    }
+}
+.tab-content-box{
+    & .nav-tabs{
+        border-bottom: none;
+        gap: 10px;
+        & .nav-link{
+            background-color: #F6F7F8;
+            border: 1px solid #E4E4E4;
+            border-radius: 2px;
+            font-weight: 700;
+            font-family: $cairo;
+            padding: 15px 35px;
+            color: $heading;
+            &.active{
+                background-color: $primary;
+                color: #fff;
+            }
+        }
+    }
+    & .features-item{
+        @media #{$lg}{
+            padding-right: 50px;
+        }
+    }
+    & .block-image{
+        & img{
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+
+.about-section-shape{
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        &.shape-one{
+            left: 0;
+            top: -100px;
+        }
+        &.shape-two{
+            right: 0;
+            top: -100px;
+        }
+    }
+}

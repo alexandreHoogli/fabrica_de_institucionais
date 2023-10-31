@@ -27,6 +27,7 @@ $home = Home::getInstance(Conexao::getInstance());
 include "../Class/price.class.php";
 $price = Price::getInstance(Conexao::getInstance());
 
+
 function get_url()
 {
   return $_SERVER['SCRIPT_NAME'] . $_SERVER['REQUEST_URI'];

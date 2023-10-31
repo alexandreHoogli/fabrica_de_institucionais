@@ -37,85 +37,17 @@
                         </li>
                     </ul>
                 </li>
-
                 
-        <li class="sidebar-item"> <a class="sidebar-link" href="editar-home.php?pi=S&id=1"> 
-            <i data-feather="file-text" class="feather-icon"></i>Home</a>
-        </li>
-
-        
         <li class="sidebar-item"> 
             <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
                 <i data-feather="file-text" class="feather-icon"></i>
-                <span class="hide-menu">Price</span>
+                <span class="hide-menu">Two-column</span>
             </a>
             <ul aria-expanded="false" class="collapse first-level base-level-line">
-                <li class="sidebar-item"><a href="price.php" class="sidebar-link"><span class="hide-menu">
-                    Listar Price</span></a></li>
-                <li class="sidebar-item"><a href="add-price.php" class="sidebar-link"><span class="hide-menu">
-                    Adicionar price</span></a></li>
-            </ul>
-        </li>
-        
-        <li class="sidebar-item"> 
-            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                <i data-feather="file-text" class="feather-icon"></i>
-                <span class="hide-menu">Home</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                <li class="sidebar-item"><a href="home.php" class="sidebar-link"><span class="hide-menu">
-                    Listar Home</span></a></li>
-                <li class="sidebar-item"><a href="add-home.php" class="sidebar-link"><span class="hide-menu">
-                    Adicionar home</span></a></li>
-            </ul>
-        </li>
-        
-        <li class="sidebar-item"> <a class="sidebar-link" href="editar-price.php?pi=S&id=1"> 
-            <i data-feather="file-text" class="feather-icon"></i>Price</a>
-        </li>
-
-        
-        <li class="sidebar-item"> 
-            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                <i data-feather="file-text" class="feather-icon"></i>
-                <span class="hide-menu">Home</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                <li class="sidebar-item"><a href="home.php" class="sidebar-link"><span class="hide-menu">
-                    Listar Home</span></a></li>
-                <li class="sidebar-item"><a href="add-home.php" class="sidebar-link"><span class="hide-menu">
-                    Adicionar home</span></a></li>
-            </ul>
-        </li>
-        
-        <li class="sidebar-item"> <a class="sidebar-link" href="editar-price.php?pi=S&id=1"> 
-            <i data-feather="file-text" class="feather-icon"></i>Price</a>
-        </li>
-
-        
-        <li class="sidebar-item"> 
-            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                <i data-feather="file-text" class="feather-icon"></i>
-                <span class="hide-menu">Home</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                <li class="sidebar-item"><a href="home.php" class="sidebar-link"><span class="hide-menu">
-                    Listar Home</span></a></li>
-                <li class="sidebar-item"><a href="add-home.php" class="sidebar-link"><span class="hide-menu">
-                    Adicionar home</span></a></li>
-            </ul>
-        </li>
-        
-        <li class="sidebar-item"> 
-            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                <i data-feather="file-text" class="feather-icon"></i>
-                <span class="hide-menu">Price</span>
-            </a>
-            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                <li class="sidebar-item"><a href="price.php" class="sidebar-link"><span class="hide-menu">
-                    Listar Price</span></a></li>
-                <li class="sidebar-item"><a href="add-price.php" class="sidebar-link"><span class="hide-menu">
-                    Adicionar price</span></a></li>
+                <li class="sidebar-item"><a href="two-column.php" class="sidebar-link"><span class="hide-menu">
+                    Listar Two-column</span></a></li>
+                <li class="sidebar-item"><a href="add-two-column.php" class="sidebar-link"><span class="hide-menu">
+                    Adicionar two-column</span></a></li>
             </ul>
         </li>
         <li id="aqui" class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"

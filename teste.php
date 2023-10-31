@@ -12,8 +12,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["arquivos_selecionados"
         $dom = str_get_html($content);
         $body_element = $dom->find('body', 0);
         $arquivo = pathinfo($arquivo, PATHINFO_FILENAME);
-        //gerarHtml($arquivo, $body_element, $valor_dropdown);
+        $arquivo = strtolower($arquivo);
+        $arquivo = str_replace('-', '_', $arquivo);
+        $foreachElements = $dom->find('foreach');
+        if (count($foreachElements) > 0) {
+            foreach ($foreachElements as $foreachElement) {
+                $arquivo = $arquivo . '_foreach_' . rand(1, 10);
+                gerarHtml($arquivo, $foreachElement, 'sim');
+            }
+        }
+        gerarHtml($arquivo, $body_element, $valor_dropdown);
     }
+    $dados = "Linkado";
+    header("Location: painel/pastas.php?dados=$dados");
+    exit;
 } else {
     echo "<p>Nenhum arquivo foi selecionado.</p>";
 }

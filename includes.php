@@ -10,4 +10,4 @@ $menusAtivo = Menus::getInstance(Conexao::getInstance())->rsDados();
 
 
 
-define('SITE_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/projetobase') ?>
+define('SITE_URL', 'https://' . $_SERVER['HTTP_HOST'] . '/fabrica_de_institucionais') ?>

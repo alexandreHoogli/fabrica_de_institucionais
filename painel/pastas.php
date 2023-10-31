@@ -113,6 +113,12 @@ $editaConfig = $infoSistema->rsDados(1);
             <div class="card">
               <div class="card-body">
                 <?php
+                if (isset($_GET['dados'])) {
+                  $dados_recebidos = $_GET['dados'];
+                  echo $dados_recebidos;
+                }
+                ?>
+                <?php
                 $dir = '../linkagem';
                 echo '<table>';
                 echo '<tr>';

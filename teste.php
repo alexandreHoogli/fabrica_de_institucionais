@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["arquivos_selecionados"
     $arquivos_selecionados = $_POST["arquivos_selecionados"];
     $arquivos_dropdown = $_POST["arquivos_dropdown"];
     require_once('./simple_html_dom.php');
+
     foreach ($arquivos_selecionados as $arquivo) {
         $valor_dropdown = $arquivos_dropdown[$arquivo];
         $content = file_get_contents('./linkagem/' . $arquivo);
@@ -15,13 +16,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["arquivos_selecionados"
         $arquivo = strtolower($arquivo);
         $arquivo = str_replace('-', '_', $arquivo);
         $foreachElements = $dom->find('foreach');
+        gerarHtml($arquivo, $body_element, $valor_dropdown);
+        $count = 1;
         if (count($foreachElements) > 0) {
-            foreach ($foreachElements as $foreachElement) {
-                $arquivo = $arquivo . '_foreach_' . rand(1, 10);
+            foreach ($foreachElements as $index => $foreachElement) {
+                $arquivo = $arquivo . '_foreach_' . $count;
                 gerarHtml($arquivo, $foreachElement, 'sim');
+                $count++;
             }
         }
-        gerarHtml($arquivo, $body_element, $valor_dropdown);
     }
     $dados = "Linkado";
     header("Location: painel/pastas.php?dados=$dados");
@@ -29,4 +32,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["arquivos_selecionados"
 } else {
     echo "<p>Nenhum arquivo foi selecionado.</p>";
 }
-?>

@@ -64,23 +64,24 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <hr>
 <br>
 <div class="form-group row">
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 1 link 1</label>
-<input type="text" class="form-control" name="section_1_link_1" value="<?php if(isset($editaHome->section_1_link_1) && !empty($editaHome->section_1_link_1)){ echo $editaHome->section_1_link_1;}?>" >
-</div>
-</div>
  <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 1 link alt 1</label>
-<input type="text" class="form-control" name="section_1_link_alt_1" value="<?php if(isset($editaHome->section_1_link_alt_1) && !empty($editaHome->section_1_link_alt_1)){ echo $editaHome->section_1_link_alt_1;}?>" >
+<div class="form-group">
+<label class="mr-sm-2" for="">section 1 img 3 ()</label>
+   <input type="file" class="form-control" name="section_1_img_3" >
 </div>
  </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 1 link conteudo 1</label>
- <input type="text" class="form-control" name="section_1_link_conteudo_1" value="<?php if(isset($editaHome->section_1_link_conteudo_1) && !empty($editaHome->section_1_link_conteudo_1)){ echo $editaHome->section_1_link_conteudo_1;}?>" >
- </div>
+ <?php if(isset($editaHome->section_1_img_3) && !empty($editaHome->section_1_img_3)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_1_img_3;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 1 image alt 3</label>
+ <input type="text" class="form-control" name="section_1_image_alt_3" value="<?php if(isset($editaHome->section_1_image_alt_3) && !empty($editaHome->section_1_image_alt_3)){ echo $editaHome->section_1_image_alt_3;}?>" >
+</div>
  </div>
  <div class="col-md-4">
 <div class="form-group">
@@ -101,135 +102,135 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
  <input type="text" class="form-control" name="section_1_image_alt_4" value="<?php if(isset($editaHome->section_1_image_alt_4) && !empty($editaHome->section_1_image_alt_4)){ echo $editaHome->section_1_image_alt_4;}?>" >
 </div>
  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 1 img 5 ()</label>
-   <input type="file" class="form-control" name="section_1_img_5" >
-</div>
- </div>
- <?php if(isset($editaHome->section_1_img_5) && !empty($editaHome->section_1_img_5)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_1_img_5;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 1 image alt 5</label>
- <input type="text" class="form-control" name="section_1_image_alt_5" value="<?php if(isset($editaHome->section_1_image_alt_5) && !empty($editaHome->section_1_image_alt_5)){ echo $editaHome->section_1_image_alt_5;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 1 img 6 ()</label>
-   <input type="file" class="form-control" name="section_1_img_6" >
-</div>
- </div>
- <?php if(isset($editaHome->section_1_img_6) && !empty($editaHome->section_1_img_6)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_1_img_6;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 1 image alt 6</label>
- <input type="text" class="form-control" name="section_1_image_alt_6" value="<?php if(isset($editaHome->section_1_image_alt_6) && !empty($editaHome->section_1_image_alt_6)){ echo $editaHome->section_1_image_alt_6;}?>" >
-</div>
- </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 1 conteudo 7</label>
-  <input type="text" class="form-control" name="section_1_conteudo_7" value="<?php if(isset($editaHome->section_1_conteudo_7) && !empty($editaHome->section_1_conteudo_7)){ echo $editaHome->section_1_conteudo_7;}?>" >
+ <label class="mr-sm-2" for="">section 1 conteudo 5</label>
+  <input type="text" class="form-control" name="section_1_conteudo_5" value="<?php if(isset($editaHome->section_1_conteudo_5) && !empty($editaHome->section_1_conteudo_5)){ echo $editaHome->section_1_conteudo_5;}?>" >
    </div>
   </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 1 conteudo 6</label>
+  <input type="text" class="form-control" name="section_1_conteudo_6" value="<?php if(isset($editaHome->section_1_conteudo_6) && !empty($editaHome->section_1_conteudo_6)){ echo $editaHome->section_1_conteudo_6;}?>" >
+   </div>
+  </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 1 link 7</label>
+<input type="text" class="form-control" name="section_1_link_7" value="<?php if(isset($editaHome->section_1_link_7) && !empty($editaHome->section_1_link_7)){ echo $editaHome->section_1_link_7;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 1 link alt 7</label>
+<input type="text" class="form-control" name="section_1_link_alt_7" value="<?php if(isset($editaHome->section_1_link_alt_7) && !empty($editaHome->section_1_link_alt_7)){ echo $editaHome->section_1_link_alt_7;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 1 link conteudo 7</label>
+ <input type="text" class="form-control" name="section_1_link_conteudo_7" value="<?php if(isset($editaHome->section_1_link_conteudo_7) && !empty($editaHome->section_1_link_conteudo_7)){ echo $editaHome->section_1_link_conteudo_7;}?>" >
+ </div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
  <label class="mr-sm-2" for="">section 1 conteudo 8</label>
   <input type="text" class="form-control" name="section_1_conteudo_8" value="<?php if(isset($editaHome->section_1_conteudo_8) && !empty($editaHome->section_1_conteudo_8)){ echo $editaHome->section_1_conteudo_8;}?>" >
    </div>
   </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 1 link 9</label>
-<input type="text" class="form-control" name="section_1_link_9" value="<?php if(isset($editaHome->section_1_link_9) && !empty($editaHome->section_1_link_9)){ echo $editaHome->section_1_link_9;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 1 link alt 9</label>
-<input type="text" class="form-control" name="section_1_link_alt_9" value="<?php if(isset($editaHome->section_1_link_alt_9) && !empty($editaHome->section_1_link_alt_9)){ echo $editaHome->section_1_link_alt_9;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 1 link conteudo 9</label>
- <input type="text" class="form-control" name="section_1_link_conteudo_9" value="<?php if(isset($editaHome->section_1_link_conteudo_9) && !empty($editaHome->section_1_link_conteudo_9)){ echo $editaHome->section_1_link_conteudo_9;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 1 conteudo 10</label>
-  <input type="text" class="form-control" name="section_1_conteudo_10" value="<?php if(isset($editaHome->section_1_conteudo_10) && !empty($editaHome->section_1_conteudo_10)){ echo $editaHome->section_1_conteudo_10;}?>" >
-   </div>
-  </div>
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 1 img 11 ()</label>
-   <input type="file" class="form-control" name="section_1_img_11" >
+<label class="mr-sm-2" for="">section 1 img 9 ()</label>
+   <input type="file" class="form-control" name="section_1_img_9" >
 </div>
  </div>
- <?php if(isset($editaHome->section_1_img_11) && !empty($editaHome->section_1_img_11)){ ?>
+ <?php if(isset($editaHome->section_1_img_9) && !empty($editaHome->section_1_img_9)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_1_img_11;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_1_img_9;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 1 image alt 11</label>
- <input type="text" class="form-control" name="section_1_image_alt_11" value="<?php if(isset($editaHome->section_1_image_alt_11) && !empty($editaHome->section_1_image_alt_11)){ echo $editaHome->section_1_image_alt_11;}?>" >
+  <label class="mr-sm-2" for="">section 1 image alt 9</label>
+ <input type="text" class="form-control" name="section_1_image_alt_9" value="<?php if(isset($editaHome->section_1_image_alt_9) && !empty($editaHome->section_1_image_alt_9)){ echo $editaHome->section_1_image_alt_9;}?>" >
 </div>
  </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 1 img 10 ()</label>
+   <input type="file" class="form-control" name="section_1_img_10" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_1_img_10) && !empty($editaHome->section_1_img_10)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_1_img_10;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 1 image alt 10</label>
+ <input type="text" class="form-control" name="section_1_image_alt_10" value="<?php if(isset($editaHome->section_1_image_alt_10) && !empty($editaHome->section_1_image_alt_10)){ echo $editaHome->section_1_image_alt_10;}?>" >
+</div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 1 conteudo 11</label>
+  <input type="text" class="form-control" name="section_1_conteudo_11" value="<?php if(isset($editaHome->section_1_conteudo_11) && !empty($editaHome->section_1_conteudo_11)){ echo $editaHome->section_1_conteudo_11;}?>" >
+   </div>
+  </div>
   <div class="col-md-12">
   <div class="form-group">
  <label class="mr-sm-2" for="">section 1 conteudo 12</label>
   <input type="text" class="form-control" name="section_1_conteudo_12" value="<?php if(isset($editaHome->section_1_conteudo_12) && !empty($editaHome->section_1_conteudo_12)){ echo $editaHome->section_1_conteudo_12;}?>" >
    </div>
   </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 1 conteudo 13</label>
-  <input type="text" class="form-control" name="section_1_conteudo_13" value="<?php if(isset($editaHome->section_1_conteudo_13) && !empty($editaHome->section_1_conteudo_13)){ echo $editaHome->section_1_conteudo_13;}?>" >
-   </div>
-  </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 1 link 14</label>
-<input type="text" class="form-control" name="section_1_link_14" value="<?php if(isset($editaHome->section_1_link_14) && !empty($editaHome->section_1_link_14)){ echo $editaHome->section_1_link_14;}?>" >
+ <label class="mr-sm-2" for="">section 1 link 13</label>
+<input type="text" class="form-control" name="section_1_link_13" value="<?php if(isset($editaHome->section_1_link_13) && !empty($editaHome->section_1_link_13)){ echo $editaHome->section_1_link_13;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 1 link alt 14</label>
-<input type="text" class="form-control" name="section_1_link_alt_14" value="<?php if(isset($editaHome->section_1_link_alt_14) && !empty($editaHome->section_1_link_alt_14)){ echo $editaHome->section_1_link_alt_14;}?>" >
+ <label class="mr-sm-2" for="">section 1 link alt 13</label>
+<input type="text" class="form-control" name="section_1_link_alt_13" value="<?php if(isset($editaHome->section_1_link_alt_13) && !empty($editaHome->section_1_link_alt_13)){ echo $editaHome->section_1_link_alt_13;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 1 link conteudo 14</label>
- <input type="text" class="form-control" name="section_1_link_conteudo_14" value="<?php if(isset($editaHome->section_1_link_conteudo_14) && !empty($editaHome->section_1_link_conteudo_14)){ echo $editaHome->section_1_link_conteudo_14;}?>" >
+<label class="mr-sm-2" for="">section 1 link conteudo 13</label>
+ <input type="text" class="form-control" name="section_1_link_conteudo_13" value="<?php if(isset($editaHome->section_1_link_conteudo_13) && !empty($editaHome->section_1_link_conteudo_13)){ echo $editaHome->section_1_link_conteudo_13;}?>" >
  </div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 1 conteudo 15</label>
-  <input type="text" class="form-control" name="section_1_conteudo_15" value="<?php if(isset($editaHome->section_1_conteudo_15) && !empty($editaHome->section_1_conteudo_15)){ echo $editaHome->section_1_conteudo_15;}?>" >
+ <label class="mr-sm-2" for="">section 1 conteudo 14</label>
+  <input type="text" class="form-control" name="section_1_conteudo_14" value="<?php if(isset($editaHome->section_1_conteudo_14) && !empty($editaHome->section_1_conteudo_14)){ echo $editaHome->section_1_conteudo_14;}?>" >
    </div>
   </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 1 img 15 ()</label>
+   <input type="file" class="form-control" name="section_1_img_15" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_1_img_15) && !empty($editaHome->section_1_img_15)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_1_img_15;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 1 image alt 15</label>
+ <input type="text" class="form-control" name="section_1_image_alt_15" value="<?php if(isset($editaHome->section_1_image_alt_15) && !empty($editaHome->section_1_image_alt_15)){ echo $editaHome->section_1_image_alt_15;}?>" >
+</div>
+ </div>
  <div class="col-md-4">
 <div class="form-group">
 <label class="mr-sm-2" for="">section 1 img 16 ()</label>
@@ -700,164 +701,6 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
   <input type="text" class="form-control" name="section_4_conteudo_58" value="<?php if(isset($editaHome->section_4_conteudo_58) && !empty($editaHome->section_4_conteudo_58)){ echo $editaHome->section_4_conteudo_58;}?>" >
    </div>
   </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 4 img 59 ()</label>
-   <input type="file" class="form-control" name="section_4_img_59" >
-</div>
- </div>
- <?php if(isset($editaHome->section_4_img_59) && !empty($editaHome->section_4_img_59)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_4_img_59;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 4 image alt 59</label>
- <input type="text" class="form-control" name="section_4_image_alt_59" value="<?php if(isset($editaHome->section_4_image_alt_59) && !empty($editaHome->section_4_image_alt_59)){ echo $editaHome->section_4_image_alt_59;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 60</label>
-  <input type="text" class="form-control" name="section_4_conteudo_60" value="<?php if(isset($editaHome->section_4_conteudo_60) && !empty($editaHome->section_4_conteudo_60)){ echo $editaHome->section_4_conteudo_60;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 61</label>
-  <input type="text" class="form-control" name="section_4_conteudo_61" value="<?php if(isset($editaHome->section_4_conteudo_61) && !empty($editaHome->section_4_conteudo_61)){ echo $editaHome->section_4_conteudo_61;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 4 link 62</label>
-<input type="text" class="form-control" name="section_4_link_62" value="<?php if(isset($editaHome->section_4_link_62) && !empty($editaHome->section_4_link_62)){ echo $editaHome->section_4_link_62;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 4 link alt 62</label>
-<input type="text" class="form-control" name="section_4_link_alt_62" value="<?php if(isset($editaHome->section_4_link_alt_62) && !empty($editaHome->section_4_link_alt_62)){ echo $editaHome->section_4_link_alt_62;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 4 link conteudo 62</label>
- <input type="text" class="form-control" name="section_4_link_conteudo_62" value="<?php if(isset($editaHome->section_4_link_conteudo_62) && !empty($editaHome->section_4_link_conteudo_62)){ echo $editaHome->section_4_link_conteudo_62;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 63</label>
-  <input type="text" class="form-control" name="section_4_conteudo_63" value="<?php if(isset($editaHome->section_4_conteudo_63) && !empty($editaHome->section_4_conteudo_63)){ echo $editaHome->section_4_conteudo_63;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 4 link 64</label>
-<input type="text" class="form-control" name="section_4_link_64" value="<?php if(isset($editaHome->section_4_link_64) && !empty($editaHome->section_4_link_64)){ echo $editaHome->section_4_link_64;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 4 link alt 64</label>
-<input type="text" class="form-control" name="section_4_link_alt_64" value="<?php if(isset($editaHome->section_4_link_alt_64) && !empty($editaHome->section_4_link_alt_64)){ echo $editaHome->section_4_link_alt_64;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 4 link conteudo 64</label>
- <input type="text" class="form-control" name="section_4_link_conteudo_64" value="<?php if(isset($editaHome->section_4_link_conteudo_64) && !empty($editaHome->section_4_link_conteudo_64)){ echo $editaHome->section_4_link_conteudo_64;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 65</label>
-  <input type="text" class="form-control" name="section_4_conteudo_65" value="<?php if(isset($editaHome->section_4_conteudo_65) && !empty($editaHome->section_4_conteudo_65)){ echo $editaHome->section_4_conteudo_65;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 4 img 66 ()</label>
-   <input type="file" class="form-control" name="section_4_img_66" >
-</div>
- </div>
- <?php if(isset($editaHome->section_4_img_66) && !empty($editaHome->section_4_img_66)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_4_img_66;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 4 image alt 66</label>
- <input type="text" class="form-control" name="section_4_image_alt_66" value="<?php if(isset($editaHome->section_4_image_alt_66) && !empty($editaHome->section_4_image_alt_66)){ echo $editaHome->section_4_image_alt_66;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 67</label>
-  <input type="text" class="form-control" name="section_4_conteudo_67" value="<?php if(isset($editaHome->section_4_conteudo_67) && !empty($editaHome->section_4_conteudo_67)){ echo $editaHome->section_4_conteudo_67;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 68</label>
-  <input type="text" class="form-control" name="section_4_conteudo_68" value="<?php if(isset($editaHome->section_4_conteudo_68) && !empty($editaHome->section_4_conteudo_68)){ echo $editaHome->section_4_conteudo_68;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 4 link 69</label>
-<input type="text" class="form-control" name="section_4_link_69" value="<?php if(isset($editaHome->section_4_link_69) && !empty($editaHome->section_4_link_69)){ echo $editaHome->section_4_link_69;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 4 link alt 69</label>
-<input type="text" class="form-control" name="section_4_link_alt_69" value="<?php if(isset($editaHome->section_4_link_alt_69) && !empty($editaHome->section_4_link_alt_69)){ echo $editaHome->section_4_link_alt_69;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 4 link conteudo 69</label>
- <input type="text" class="form-control" name="section_4_link_conteudo_69" value="<?php if(isset($editaHome->section_4_link_conteudo_69) && !empty($editaHome->section_4_link_conteudo_69)){ echo $editaHome->section_4_link_conteudo_69;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 70</label>
-  <input type="text" class="form-control" name="section_4_conteudo_70" value="<?php if(isset($editaHome->section_4_conteudo_70) && !empty($editaHome->section_4_conteudo_70)){ echo $editaHome->section_4_conteudo_70;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 4 link 71</label>
-<input type="text" class="form-control" name="section_4_link_71" value="<?php if(isset($editaHome->section_4_link_71) && !empty($editaHome->section_4_link_71)){ echo $editaHome->section_4_link_71;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 4 link alt 71</label>
-<input type="text" class="form-control" name="section_4_link_alt_71" value="<?php if(isset($editaHome->section_4_link_alt_71) && !empty($editaHome->section_4_link_alt_71)){ echo $editaHome->section_4_link_alt_71;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 4 link conteudo 71</label>
- <input type="text" class="form-control" name="section_4_link_conteudo_71" value="<?php if(isset($editaHome->section_4_link_conteudo_71) && !empty($editaHome->section_4_link_conteudo_71)){ echo $editaHome->section_4_link_conteudo_71;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 4 conteudo 72</label>
-  <input type="text" class="form-control" name="section_4_conteudo_72" value="<?php if(isset($editaHome->section_4_conteudo_72) && !empty($editaHome->section_4_conteudo_72)){ echo $editaHome->section_4_conteudo_72;}?>" >
-   </div>
-  </div>
 </div>
 <br>
 <hr>
@@ -865,100 +708,77 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <hr>
 <br>
 <div class="form-group row">
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 5 img 59 ()</label>
+   <input type="file" class="form-control" name="section_5_img_59" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_5_img_59) && !empty($editaHome->section_5_img_59)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_5_img_59;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 5 image alt 59</label>
+ <input type="text" class="form-control" name="section_5_image_alt_59" value="<?php if(isset($editaHome->section_5_image_alt_59) && !empty($editaHome->section_5_image_alt_59)){ echo $editaHome->section_5_image_alt_59;}?>" >
+</div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 73</label>
-  <input type="text" class="form-control" name="section_5_conteudo_73" value="<?php if(isset($editaHome->section_5_conteudo_73) && !empty($editaHome->section_5_conteudo_73)){ echo $editaHome->section_5_conteudo_73;}?>" >
+ <label class="mr-sm-2" for="">section 5 conteudo 60</label>
+  <input type="text" class="form-control" name="section_5_conteudo_60" value="<?php if(isset($editaHome->section_5_conteudo_60) && !empty($editaHome->section_5_conteudo_60)){ echo $editaHome->section_5_conteudo_60;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 5 conteudo 61</label>
+  <input type="text" class="form-control" name="section_5_conteudo_61" value="<?php if(isset($editaHome->section_5_conteudo_61) && !empty($editaHome->section_5_conteudo_61)){ echo $editaHome->section_5_conteudo_61;}?>" >
    </div>
   </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 5 link 74</label>
-<input type="text" class="form-control" name="section_5_link_74" value="<?php if(isset($editaHome->section_5_link_74) && !empty($editaHome->section_5_link_74)){ echo $editaHome->section_5_link_74;}?>" >
+ <label class="mr-sm-2" for="">section 5 link 62</label>
+<input type="text" class="form-control" name="section_5_link_62" value="<?php if(isset($editaHome->section_5_link_62) && !empty($editaHome->section_5_link_62)){ echo $editaHome->section_5_link_62;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 link alt 74</label>
-<input type="text" class="form-control" name="section_5_link_alt_74" value="<?php if(isset($editaHome->section_5_link_alt_74) && !empty($editaHome->section_5_link_alt_74)){ echo $editaHome->section_5_link_alt_74;}?>" >
+ <label class="mr-sm-2" for="">section 5 link alt 62</label>
+<input type="text" class="form-control" name="section_5_link_alt_62" value="<?php if(isset($editaHome->section_5_link_alt_62) && !empty($editaHome->section_5_link_alt_62)){ echo $editaHome->section_5_link_alt_62;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 5 link conteudo 74</label>
- <input type="text" class="form-control" name="section_5_link_conteudo_74" value="<?php if(isset($editaHome->section_5_link_conteudo_74) && !empty($editaHome->section_5_link_conteudo_74)){ echo $editaHome->section_5_link_conteudo_74;}?>" >
+<label class="mr-sm-2" for="">section 5 link conteudo 62</label>
+ <input type="text" class="form-control" name="section_5_link_conteudo_62" value="<?php if(isset($editaHome->section_5_link_conteudo_62) && !empty($editaHome->section_5_link_conteudo_62)){ echo $editaHome->section_5_link_conteudo_62;}?>" >
  </div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 75</label>
-  <input type="text" class="form-control" name="section_5_conteudo_75" value="<?php if(isset($editaHome->section_5_conteudo_75) && !empty($editaHome->section_5_conteudo_75)){ echo $editaHome->section_5_conteudo_75;}?>" >
+ <label class="mr-sm-2" for="">section 5 conteudo 63</label>
+  <input type="text" class="form-control" name="section_5_conteudo_63" value="<?php if(isset($editaHome->section_5_conteudo_63) && !empty($editaHome->section_5_conteudo_63)){ echo $editaHome->section_5_conteudo_63;}?>" >
    </div>
   </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 5 link 64</label>
+<input type="text" class="form-control" name="section_5_link_64" value="<?php if(isset($editaHome->section_5_link_64) && !empty($editaHome->section_5_link_64)){ echo $editaHome->section_5_link_64;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 5 link alt 64</label>
+<input type="text" class="form-control" name="section_5_link_alt_64" value="<?php if(isset($editaHome->section_5_link_alt_64) && !empty($editaHome->section_5_link_alt_64)){ echo $editaHome->section_5_link_alt_64;}?>" >
+</div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 76</label>
-  <input type="text" class="form-control" name="section_5_conteudo_76" value="<?php if(isset($editaHome->section_5_conteudo_76) && !empty($editaHome->section_5_conteudo_76)){ echo $editaHome->section_5_conteudo_76;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 77</label>
-  <input type="text" class="form-control" name="section_5_conteudo_77" value="<?php if(isset($editaHome->section_5_conteudo_77) && !empty($editaHome->section_5_conteudo_77)){ echo $editaHome->section_5_conteudo_77;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 78</label>
-  <input type="text" class="form-control" name="section_5_conteudo_78" value="<?php if(isset($editaHome->section_5_conteudo_78) && !empty($editaHome->section_5_conteudo_78)){ echo $editaHome->section_5_conteudo_78;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 79</label>
-  <input type="text" class="form-control" name="section_5_conteudo_79" value="<?php if(isset($editaHome->section_5_conteudo_79) && !empty($editaHome->section_5_conteudo_79)){ echo $editaHome->section_5_conteudo_79;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 80</label>
-  <input type="text" class="form-control" name="section_5_conteudo_80" value="<?php if(isset($editaHome->section_5_conteudo_80) && !empty($editaHome->section_5_conteudo_80)){ echo $editaHome->section_5_conteudo_80;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 81</label>
-  <input type="text" class="form-control" name="section_5_conteudo_81" value="<?php if(isset($editaHome->section_5_conteudo_81) && !empty($editaHome->section_5_conteudo_81)){ echo $editaHome->section_5_conteudo_81;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 82</label>
-  <input type="text" class="form-control" name="section_5_conteudo_82" value="<?php if(isset($editaHome->section_5_conteudo_82) && !empty($editaHome->section_5_conteudo_82)){ echo $editaHome->section_5_conteudo_82;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 83</label>
-  <input type="text" class="form-control" name="section_5_conteudo_83" value="<?php if(isset($editaHome->section_5_conteudo_83) && !empty($editaHome->section_5_conteudo_83)){ echo $editaHome->section_5_conteudo_83;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 84</label>
-  <input type="text" class="form-control" name="section_5_conteudo_84" value="<?php if(isset($editaHome->section_5_conteudo_84) && !empty($editaHome->section_5_conteudo_84)){ echo $editaHome->section_5_conteudo_84;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 85</label>
-  <input type="text" class="form-control" name="section_5_conteudo_85" value="<?php if(isset($editaHome->section_5_conteudo_85) && !empty($editaHome->section_5_conteudo_85)){ echo $editaHome->section_5_conteudo_85;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 5 conteudo 86</label>
-  <input type="text" class="form-control" name="section_5_conteudo_86" value="<?php if(isset($editaHome->section_5_conteudo_86) && !empty($editaHome->section_5_conteudo_86)){ echo $editaHome->section_5_conteudo_86;}?>" >
+ <label class="mr-sm-2" for="">section 5 conteudo 65</label>
+  <input type="text" class="form-control" name="section_5_conteudo_65" value="<?php if(isset($editaHome->section_5_conteudo_65) && !empty($editaHome->section_5_conteudo_65)){ echo $editaHome->section_5_conteudo_65;}?>" >
    </div>
   </div>
 </div>
@@ -970,188 +790,144 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <div class="form-group row">
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 87</label>
-  <input type="text" class="form-control" name="section_6_conteudo_87" value="<?php if(isset($editaHome->section_6_conteudo_87) && !empty($editaHome->section_6_conteudo_87)){ echo $editaHome->section_6_conteudo_87;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 88</label>
-  <input type="text" class="form-control" name="section_6_conteudo_88" value="<?php if(isset($editaHome->section_6_conteudo_88) && !empty($editaHome->section_6_conteudo_88)){ echo $editaHome->section_6_conteudo_88;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 89</label>
-  <input type="text" class="form-control" name="section_6_conteudo_89" value="<?php if(isset($editaHome->section_6_conteudo_89) && !empty($editaHome->section_6_conteudo_89)){ echo $editaHome->section_6_conteudo_89;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 90</label>
-  <input type="text" class="form-control" name="section_6_conteudo_90" value="<?php if(isset($editaHome->section_6_conteudo_90) && !empty($editaHome->section_6_conteudo_90)){ echo $editaHome->section_6_conteudo_90;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 91</label>
-  <input type="text" class="form-control" name="section_6_conteudo_91" value="<?php if(isset($editaHome->section_6_conteudo_91) && !empty($editaHome->section_6_conteudo_91)){ echo $editaHome->section_6_conteudo_91;}?>" >
+ <label class="mr-sm-2" for="">section 6 conteudo 66</label>
+  <input type="text" class="form-control" name="section_6_conteudo_66" value="<?php if(isset($editaHome->section_6_conteudo_66) && !empty($editaHome->section_6_conteudo_66)){ echo $editaHome->section_6_conteudo_66;}?>" >
    </div>
   </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 6 link 92</label>
-<input type="text" class="form-control" name="section_6_link_92" value="<?php if(isset($editaHome->section_6_link_92) && !empty($editaHome->section_6_link_92)){ echo $editaHome->section_6_link_92;}?>" >
+ <label class="mr-sm-2" for="">section 6 link 67</label>
+<input type="text" class="form-control" name="section_6_link_67" value="<?php if(isset($editaHome->section_6_link_67) && !empty($editaHome->section_6_link_67)){ echo $editaHome->section_6_link_67;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 link alt 92</label>
-<input type="text" class="form-control" name="section_6_link_alt_92" value="<?php if(isset($editaHome->section_6_link_alt_92) && !empty($editaHome->section_6_link_alt_92)){ echo $editaHome->section_6_link_alt_92;}?>" >
+ <label class="mr-sm-2" for="">section 6 link alt 67</label>
+<input type="text" class="form-control" name="section_6_link_alt_67" value="<?php if(isset($editaHome->section_6_link_alt_67) && !empty($editaHome->section_6_link_alt_67)){ echo $editaHome->section_6_link_alt_67;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 6 link conteudo 92</label>
- <input type="text" class="form-control" name="section_6_link_conteudo_92" value="<?php if(isset($editaHome->section_6_link_conteudo_92) && !empty($editaHome->section_6_link_conteudo_92)){ echo $editaHome->section_6_link_conteudo_92;}?>" >
+<label class="mr-sm-2" for="">section 6 link conteudo 67</label>
+ <input type="text" class="form-control" name="section_6_link_conteudo_67" value="<?php if(isset($editaHome->section_6_link_conteudo_67) && !empty($editaHome->section_6_link_conteudo_67)){ echo $editaHome->section_6_link_conteudo_67;}?>" >
  </div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 93</label>
-  <input type="text" class="form-control" name="section_6_conteudo_93" value="<?php if(isset($editaHome->section_6_conteudo_93) && !empty($editaHome->section_6_conteudo_93)){ echo $editaHome->section_6_conteudo_93;}?>" >
+ <label class="mr-sm-2" for="">section 6 conteudo 68</label>
+  <input type="text" class="form-control" name="section_6_conteudo_68" value="<?php if(isset($editaHome->section_6_conteudo_68) && !empty($editaHome->section_6_conteudo_68)){ echo $editaHome->section_6_conteudo_68;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 94</label>
-  <input type="text" class="form-control" name="section_6_conteudo_94" value="<?php if(isset($editaHome->section_6_conteudo_94) && !empty($editaHome->section_6_conteudo_94)){ echo $editaHome->section_6_conteudo_94;}?>" >
+ <label class="mr-sm-2" for="">section 6 conteudo 69</label>
+  <input type="text" class="form-control" name="section_6_conteudo_69" value="<?php if(isset($editaHome->section_6_conteudo_69) && !empty($editaHome->section_6_conteudo_69)){ echo $editaHome->section_6_conteudo_69;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 95</label>
-  <input type="text" class="form-control" name="section_6_conteudo_95" value="<?php if(isset($editaHome->section_6_conteudo_95) && !empty($editaHome->section_6_conteudo_95)){ echo $editaHome->section_6_conteudo_95;}?>" >
+ <label class="mr-sm-2" for="">section 6 conteudo 70</label>
+  <input type="text" class="form-control" name="section_6_conteudo_70" value="<?php if(isset($editaHome->section_6_conteudo_70) && !empty($editaHome->section_6_conteudo_70)){ echo $editaHome->section_6_conteudo_70;}?>" >
    </div>
   </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 96</label>
-  <input type="text" class="form-control" name="section_6_conteudo_96" value="<?php if(isset($editaHome->section_6_conteudo_96) && !empty($editaHome->section_6_conteudo_96)){ echo $editaHome->section_6_conteudo_96;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 6 link 97</label>
-<input type="text" class="form-control" name="section_6_link_97" value="<?php if(isset($editaHome->section_6_link_97) && !empty($editaHome->section_6_link_97)){ echo $editaHome->section_6_link_97;}?>" >
-</div>
-</div>
  <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 6 img 71 ()</label>
+   <input type="file" class="form-control" name="section_6_img_71" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_6_img_71) && !empty($editaHome->section_6_img_71)){ ?>
+<div class="col-md-2">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 link alt 97</label>
-<input type="text" class="form-control" name="section_6_link_alt_97" value="<?php if(isset($editaHome->section_6_link_alt_97) && !empty($editaHome->section_6_link_alt_97)){ echo $editaHome->section_6_link_alt_97;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 6 link conteudo 97</label>
- <input type="text" class="form-control" name="section_6_link_conteudo_97" value="<?php if(isset($editaHome->section_6_link_conteudo_97) && !empty($editaHome->section_6_link_conteudo_97)){ echo $editaHome->section_6_link_conteudo_97;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 98</label>
-  <input type="text" class="form-control" name="section_6_conteudo_98" value="<?php if(isset($editaHome->section_6_conteudo_98) && !empty($editaHome->section_6_conteudo_98)){ echo $editaHome->section_6_conteudo_98;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 99</label>
-  <input type="text" class="form-control" name="section_6_conteudo_99" value="<?php if(isset($editaHome->section_6_conteudo_99) && !empty($editaHome->section_6_conteudo_99)){ echo $editaHome->section_6_conteudo_99;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 100</label>
-  <input type="text" class="form-control" name="section_6_conteudo_100" value="<?php if(isset($editaHome->section_6_conteudo_100) && !empty($editaHome->section_6_conteudo_100)){ echo $editaHome->section_6_conteudo_100;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 101</label>
-  <input type="text" class="form-control" name="section_6_conteudo_101" value="<?php if(isset($editaHome->section_6_conteudo_101) && !empty($editaHome->section_6_conteudo_101)){ echo $editaHome->section_6_conteudo_101;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 6 link 102</label>
-<input type="text" class="form-control" name="section_6_link_102" value="<?php if(isset($editaHome->section_6_link_102) && !empty($editaHome->section_6_link_102)){ echo $editaHome->section_6_link_102;}?>" >
+ <img src="../img/<?php echo $editaHome->section_6_img_71;?>" width="100" alt="">
 </div>
 </div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 6 image alt 71</label>
+ <input type="text" class="form-control" name="section_6_image_alt_71" value="<?php if(isset($editaHome->section_6_image_alt_71) && !empty($editaHome->section_6_image_alt_71)){ echo $editaHome->section_6_image_alt_71;}?>" >
+</div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 6 conteudo 72</label>
+  <input type="text" class="form-control" name="section_6_conteudo_72" value="<?php if(isset($editaHome->section_6_conteudo_72) && !empty($editaHome->section_6_conteudo_72)){ echo $editaHome->section_6_conteudo_72;}?>" >
+   </div>
+  </div>
  <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 6 img 73 ()</label>
+   <input type="file" class="form-control" name="section_6_img_73" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_6_img_73) && !empty($editaHome->section_6_img_73)){ ?>
+<div class="col-md-2">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 link alt 102</label>
-<input type="text" class="form-control" name="section_6_link_alt_102" value="<?php if(isset($editaHome->section_6_link_alt_102) && !empty($editaHome->section_6_link_alt_102)){ echo $editaHome->section_6_link_alt_102;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 6 link conteudo 102</label>
- <input type="text" class="form-control" name="section_6_link_conteudo_102" value="<?php if(isset($editaHome->section_6_link_conteudo_102) && !empty($editaHome->section_6_link_conteudo_102)){ echo $editaHome->section_6_link_conteudo_102;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 103</label>
-  <input type="text" class="form-control" name="section_6_conteudo_103" value="<?php if(isset($editaHome->section_6_conteudo_103) && !empty($editaHome->section_6_conteudo_103)){ echo $editaHome->section_6_conteudo_103;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 104</label>
-  <input type="text" class="form-control" name="section_6_conteudo_104" value="<?php if(isset($editaHome->section_6_conteudo_104) && !empty($editaHome->section_6_conteudo_104)){ echo $editaHome->section_6_conteudo_104;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 105</label>
-  <input type="text" class="form-control" name="section_6_conteudo_105" value="<?php if(isset($editaHome->section_6_conteudo_105) && !empty($editaHome->section_6_conteudo_105)){ echo $editaHome->section_6_conteudo_105;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 106</label>
-  <input type="text" class="form-control" name="section_6_conteudo_106" value="<?php if(isset($editaHome->section_6_conteudo_106) && !empty($editaHome->section_6_conteudo_106)){ echo $editaHome->section_6_conteudo_106;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 6 link 107</label>
-<input type="text" class="form-control" name="section_6_link_107" value="<?php if(isset($editaHome->section_6_link_107) && !empty($editaHome->section_6_link_107)){ echo $editaHome->section_6_link_107;}?>" >
+ <img src="../img/<?php echo $editaHome->section_6_img_73;?>" width="100" alt="">
 </div>
 </div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 6 image alt 73</label>
+ <input type="text" class="form-control" name="section_6_image_alt_73" value="<?php if(isset($editaHome->section_6_image_alt_73) && !empty($editaHome->section_6_image_alt_73)){ echo $editaHome->section_6_image_alt_73;}?>" >
+</div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 6 conteudo 74</label>
+  <input type="text" class="form-control" name="section_6_conteudo_74" value="<?php if(isset($editaHome->section_6_conteudo_74) && !empty($editaHome->section_6_conteudo_74)){ echo $editaHome->section_6_conteudo_74;}?>" >
+   </div>
+  </div>
  <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 6 link alt 107</label>
-<input type="text" class="form-control" name="section_6_link_alt_107" value="<?php if(isset($editaHome->section_6_link_alt_107) && !empty($editaHome->section_6_link_alt_107)){ echo $editaHome->section_6_link_alt_107;}?>" >
+<div class="form-group">
+<label class="mr-sm-2" for="">section 6 img 75 ()</label>
+   <input type="file" class="form-control" name="section_6_img_75" >
 </div>
  </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 6 link conteudo 107</label>
- <input type="text" class="form-control" name="section_6_link_conteudo_107" value="<?php if(isset($editaHome->section_6_link_conteudo_107) && !empty($editaHome->section_6_link_conteudo_107)){ echo $editaHome->section_6_link_conteudo_107;}?>" >
- </div>
+ <?php if(isset($editaHome->section_6_img_75) && !empty($editaHome->section_6_img_75)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_6_img_75;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 6 image alt 75</label>
+ <input type="text" class="form-control" name="section_6_image_alt_75" value="<?php if(isset($editaHome->section_6_image_alt_75) && !empty($editaHome->section_6_image_alt_75)){ echo $editaHome->section_6_image_alt_75;}?>" >
+</div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 108</label>
-  <input type="text" class="form-control" name="section_6_conteudo_108" value="<?php if(isset($editaHome->section_6_conteudo_108) && !empty($editaHome->section_6_conteudo_108)){ echo $editaHome->section_6_conteudo_108;}?>" >
+ <label class="mr-sm-2" for="">section 6 conteudo 76</label>
+  <input type="text" class="form-control" name="section_6_conteudo_76" value="<?php if(isset($editaHome->section_6_conteudo_76) && !empty($editaHome->section_6_conteudo_76)){ echo $editaHome->section_6_conteudo_76;}?>" >
    </div>
   </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 6 img 77 ()</label>
+   <input type="file" class="form-control" name="section_6_img_77" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_6_img_77) && !empty($editaHome->section_6_img_77)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_6_img_77;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 6 image alt 77</label>
+ <input type="text" class="form-control" name="section_6_image_alt_77" value="<?php if(isset($editaHome->section_6_image_alt_77) && !empty($editaHome->section_6_image_alt_77)){ echo $editaHome->section_6_image_alt_77;}?>" >
+</div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 6 conteudo 109</label>
-  <input type="text" class="form-control" name="section_6_conteudo_109" value="<?php if(isset($editaHome->section_6_conteudo_109) && !empty($editaHome->section_6_conteudo_109)){ echo $editaHome->section_6_conteudo_109;}?>" >
+ <label class="mr-sm-2" for="">section 6 conteudo 78</label>
+  <input type="text" class="form-control" name="section_6_conteudo_78" value="<?php if(isset($editaHome->section_6_conteudo_78) && !empty($editaHome->section_6_conteudo_78)){ echo $editaHome->section_6_conteudo_78;}?>" >
    </div>
   </div>
 </div>
@@ -1161,145 +937,190 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <hr>
 <br>
 <div class="form-group row">
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 7 link 110</label>
-<input type="text" class="form-control" name="section_7_link_110" value="<?php if(isset($editaHome->section_7_link_110) && !empty($editaHome->section_7_link_110)){ echo $editaHome->section_7_link_110;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 7 link alt 110</label>
-<input type="text" class="form-control" name="section_7_link_alt_110" value="<?php if(isset($editaHome->section_7_link_alt_110) && !empty($editaHome->section_7_link_alt_110)){ echo $editaHome->section_7_link_alt_110;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 7 img 111 ()</label>
-   <input type="file" class="form-control" name="section_7_img_111" >
-</div>
- </div>
- <?php if(isset($editaHome->section_7_img_111) && !empty($editaHome->section_7_img_111)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_7_img_111;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 7 image alt 111</label>
- <input type="text" class="form-control" name="section_7_image_alt_111" value="<?php if(isset($editaHome->section_7_image_alt_111) && !empty($editaHome->section_7_image_alt_111)){ echo $editaHome->section_7_image_alt_111;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 7 img 112 ()</label>
-   <input type="file" class="form-control" name="section_7_img_112" >
-</div>
- </div>
- <?php if(isset($editaHome->section_7_img_112) && !empty($editaHome->section_7_img_112)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_7_img_112;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 7 image alt 112</label>
- <input type="text" class="form-control" name="section_7_image_alt_112" value="<?php if(isset($editaHome->section_7_image_alt_112) && !empty($editaHome->section_7_image_alt_112)){ echo $editaHome->section_7_image_alt_112;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 7 img 113 ()</label>
-   <input type="file" class="form-control" name="section_7_img_113" >
-</div>
- </div>
- <?php if(isset($editaHome->section_7_img_113) && !empty($editaHome->section_7_img_113)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_7_img_113;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 7 image alt 113</label>
- <input type="text" class="form-control" name="section_7_image_alt_113" value="<?php if(isset($editaHome->section_7_image_alt_113) && !empty($editaHome->section_7_image_alt_113)){ echo $editaHome->section_7_image_alt_113;}?>" >
-</div>
- </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 7 conteudo 114</label>
-  <input type="text" class="form-control" name="section_7_conteudo_114" value="<?php if(isset($editaHome->section_7_conteudo_114) && !empty($editaHome->section_7_conteudo_114)){ echo $editaHome->section_7_conteudo_114;}?>" >
+ <label class="mr-sm-2" for="">section 7 conteudo 79</label>
+  <input type="text" class="form-control" name="section_7_conteudo_79" value="<?php if(isset($editaHome->section_7_conteudo_79) && !empty($editaHome->section_7_conteudo_79)){ echo $editaHome->section_7_conteudo_79;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 7 conteudo 115</label>
-  <input type="text" class="form-control" name="section_7_conteudo_115" value="<?php if(isset($editaHome->section_7_conteudo_115) && !empty($editaHome->section_7_conteudo_115)){ echo $editaHome->section_7_conteudo_115;}?>" >
+ <label class="mr-sm-2" for="">section 7 conteudo 80</label>
+  <input type="text" class="form-control" name="section_7_conteudo_80" value="<?php if(isset($editaHome->section_7_conteudo_80) && !empty($editaHome->section_7_conteudo_80)){ echo $editaHome->section_7_conteudo_80;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 7 conteudo 116</label>
-  <input type="text" class="form-control" name="section_7_conteudo_116" value="<?php if(isset($editaHome->section_7_conteudo_116) && !empty($editaHome->section_7_conteudo_116)){ echo $editaHome->section_7_conteudo_116;}?>" >
+ <label class="mr-sm-2" for="">section 7 conteudo 81</label>
+  <input type="text" class="form-control" name="section_7_conteudo_81" value="<?php if(isset($editaHome->section_7_conteudo_81) && !empty($editaHome->section_7_conteudo_81)){ echo $editaHome->section_7_conteudo_81;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 7 conteudo 117</label>
-  <input type="text" class="form-control" name="section_7_conteudo_117" value="<?php if(isset($editaHome->section_7_conteudo_117) && !empty($editaHome->section_7_conteudo_117)){ echo $editaHome->section_7_conteudo_117;}?>" >
+ <label class="mr-sm-2" for="">section 7 conteudo 82</label>
+  <input type="text" class="form-control" name="section_7_conteudo_82" value="<?php if(isset($editaHome->section_7_conteudo_82) && !empty($editaHome->section_7_conteudo_82)){ echo $editaHome->section_7_conteudo_82;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 83</label>
+  <input type="text" class="form-control" name="section_7_conteudo_83" value="<?php if(isset($editaHome->section_7_conteudo_83) && !empty($editaHome->section_7_conteudo_83)){ echo $editaHome->section_7_conteudo_83;}?>" >
    </div>
   </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 7 link 118</label>
-<input type="text" class="form-control" name="section_7_link_118" value="<?php if(isset($editaHome->section_7_link_118) && !empty($editaHome->section_7_link_118)){ echo $editaHome->section_7_link_118;}?>" >
+ <label class="mr-sm-2" for="">section 7 link 84</label>
+<input type="text" class="form-control" name="section_7_link_84" value="<?php if(isset($editaHome->section_7_link_84) && !empty($editaHome->section_7_link_84)){ echo $editaHome->section_7_link_84;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 7 link alt 118</label>
-<input type="text" class="form-control" name="section_7_link_alt_118" value="<?php if(isset($editaHome->section_7_link_alt_118) && !empty($editaHome->section_7_link_alt_118)){ echo $editaHome->section_7_link_alt_118;}?>" >
+ <label class="mr-sm-2" for="">section 7 link alt 84</label>
+<input type="text" class="form-control" name="section_7_link_alt_84" value="<?php if(isset($editaHome->section_7_link_alt_84) && !empty($editaHome->section_7_link_alt_84)){ echo $editaHome->section_7_link_alt_84;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 7 link conteudo 118</label>
- <input type="text" class="form-control" name="section_7_link_conteudo_118" value="<?php if(isset($editaHome->section_7_link_conteudo_118) && !empty($editaHome->section_7_link_conteudo_118)){ echo $editaHome->section_7_link_conteudo_118;}?>" >
+<label class="mr-sm-2" for="">section 7 link conteudo 84</label>
+ <input type="text" class="form-control" name="section_7_link_conteudo_84" value="<?php if(isset($editaHome->section_7_link_conteudo_84) && !empty($editaHome->section_7_link_conteudo_84)){ echo $editaHome->section_7_link_conteudo_84;}?>" >
  </div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 7 conteudo 119</label>
-  <input type="text" class="form-control" name="section_7_conteudo_119" value="<?php if(isset($editaHome->section_7_conteudo_119) && !empty($editaHome->section_7_conteudo_119)){ echo $editaHome->section_7_conteudo_119;}?>" >
+ <label class="mr-sm-2" for="">section 7 conteudo 85</label>
+  <input type="text" class="form-control" name="section_7_conteudo_85" value="<?php if(isset($editaHome->section_7_conteudo_85) && !empty($editaHome->section_7_conteudo_85)){ echo $editaHome->section_7_conteudo_85;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 86</label>
+  <input type="text" class="form-control" name="section_7_conteudo_86" value="<?php if(isset($editaHome->section_7_conteudo_86) && !empty($editaHome->section_7_conteudo_86)){ echo $editaHome->section_7_conteudo_86;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 87</label>
+  <input type="text" class="form-control" name="section_7_conteudo_87" value="<?php if(isset($editaHome->section_7_conteudo_87) && !empty($editaHome->section_7_conteudo_87)){ echo $editaHome->section_7_conteudo_87;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 88</label>
+  <input type="text" class="form-control" name="section_7_conteudo_88" value="<?php if(isset($editaHome->section_7_conteudo_88) && !empty($editaHome->section_7_conteudo_88)){ echo $editaHome->section_7_conteudo_88;}?>" >
    </div>
   </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 7 link 120</label>
-<input type="text" class="form-control" name="section_7_link_120" value="<?php if(isset($editaHome->section_7_link_120) && !empty($editaHome->section_7_link_120)){ echo $editaHome->section_7_link_120;}?>" >
+ <label class="mr-sm-2" for="">section 7 link 89</label>
+<input type="text" class="form-control" name="section_7_link_89" value="<?php if(isset($editaHome->section_7_link_89) && !empty($editaHome->section_7_link_89)){ echo $editaHome->section_7_link_89;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 7 link alt 120</label>
-<input type="text" class="form-control" name="section_7_link_alt_120" value="<?php if(isset($editaHome->section_7_link_alt_120) && !empty($editaHome->section_7_link_alt_120)){ echo $editaHome->section_7_link_alt_120;}?>" >
+ <label class="mr-sm-2" for="">section 7 link alt 89</label>
+<input type="text" class="form-control" name="section_7_link_alt_89" value="<?php if(isset($editaHome->section_7_link_alt_89) && !empty($editaHome->section_7_link_alt_89)){ echo $editaHome->section_7_link_alt_89;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 7 link conteudo 120</label>
- <input type="text" class="form-control" name="section_7_link_conteudo_120" value="<?php if(isset($editaHome->section_7_link_conteudo_120) && !empty($editaHome->section_7_link_conteudo_120)){ echo $editaHome->section_7_link_conteudo_120;}?>" >
+<label class="mr-sm-2" for="">section 7 link conteudo 89</label>
+ <input type="text" class="form-control" name="section_7_link_conteudo_89" value="<?php if(isset($editaHome->section_7_link_conteudo_89) && !empty($editaHome->section_7_link_conteudo_89)){ echo $editaHome->section_7_link_conteudo_89;}?>" >
  </div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 7 conteudo 121</label>
-  <input type="text" class="form-control" name="section_7_conteudo_121" value="<?php if(isset($editaHome->section_7_conteudo_121) && !empty($editaHome->section_7_conteudo_121)){ echo $editaHome->section_7_conteudo_121;}?>" >
+ <label class="mr-sm-2" for="">section 7 conteudo 90</label>
+  <input type="text" class="form-control" name="section_7_conteudo_90" value="<?php if(isset($editaHome->section_7_conteudo_90) && !empty($editaHome->section_7_conteudo_90)){ echo $editaHome->section_7_conteudo_90;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 91</label>
+  <input type="text" class="form-control" name="section_7_conteudo_91" value="<?php if(isset($editaHome->section_7_conteudo_91) && !empty($editaHome->section_7_conteudo_91)){ echo $editaHome->section_7_conteudo_91;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 92</label>
+  <input type="text" class="form-control" name="section_7_conteudo_92" value="<?php if(isset($editaHome->section_7_conteudo_92) && !empty($editaHome->section_7_conteudo_92)){ echo $editaHome->section_7_conteudo_92;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 93</label>
+  <input type="text" class="form-control" name="section_7_conteudo_93" value="<?php if(isset($editaHome->section_7_conteudo_93) && !empty($editaHome->section_7_conteudo_93)){ echo $editaHome->section_7_conteudo_93;}?>" >
+   </div>
+  </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 7 link 94</label>
+<input type="text" class="form-control" name="section_7_link_94" value="<?php if(isset($editaHome->section_7_link_94) && !empty($editaHome->section_7_link_94)){ echo $editaHome->section_7_link_94;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 link alt 94</label>
+<input type="text" class="form-control" name="section_7_link_alt_94" value="<?php if(isset($editaHome->section_7_link_alt_94) && !empty($editaHome->section_7_link_alt_94)){ echo $editaHome->section_7_link_alt_94;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 7 link conteudo 94</label>
+ <input type="text" class="form-control" name="section_7_link_conteudo_94" value="<?php if(isset($editaHome->section_7_link_conteudo_94) && !empty($editaHome->section_7_link_conteudo_94)){ echo $editaHome->section_7_link_conteudo_94;}?>" >
+ </div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 95</label>
+  <input type="text" class="form-control" name="section_7_conteudo_95" value="<?php if(isset($editaHome->section_7_conteudo_95) && !empty($editaHome->section_7_conteudo_95)){ echo $editaHome->section_7_conteudo_95;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 96</label>
+  <input type="text" class="form-control" name="section_7_conteudo_96" value="<?php if(isset($editaHome->section_7_conteudo_96) && !empty($editaHome->section_7_conteudo_96)){ echo $editaHome->section_7_conteudo_96;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 97</label>
+  <input type="text" class="form-control" name="section_7_conteudo_97" value="<?php if(isset($editaHome->section_7_conteudo_97) && !empty($editaHome->section_7_conteudo_97)){ echo $editaHome->section_7_conteudo_97;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 98</label>
+  <input type="text" class="form-control" name="section_7_conteudo_98" value="<?php if(isset($editaHome->section_7_conteudo_98) && !empty($editaHome->section_7_conteudo_98)){ echo $editaHome->section_7_conteudo_98;}?>" >
+   </div>
+  </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 7 link 99</label>
+<input type="text" class="form-control" name="section_7_link_99" value="<?php if(isset($editaHome->section_7_link_99) && !empty($editaHome->section_7_link_99)){ echo $editaHome->section_7_link_99;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 link alt 99</label>
+<input type="text" class="form-control" name="section_7_link_alt_99" value="<?php if(isset($editaHome->section_7_link_alt_99) && !empty($editaHome->section_7_link_alt_99)){ echo $editaHome->section_7_link_alt_99;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 7 link conteudo 99</label>
+ <input type="text" class="form-control" name="section_7_link_conteudo_99" value="<?php if(isset($editaHome->section_7_link_conteudo_99) && !empty($editaHome->section_7_link_conteudo_99)){ echo $editaHome->section_7_link_conteudo_99;}?>" >
+ </div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 100</label>
+  <input type="text" class="form-control" name="section_7_conteudo_100" value="<?php if(isset($editaHome->section_7_conteudo_100) && !empty($editaHome->section_7_conteudo_100)){ echo $editaHome->section_7_conteudo_100;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 7 conteudo 101</label>
+  <input type="text" class="form-control" name="section_7_conteudo_101" value="<?php if(isset($editaHome->section_7_conteudo_101) && !empty($editaHome->section_7_conteudo_101)){ echo $editaHome->section_7_conteudo_101;}?>" >
    </div>
   </div>
 </div>
@@ -1309,40 +1130,164 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <hr>
 <br>
 <div class="form-group row">
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 8 img 102 ()</label>
+   <input type="file" class="form-control" name="section_8_img_102" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_8_img_102) && !empty($editaHome->section_8_img_102)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_8_img_102;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 8 image alt 102</label>
+ <input type="text" class="form-control" name="section_8_image_alt_102" value="<?php if(isset($editaHome->section_8_image_alt_102) && !empty($editaHome->section_8_image_alt_102)){ echo $editaHome->section_8_image_alt_102;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 8 link 103</label>
+<input type="text" class="form-control" name="section_8_link_103" value="<?php if(isset($editaHome->section_8_link_103) && !empty($editaHome->section_8_link_103)){ echo $editaHome->section_8_link_103;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 8 link alt 103</label>
+<input type="text" class="form-control" name="section_8_link_alt_103" value="<?php if(isset($editaHome->section_8_link_alt_103) && !empty($editaHome->section_8_link_alt_103)){ echo $editaHome->section_8_link_alt_103;}?>" >
+</div>
+ </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 8 img 104 ()</label>
+   <input type="file" class="form-control" name="section_8_img_104" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_8_img_104) && !empty($editaHome->section_8_img_104)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_8_img_104;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 8 image alt 104</label>
+ <input type="text" class="form-control" name="section_8_image_alt_104" value="<?php if(isset($editaHome->section_8_image_alt_104) && !empty($editaHome->section_8_image_alt_104)){ echo $editaHome->section_8_image_alt_104;}?>" >
+</div>
+ </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 8 img 105 ()</label>
+   <input type="file" class="form-control" name="section_8_img_105" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_8_img_105) && !empty($editaHome->section_8_img_105)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_8_img_105;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 8 image alt 105</label>
+ <input type="text" class="form-control" name="section_8_image_alt_105" value="<?php if(isset($editaHome->section_8_image_alt_105) && !empty($editaHome->section_8_image_alt_105)){ echo $editaHome->section_8_image_alt_105;}?>" >
+</div>
+ </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 8 img 106 ()</label>
+   <input type="file" class="form-control" name="section_8_img_106" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_8_img_106) && !empty($editaHome->section_8_img_106)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_8_img_106;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 8 image alt 106</label>
+ <input type="text" class="form-control" name="section_8_image_alt_106" value="<?php if(isset($editaHome->section_8_image_alt_106) && !empty($editaHome->section_8_image_alt_106)){ echo $editaHome->section_8_image_alt_106;}?>" >
+</div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 8 conteudo 122</label>
-  <input type="text" class="form-control" name="section_8_conteudo_122" value="<?php if(isset($editaHome->section_8_conteudo_122) && !empty($editaHome->section_8_conteudo_122)){ echo $editaHome->section_8_conteudo_122;}?>" >
+ <label class="mr-sm-2" for="">section 8 conteudo 107</label>
+  <input type="text" class="form-control" name="section_8_conteudo_107" value="<?php if(isset($editaHome->section_8_conteudo_107) && !empty($editaHome->section_8_conteudo_107)){ echo $editaHome->section_8_conteudo_107;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 8 conteudo 123</label>
-  <input type="text" class="form-control" name="section_8_conteudo_123" value="<?php if(isset($editaHome->section_8_conteudo_123) && !empty($editaHome->section_8_conteudo_123)){ echo $editaHome->section_8_conteudo_123;}?>" >
+ <label class="mr-sm-2" for="">section 8 conteudo 108</label>
+  <input type="text" class="form-control" name="section_8_conteudo_108" value="<?php if(isset($editaHome->section_8_conteudo_108) && !empty($editaHome->section_8_conteudo_108)){ echo $editaHome->section_8_conteudo_108;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 8 conteudo 125</label>
-  <input type="text" class="form-control" name="section_8_conteudo_125" value="<?php if(isset($editaHome->section_8_conteudo_125) && !empty($editaHome->section_8_conteudo_125)){ echo $editaHome->section_8_conteudo_125;}?>" >
+ <label class="mr-sm-2" for="">section 8 conteudo 109</label>
+  <input type="text" class="form-control" name="section_8_conteudo_109" value="<?php if(isset($editaHome->section_8_conteudo_109) && !empty($editaHome->section_8_conteudo_109)){ echo $editaHome->section_8_conteudo_109;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 8 conteudo 127</label>
-  <input type="text" class="form-control" name="section_8_conteudo_127" value="<?php if(isset($editaHome->section_8_conteudo_127) && !empty($editaHome->section_8_conteudo_127)){ echo $editaHome->section_8_conteudo_127;}?>" >
+ <label class="mr-sm-2" for="">section 8 conteudo 110</label>
+  <input type="text" class="form-control" name="section_8_conteudo_110" value="<?php if(isset($editaHome->section_8_conteudo_110) && !empty($editaHome->section_8_conteudo_110)){ echo $editaHome->section_8_conteudo_110;}?>" >
    </div>
   </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 8 link 111</label>
+<input type="text" class="form-control" name="section_8_link_111" value="<?php if(isset($editaHome->section_8_link_111) && !empty($editaHome->section_8_link_111)){ echo $editaHome->section_8_link_111;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 8 link alt 111</label>
+<input type="text" class="form-control" name="section_8_link_alt_111" value="<?php if(isset($editaHome->section_8_link_alt_111) && !empty($editaHome->section_8_link_alt_111)){ echo $editaHome->section_8_link_alt_111;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 8 link conteudo 111</label>
+ <input type="text" class="form-control" name="section_8_link_conteudo_111" value="<?php if(isset($editaHome->section_8_link_conteudo_111) && !empty($editaHome->section_8_link_conteudo_111)){ echo $editaHome->section_8_link_conteudo_111;}?>" >
+ </div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 8 conteudo 129</label>
-  <input type="text" class="form-control" name="section_8_conteudo_129" value="<?php if(isset($editaHome->section_8_conteudo_129) && !empty($editaHome->section_8_conteudo_129)){ echo $editaHome->section_8_conteudo_129;}?>" >
+ <label class="mr-sm-2" for="">section 8 conteudo 112</label>
+  <input type="text" class="form-control" name="section_8_conteudo_112" value="<?php if(isset($editaHome->section_8_conteudo_112) && !empty($editaHome->section_8_conteudo_112)){ echo $editaHome->section_8_conteudo_112;}?>" >
    </div>
   </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 8 link 113</label>
+<input type="text" class="form-control" name="section_8_link_113" value="<?php if(isset($editaHome->section_8_link_113) && !empty($editaHome->section_8_link_113)){ echo $editaHome->section_8_link_113;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 8 link alt 113</label>
+<input type="text" class="form-control" name="section_8_link_alt_113" value="<?php if(isset($editaHome->section_8_link_alt_113) && !empty($editaHome->section_8_link_alt_113)){ echo $editaHome->section_8_link_alt_113;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 8 link conteudo 113</label>
+ <input type="text" class="form-control" name="section_8_link_conteudo_113" value="<?php if(isset($editaHome->section_8_link_conteudo_113) && !empty($editaHome->section_8_link_conteudo_113)){ echo $editaHome->section_8_link_conteudo_113;}?>" >
+ </div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 8 conteudo 131</label>
-  <input type="text" class="form-control" name="section_8_conteudo_131" value="<?php if(isset($editaHome->section_8_conteudo_131) && !empty($editaHome->section_8_conteudo_131)){ echo $editaHome->section_8_conteudo_131;}?>" >
+ <label class="mr-sm-2" for="">section 8 conteudo 114</label>
+  <input type="text" class="form-control" name="section_8_conteudo_114" value="<?php if(isset($editaHome->section_8_conteudo_114) && !empty($editaHome->section_8_conteudo_114)){ echo $editaHome->section_8_conteudo_114;}?>" >
    </div>
   </div>
 </div>
@@ -1354,282 +1299,87 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <div class="form-group row">
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 133 ()</label>
-   <input type="file" class="form-control" name="section_9_img_133" >
+<label class="mr-sm-2" for="">section 9 img 115 ()</label>
+   <input type="file" class="form-control" name="section_9_img_115" >
 </div>
  </div>
- <?php if(isset($editaHome->section_9_img_133) && !empty($editaHome->section_9_img_133)){ ?>
+ <?php if(isset($editaHome->section_9_img_115) && !empty($editaHome->section_9_img_115)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_133;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_9_img_115;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 133</label>
- <input type="text" class="form-control" name="section_9_image_alt_133" value="<?php if(isset($editaHome->section_9_image_alt_133) && !empty($editaHome->section_9_image_alt_133)){ echo $editaHome->section_9_image_alt_133;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 134 ()</label>
-   <input type="file" class="form-control" name="section_9_img_134" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_134) && !empty($editaHome->section_9_img_134)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_134;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 134</label>
- <input type="text" class="form-control" name="section_9_image_alt_134" value="<?php if(isset($editaHome->section_9_image_alt_134) && !empty($editaHome->section_9_image_alt_134)){ echo $editaHome->section_9_image_alt_134;}?>" >
+  <label class="mr-sm-2" for="">section 9 image alt 115</label>
+ <input type="text" class="form-control" name="section_9_image_alt_115" value="<?php if(isset($editaHome->section_9_image_alt_115) && !empty($editaHome->section_9_image_alt_115)){ echo $editaHome->section_9_image_alt_115;}?>" >
 </div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 135</label>
-  <input type="text" class="form-control" name="section_9_conteudo_135" value="<?php if(isset($editaHome->section_9_conteudo_135) && !empty($editaHome->section_9_conteudo_135)){ echo $editaHome->section_9_conteudo_135;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 116</label>
+  <input type="text" class="form-control" name="section_9_conteudo_116" value="<?php if(isset($editaHome->section_9_conteudo_116) && !empty($editaHome->section_9_conteudo_116)){ echo $editaHome->section_9_conteudo_116;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 136</label>
-  <input type="text" class="form-control" name="section_9_conteudo_136" value="<?php if(isset($editaHome->section_9_conteudo_136) && !empty($editaHome->section_9_conteudo_136)){ echo $editaHome->section_9_conteudo_136;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 117</label>
+  <input type="text" class="form-control" name="section_9_conteudo_117" value="<?php if(isset($editaHome->section_9_conteudo_117) && !empty($editaHome->section_9_conteudo_117)){ echo $editaHome->section_9_conteudo_117;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 137</label>
-  <input type="text" class="form-control" name="section_9_conteudo_137" value="<?php if(isset($editaHome->section_9_conteudo_137) && !empty($editaHome->section_9_conteudo_137)){ echo $editaHome->section_9_conteudo_137;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 138 ()</label>
-   <input type="file" class="form-control" name="section_9_img_138" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_138) && !empty($editaHome->section_9_img_138)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_138;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 138</label>
- <input type="text" class="form-control" name="section_9_image_alt_138" value="<?php if(isset($editaHome->section_9_image_alt_138) && !empty($editaHome->section_9_image_alt_138)){ echo $editaHome->section_9_image_alt_138;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 139 ()</label>
-   <input type="file" class="form-control" name="section_9_img_139" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_139) && !empty($editaHome->section_9_img_139)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_139;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 139</label>
- <input type="text" class="form-control" name="section_9_image_alt_139" value="<?php if(isset($editaHome->section_9_image_alt_139) && !empty($editaHome->section_9_image_alt_139)){ echo $editaHome->section_9_image_alt_139;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 140</label>
-  <input type="text" class="form-control" name="section_9_conteudo_140" value="<?php if(isset($editaHome->section_9_conteudo_140) && !empty($editaHome->section_9_conteudo_140)){ echo $editaHome->section_9_conteudo_140;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 119</label>
+  <input type="text" class="form-control" name="section_9_conteudo_119" value="<?php if(isset($editaHome->section_9_conteudo_119) && !empty($editaHome->section_9_conteudo_119)){ echo $editaHome->section_9_conteudo_119;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 141</label>
-  <input type="text" class="form-control" name="section_9_conteudo_141" value="<?php if(isset($editaHome->section_9_conteudo_141) && !empty($editaHome->section_9_conteudo_141)){ echo $editaHome->section_9_conteudo_141;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 120</label>
+  <input type="text" class="form-control" name="section_9_conteudo_120" value="<?php if(isset($editaHome->section_9_conteudo_120) && !empty($editaHome->section_9_conteudo_120)){ echo $editaHome->section_9_conteudo_120;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 142</label>
-  <input type="text" class="form-control" name="section_9_conteudo_142" value="<?php if(isset($editaHome->section_9_conteudo_142) && !empty($editaHome->section_9_conteudo_142)){ echo $editaHome->section_9_conteudo_142;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 143 ()</label>
-   <input type="file" class="form-control" name="section_9_img_143" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_143) && !empty($editaHome->section_9_img_143)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_143;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 143</label>
- <input type="text" class="form-control" name="section_9_image_alt_143" value="<?php if(isset($editaHome->section_9_image_alt_143) && !empty($editaHome->section_9_image_alt_143)){ echo $editaHome->section_9_image_alt_143;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 144 ()</label>
-   <input type="file" class="form-control" name="section_9_img_144" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_144) && !empty($editaHome->section_9_img_144)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_144;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 144</label>
- <input type="text" class="form-control" name="section_9_image_alt_144" value="<?php if(isset($editaHome->section_9_image_alt_144) && !empty($editaHome->section_9_image_alt_144)){ echo $editaHome->section_9_image_alt_144;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 145</label>
-  <input type="text" class="form-control" name="section_9_conteudo_145" value="<?php if(isset($editaHome->section_9_conteudo_145) && !empty($editaHome->section_9_conteudo_145)){ echo $editaHome->section_9_conteudo_145;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 122</label>
+  <input type="text" class="form-control" name="section_9_conteudo_122" value="<?php if(isset($editaHome->section_9_conteudo_122) && !empty($editaHome->section_9_conteudo_122)){ echo $editaHome->section_9_conteudo_122;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 146</label>
-  <input type="text" class="form-control" name="section_9_conteudo_146" value="<?php if(isset($editaHome->section_9_conteudo_146) && !empty($editaHome->section_9_conteudo_146)){ echo $editaHome->section_9_conteudo_146;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 123</label>
+  <input type="text" class="form-control" name="section_9_conteudo_123" value="<?php if(isset($editaHome->section_9_conteudo_123) && !empty($editaHome->section_9_conteudo_123)){ echo $editaHome->section_9_conteudo_123;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 147</label>
-  <input type="text" class="form-control" name="section_9_conteudo_147" value="<?php if(isset($editaHome->section_9_conteudo_147) && !empty($editaHome->section_9_conteudo_147)){ echo $editaHome->section_9_conteudo_147;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 148 ()</label>
-   <input type="file" class="form-control" name="section_9_img_148" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_148) && !empty($editaHome->section_9_img_148)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_148;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 148</label>
- <input type="text" class="form-control" name="section_9_image_alt_148" value="<?php if(isset($editaHome->section_9_image_alt_148) && !empty($editaHome->section_9_image_alt_148)){ echo $editaHome->section_9_image_alt_148;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 149 ()</label>
-   <input type="file" class="form-control" name="section_9_img_149" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_149) && !empty($editaHome->section_9_img_149)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_149;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 149</label>
- <input type="text" class="form-control" name="section_9_image_alt_149" value="<?php if(isset($editaHome->section_9_image_alt_149) && !empty($editaHome->section_9_image_alt_149)){ echo $editaHome->section_9_image_alt_149;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 150</label>
-  <input type="text" class="form-control" name="section_9_conteudo_150" value="<?php if(isset($editaHome->section_9_conteudo_150) && !empty($editaHome->section_9_conteudo_150)){ echo $editaHome->section_9_conteudo_150;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 125</label>
+  <input type="text" class="form-control" name="section_9_conteudo_125" value="<?php if(isset($editaHome->section_9_conteudo_125) && !empty($editaHome->section_9_conteudo_125)){ echo $editaHome->section_9_conteudo_125;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 151</label>
-  <input type="text" class="form-control" name="section_9_conteudo_151" value="<?php if(isset($editaHome->section_9_conteudo_151) && !empty($editaHome->section_9_conteudo_151)){ echo $editaHome->section_9_conteudo_151;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 126</label>
+  <input type="text" class="form-control" name="section_9_conteudo_126" value="<?php if(isset($editaHome->section_9_conteudo_126) && !empty($editaHome->section_9_conteudo_126)){ echo $editaHome->section_9_conteudo_126;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 152</label>
-  <input type="text" class="form-control" name="section_9_conteudo_152" value="<?php if(isset($editaHome->section_9_conteudo_152) && !empty($editaHome->section_9_conteudo_152)){ echo $editaHome->section_9_conteudo_152;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 153 ()</label>
-   <input type="file" class="form-control" name="section_9_img_153" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_153) && !empty($editaHome->section_9_img_153)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_153;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 153</label>
- <input type="text" class="form-control" name="section_9_image_alt_153" value="<?php if(isset($editaHome->section_9_image_alt_153) && !empty($editaHome->section_9_image_alt_153)){ echo $editaHome->section_9_image_alt_153;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 9 img 154 ()</label>
-   <input type="file" class="form-control" name="section_9_img_154" >
-</div>
- </div>
- <?php if(isset($editaHome->section_9_img_154) && !empty($editaHome->section_9_img_154)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_9_img_154;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 9 image alt 154</label>
- <input type="text" class="form-control" name="section_9_image_alt_154" value="<?php if(isset($editaHome->section_9_image_alt_154) && !empty($editaHome->section_9_image_alt_154)){ echo $editaHome->section_9_image_alt_154;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 155</label>
-  <input type="text" class="form-control" name="section_9_conteudo_155" value="<?php if(isset($editaHome->section_9_conteudo_155) && !empty($editaHome->section_9_conteudo_155)){ echo $editaHome->section_9_conteudo_155;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 128</label>
+  <input type="text" class="form-control" name="section_9_conteudo_128" value="<?php if(isset($editaHome->section_9_conteudo_128) && !empty($editaHome->section_9_conteudo_128)){ echo $editaHome->section_9_conteudo_128;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 156</label>
-  <input type="text" class="form-control" name="section_9_conteudo_156" value="<?php if(isset($editaHome->section_9_conteudo_156) && !empty($editaHome->section_9_conteudo_156)){ echo $editaHome->section_9_conteudo_156;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 129</label>
+  <input type="text" class="form-control" name="section_9_conteudo_129" value="<?php if(isset($editaHome->section_9_conteudo_129) && !empty($editaHome->section_9_conteudo_129)){ echo $editaHome->section_9_conteudo_129;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 9 conteudo 157</label>
-  <input type="text" class="form-control" name="section_9_conteudo_157" value="<?php if(isset($editaHome->section_9_conteudo_157) && !empty($editaHome->section_9_conteudo_157)){ echo $editaHome->section_9_conteudo_157;}?>" >
+ <label class="mr-sm-2" for="">section 9 conteudo 131</label>
+  <input type="text" class="form-control" name="section_9_conteudo_131" value="<?php if(isset($editaHome->section_9_conteudo_131) && !empty($editaHome->section_9_conteudo_131)){ echo $editaHome->section_9_conteudo_131;}?>" >
    </div>
   </div>
 </div>
@@ -1641,118 +1391,116 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <div class="form-group row">
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 10 img 158 ()</label>
-   <input type="file" class="form-control" name="section_10_img_158" >
+<label class="mr-sm-2" for="">section 10 img 132 ()</label>
+   <input type="file" class="form-control" name="section_10_img_132" >
 </div>
  </div>
- <?php if(isset($editaHome->section_10_img_158) && !empty($editaHome->section_10_img_158)){ ?>
+ <?php if(isset($editaHome->section_10_img_132) && !empty($editaHome->section_10_img_132)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_10_img_158;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_10_img_132;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 10 image alt 158</label>
- <input type="text" class="form-control" name="section_10_image_alt_158" value="<?php if(isset($editaHome->section_10_image_alt_158) && !empty($editaHome->section_10_image_alt_158)){ echo $editaHome->section_10_image_alt_158;}?>" >
+  <label class="mr-sm-2" for="">section 10 image alt 132</label>
+ <input type="text" class="form-control" name="section_10_image_alt_132" value="<?php if(isset($editaHome->section_10_image_alt_132) && !empty($editaHome->section_10_image_alt_132)){ echo $editaHome->section_10_image_alt_132;}?>" >
 </div>
  </div>
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 10 img 159 ()</label>
-   <input type="file" class="form-control" name="section_10_img_159" >
+<label class="mr-sm-2" for="">section 10 img 133 ()</label>
+   <input type="file" class="form-control" name="section_10_img_133" >
 </div>
  </div>
- <?php if(isset($editaHome->section_10_img_159) && !empty($editaHome->section_10_img_159)){ ?>
+ <?php if(isset($editaHome->section_10_img_133) && !empty($editaHome->section_10_img_133)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_10_img_159;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_10_img_133;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 10 image alt 159</label>
- <input type="text" class="form-control" name="section_10_image_alt_159" value="<?php if(isset($editaHome->section_10_image_alt_159) && !empty($editaHome->section_10_image_alt_159)){ echo $editaHome->section_10_image_alt_159;}?>" >
+  <label class="mr-sm-2" for="">section 10 image alt 133</label>
+ <input type="text" class="form-control" name="section_10_image_alt_133" value="<?php if(isset($editaHome->section_10_image_alt_133) && !empty($editaHome->section_10_image_alt_133)){ echo $editaHome->section_10_image_alt_133;}?>" >
+</div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 10 conteudo 134</label>
+  <input type="text" class="form-control" name="section_10_conteudo_134" value="<?php if(isset($editaHome->section_10_conteudo_134) && !empty($editaHome->section_10_conteudo_134)){ echo $editaHome->section_10_conteudo_134;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 10 conteudo 135</label>
+  <input type="text" class="form-control" name="section_10_conteudo_135" value="<?php if(isset($editaHome->section_10_conteudo_135) && !empty($editaHome->section_10_conteudo_135)){ echo $editaHome->section_10_conteudo_135;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 10 conteudo 136</label>
+  <input type="text" class="form-control" name="section_10_conteudo_136" value="<?php if(isset($editaHome->section_10_conteudo_136) && !empty($editaHome->section_10_conteudo_136)){ echo $editaHome->section_10_conteudo_136;}?>" >
+   </div>
+  </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 10 img 137 ()</label>
+   <input type="file" class="form-control" name="section_10_img_137" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_10_img_137) && !empty($editaHome->section_10_img_137)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_10_img_137;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 10 image alt 137</label>
+ <input type="text" class="form-control" name="section_10_image_alt_137" value="<?php if(isset($editaHome->section_10_image_alt_137) && !empty($editaHome->section_10_image_alt_137)){ echo $editaHome->section_10_image_alt_137;}?>" >
 </div>
  </div>
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 10 img 160 ()</label>
-   <input type="file" class="form-control" name="section_10_img_160" >
+<label class="mr-sm-2" for="">section 10 img 138 ()</label>
+   <input type="file" class="form-control" name="section_10_img_138" >
 </div>
  </div>
- <?php if(isset($editaHome->section_10_img_160) && !empty($editaHome->section_10_img_160)){ ?>
+ <?php if(isset($editaHome->section_10_img_138) && !empty($editaHome->section_10_img_138)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_10_img_160;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_10_img_138;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 10 image alt 160</label>
- <input type="text" class="form-control" name="section_10_image_alt_160" value="<?php if(isset($editaHome->section_10_image_alt_160) && !empty($editaHome->section_10_image_alt_160)){ echo $editaHome->section_10_image_alt_160;}?>" >
+  <label class="mr-sm-2" for="">section 10 image alt 138</label>
+ <input type="text" class="form-control" name="section_10_image_alt_138" value="<?php if(isset($editaHome->section_10_image_alt_138) && !empty($editaHome->section_10_image_alt_138)){ echo $editaHome->section_10_image_alt_138;}?>" >
 </div>
  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 10 img 161 ()</label>
-   <input type="file" class="form-control" name="section_10_img_161" >
-</div>
- </div>
- <?php if(isset($editaHome->section_10_img_161) && !empty($editaHome->section_10_img_161)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_10_img_161;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
+  <div class="col-md-12">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 10 image alt 161</label>
- <input type="text" class="form-control" name="section_10_image_alt_161" value="<?php if(isset($editaHome->section_10_image_alt_161) && !empty($editaHome->section_10_image_alt_161)){ echo $editaHome->section_10_image_alt_161;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 10 img 162 ()</label>
-   <input type="file" class="form-control" name="section_10_img_162" >
-</div>
- </div>
- <?php if(isset($editaHome->section_10_img_162) && !empty($editaHome->section_10_img_162)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_10_img_162;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
+ <label class="mr-sm-2" for="">section 10 conteudo 139</label>
+  <input type="text" class="form-control" name="section_10_conteudo_139" value="<?php if(isset($editaHome->section_10_conteudo_139) && !empty($editaHome->section_10_conteudo_139)){ echo $editaHome->section_10_conteudo_139;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 10 image alt 162</label>
- <input type="text" class="form-control" name="section_10_image_alt_162" value="<?php if(isset($editaHome->section_10_image_alt_162) && !empty($editaHome->section_10_image_alt_162)){ echo $editaHome->section_10_image_alt_162;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 10 img 163 ()</label>
-   <input type="file" class="form-control" name="section_10_img_163" >
-</div>
- </div>
- <?php if(isset($editaHome->section_10_img_163) && !empty($editaHome->section_10_img_163)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_10_img_163;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
+ <label class="mr-sm-2" for="">section 10 conteudo 140</label>
+  <input type="text" class="form-control" name="section_10_conteudo_140" value="<?php if(isset($editaHome->section_10_conteudo_140) && !empty($editaHome->section_10_conteudo_140)){ echo $editaHome->section_10_conteudo_140;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 10 image alt 163</label>
- <input type="text" class="form-control" name="section_10_image_alt_163" value="<?php if(isset($editaHome->section_10_image_alt_163) && !empty($editaHome->section_10_image_alt_163)){ echo $editaHome->section_10_image_alt_163;}?>" >
-</div>
- </div>
+ <label class="mr-sm-2" for="">section 10 conteudo 141</label>
+  <input type="text" class="form-control" name="section_10_conteudo_141" value="<?php if(isset($editaHome->section_10_conteudo_141) && !empty($editaHome->section_10_conteudo_141)){ echo $editaHome->section_10_conteudo_141;}?>" >
+   </div>
+  </div>
 </div>
 <br>
 <hr>
@@ -1760,391 +1508,60 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <hr>
 <br>
 <div class="form-group row">
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 11 img 142 ()</label>
+   <input type="file" class="form-control" name="section_11_img_142" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_11_img_142) && !empty($editaHome->section_11_img_142)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_11_img_142;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 11 image alt 142</label>
+ <input type="text" class="form-control" name="section_11_image_alt_142" value="<?php if(isset($editaHome->section_11_image_alt_142) && !empty($editaHome->section_11_image_alt_142)){ echo $editaHome->section_11_image_alt_142;}?>" >
+</div>
+ </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 11 img 143 ()</label>
+   <input type="file" class="form-control" name="section_11_img_143" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_11_img_143) && !empty($editaHome->section_11_img_143)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_11_img_143;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 11 image alt 143</label>
+ <input type="text" class="form-control" name="section_11_image_alt_143" value="<?php if(isset($editaHome->section_11_image_alt_143) && !empty($editaHome->section_11_image_alt_143)){ echo $editaHome->section_11_image_alt_143;}?>" >
+</div>
+ </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 164</label>
-  <input type="text" class="form-control" name="section_11_conteudo_164" value="<?php if(isset($editaHome->section_11_conteudo_164) && !empty($editaHome->section_11_conteudo_164)){ echo $editaHome->section_11_conteudo_164;}?>" >
+ <label class="mr-sm-2" for="">section 11 conteudo 144</label>
+  <input type="text" class="form-control" name="section_11_conteudo_144" value="<?php if(isset($editaHome->section_11_conteudo_144) && !empty($editaHome->section_11_conteudo_144)){ echo $editaHome->section_11_conteudo_144;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 165</label>
-  <input type="text" class="form-control" name="section_11_conteudo_165" value="<?php if(isset($editaHome->section_11_conteudo_165) && !empty($editaHome->section_11_conteudo_165)){ echo $editaHome->section_11_conteudo_165;}?>" >
+ <label class="mr-sm-2" for="">section 11 conteudo 145</label>
+  <input type="text" class="form-control" name="section_11_conteudo_145" value="<?php if(isset($editaHome->section_11_conteudo_145) && !empty($editaHome->section_11_conteudo_145)){ echo $editaHome->section_11_conteudo_145;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 166</label>
-  <input type="text" class="form-control" name="section_11_conteudo_166" value="<?php if(isset($editaHome->section_11_conteudo_166) && !empty($editaHome->section_11_conteudo_166)){ echo $editaHome->section_11_conteudo_166;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 167 ()</label>
-   <input type="file" class="form-control" name="section_11_img_167" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_167) && !empty($editaHome->section_11_img_167)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_167;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 167</label>
- <input type="text" class="form-control" name="section_11_image_alt_167" value="<?php if(isset($editaHome->section_11_image_alt_167) && !empty($editaHome->section_11_image_alt_167)){ echo $editaHome->section_11_image_alt_167;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 169</label>
-<input type="text" class="form-control" name="section_11_link_169" value="<?php if(isset($editaHome->section_11_link_169) && !empty($editaHome->section_11_link_169)){ echo $editaHome->section_11_link_169;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 169</label>
-<input type="text" class="form-control" name="section_11_link_alt_169" value="<?php if(isset($editaHome->section_11_link_alt_169) && !empty($editaHome->section_11_link_alt_169)){ echo $editaHome->section_11_link_alt_169;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 170</label>
-<input type="text" class="form-control" name="section_11_link_170" value="<?php if(isset($editaHome->section_11_link_170) && !empty($editaHome->section_11_link_170)){ echo $editaHome->section_11_link_170;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 170</label>
-<input type="text" class="form-control" name="section_11_link_alt_170" value="<?php if(isset($editaHome->section_11_link_alt_170) && !empty($editaHome->section_11_link_alt_170)){ echo $editaHome->section_11_link_alt_170;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 171</label>
-<input type="text" class="form-control" name="section_11_link_171" value="<?php if(isset($editaHome->section_11_link_171) && !empty($editaHome->section_11_link_171)){ echo $editaHome->section_11_link_171;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 171</label>
-<input type="text" class="form-control" name="section_11_link_alt_171" value="<?php if(isset($editaHome->section_11_link_alt_171) && !empty($editaHome->section_11_link_alt_171)){ echo $editaHome->section_11_link_alt_171;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 172 ()</label>
-   <input type="file" class="form-control" name="section_11_img_172" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_172) && !empty($editaHome->section_11_img_172)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_172;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 172</label>
- <input type="text" class="form-control" name="section_11_image_alt_172" value="<?php if(isset($editaHome->section_11_image_alt_172) && !empty($editaHome->section_11_image_alt_172)){ echo $editaHome->section_11_image_alt_172;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 173 ()</label>
-   <input type="file" class="form-control" name="section_11_img_173" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_173) && !empty($editaHome->section_11_img_173)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_173;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 173</label>
- <input type="text" class="form-control" name="section_11_image_alt_173" value="<?php if(isset($editaHome->section_11_image_alt_173) && !empty($editaHome->section_11_image_alt_173)){ echo $editaHome->section_11_image_alt_173;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 174</label>
-  <input type="text" class="form-control" name="section_11_conteudo_174" value="<?php if(isset($editaHome->section_11_conteudo_174) && !empty($editaHome->section_11_conteudo_174)){ echo $editaHome->section_11_conteudo_174;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 175</label>
-<input type="text" class="form-control" name="section_11_link_175" value="<?php if(isset($editaHome->section_11_link_175) && !empty($editaHome->section_11_link_175)){ echo $editaHome->section_11_link_175;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 175</label>
-<input type="text" class="form-control" name="section_11_link_alt_175" value="<?php if(isset($editaHome->section_11_link_alt_175) && !empty($editaHome->section_11_link_alt_175)){ echo $editaHome->section_11_link_alt_175;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 link conteudo 175</label>
- <input type="text" class="form-control" name="section_11_link_conteudo_175" value="<?php if(isset($editaHome->section_11_link_conteudo_175) && !empty($editaHome->section_11_link_conteudo_175)){ echo $editaHome->section_11_link_conteudo_175;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 176</label>
-  <input type="text" class="form-control" name="section_11_conteudo_176" value="<?php if(isset($editaHome->section_11_conteudo_176) && !empty($editaHome->section_11_conteudo_176)){ echo $editaHome->section_11_conteudo_176;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 177 ()</label>
-   <input type="file" class="form-control" name="section_11_img_177" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_177) && !empty($editaHome->section_11_img_177)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_177;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 177</label>
- <input type="text" class="form-control" name="section_11_image_alt_177" value="<?php if(isset($editaHome->section_11_image_alt_177) && !empty($editaHome->section_11_image_alt_177)){ echo $editaHome->section_11_image_alt_177;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 179</label>
-<input type="text" class="form-control" name="section_11_link_179" value="<?php if(isset($editaHome->section_11_link_179) && !empty($editaHome->section_11_link_179)){ echo $editaHome->section_11_link_179;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 179</label>
-<input type="text" class="form-control" name="section_11_link_alt_179" value="<?php if(isset($editaHome->section_11_link_alt_179) && !empty($editaHome->section_11_link_alt_179)){ echo $editaHome->section_11_link_alt_179;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 180</label>
-<input type="text" class="form-control" name="section_11_link_180" value="<?php if(isset($editaHome->section_11_link_180) && !empty($editaHome->section_11_link_180)){ echo $editaHome->section_11_link_180;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 180</label>
-<input type="text" class="form-control" name="section_11_link_alt_180" value="<?php if(isset($editaHome->section_11_link_alt_180) && !empty($editaHome->section_11_link_alt_180)){ echo $editaHome->section_11_link_alt_180;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 181</label>
-<input type="text" class="form-control" name="section_11_link_181" value="<?php if(isset($editaHome->section_11_link_181) && !empty($editaHome->section_11_link_181)){ echo $editaHome->section_11_link_181;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 181</label>
-<input type="text" class="form-control" name="section_11_link_alt_181" value="<?php if(isset($editaHome->section_11_link_alt_181) && !empty($editaHome->section_11_link_alt_181)){ echo $editaHome->section_11_link_alt_181;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 182 ()</label>
-   <input type="file" class="form-control" name="section_11_img_182" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_182) && !empty($editaHome->section_11_img_182)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_182;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 182</label>
- <input type="text" class="form-control" name="section_11_image_alt_182" value="<?php if(isset($editaHome->section_11_image_alt_182) && !empty($editaHome->section_11_image_alt_182)){ echo $editaHome->section_11_image_alt_182;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 183 ()</label>
-   <input type="file" class="form-control" name="section_11_img_183" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_183) && !empty($editaHome->section_11_img_183)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_183;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 183</label>
- <input type="text" class="form-control" name="section_11_image_alt_183" value="<?php if(isset($editaHome->section_11_image_alt_183) && !empty($editaHome->section_11_image_alt_183)){ echo $editaHome->section_11_image_alt_183;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 184</label>
-  <input type="text" class="form-control" name="section_11_conteudo_184" value="<?php if(isset($editaHome->section_11_conteudo_184) && !empty($editaHome->section_11_conteudo_184)){ echo $editaHome->section_11_conteudo_184;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 185</label>
-<input type="text" class="form-control" name="section_11_link_185" value="<?php if(isset($editaHome->section_11_link_185) && !empty($editaHome->section_11_link_185)){ echo $editaHome->section_11_link_185;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 185</label>
-<input type="text" class="form-control" name="section_11_link_alt_185" value="<?php if(isset($editaHome->section_11_link_alt_185) && !empty($editaHome->section_11_link_alt_185)){ echo $editaHome->section_11_link_alt_185;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 link conteudo 185</label>
- <input type="text" class="form-control" name="section_11_link_conteudo_185" value="<?php if(isset($editaHome->section_11_link_conteudo_185) && !empty($editaHome->section_11_link_conteudo_185)){ echo $editaHome->section_11_link_conteudo_185;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 186</label>
-  <input type="text" class="form-control" name="section_11_conteudo_186" value="<?php if(isset($editaHome->section_11_conteudo_186) && !empty($editaHome->section_11_conteudo_186)){ echo $editaHome->section_11_conteudo_186;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 187 ()</label>
-   <input type="file" class="form-control" name="section_11_img_187" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_187) && !empty($editaHome->section_11_img_187)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_187;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 187</label>
- <input type="text" class="form-control" name="section_11_image_alt_187" value="<?php if(isset($editaHome->section_11_image_alt_187) && !empty($editaHome->section_11_image_alt_187)){ echo $editaHome->section_11_image_alt_187;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 189</label>
-<input type="text" class="form-control" name="section_11_link_189" value="<?php if(isset($editaHome->section_11_link_189) && !empty($editaHome->section_11_link_189)){ echo $editaHome->section_11_link_189;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 189</label>
-<input type="text" class="form-control" name="section_11_link_alt_189" value="<?php if(isset($editaHome->section_11_link_alt_189) && !empty($editaHome->section_11_link_alt_189)){ echo $editaHome->section_11_link_alt_189;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 190</label>
-<input type="text" class="form-control" name="section_11_link_190" value="<?php if(isset($editaHome->section_11_link_190) && !empty($editaHome->section_11_link_190)){ echo $editaHome->section_11_link_190;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 190</label>
-<input type="text" class="form-control" name="section_11_link_alt_190" value="<?php if(isset($editaHome->section_11_link_alt_190) && !empty($editaHome->section_11_link_alt_190)){ echo $editaHome->section_11_link_alt_190;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 191</label>
-<input type="text" class="form-control" name="section_11_link_191" value="<?php if(isset($editaHome->section_11_link_191) && !empty($editaHome->section_11_link_191)){ echo $editaHome->section_11_link_191;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 191</label>
-<input type="text" class="form-control" name="section_11_link_alt_191" value="<?php if(isset($editaHome->section_11_link_alt_191) && !empty($editaHome->section_11_link_alt_191)){ echo $editaHome->section_11_link_alt_191;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 192 ()</label>
-   <input type="file" class="form-control" name="section_11_img_192" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_192) && !empty($editaHome->section_11_img_192)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_192;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 192</label>
- <input type="text" class="form-control" name="section_11_image_alt_192" value="<?php if(isset($editaHome->section_11_image_alt_192) && !empty($editaHome->section_11_image_alt_192)){ echo $editaHome->section_11_image_alt_192;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 img 193 ()</label>
-   <input type="file" class="form-control" name="section_11_img_193" >
-</div>
- </div>
- <?php if(isset($editaHome->section_11_img_193) && !empty($editaHome->section_11_img_193)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_11_img_193;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 11 image alt 193</label>
- <input type="text" class="form-control" name="section_11_image_alt_193" value="<?php if(isset($editaHome->section_11_image_alt_193) && !empty($editaHome->section_11_image_alt_193)){ echo $editaHome->section_11_image_alt_193;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 194</label>
-  <input type="text" class="form-control" name="section_11_conteudo_194" value="<?php if(isset($editaHome->section_11_conteudo_194) && !empty($editaHome->section_11_conteudo_194)){ echo $editaHome->section_11_conteudo_194;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 11 link 195</label>
-<input type="text" class="form-control" name="section_11_link_195" value="<?php if(isset($editaHome->section_11_link_195) && !empty($editaHome->section_11_link_195)){ echo $editaHome->section_11_link_195;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 11 link alt 195</label>
-<input type="text" class="form-control" name="section_11_link_alt_195" value="<?php if(isset($editaHome->section_11_link_alt_195) && !empty($editaHome->section_11_link_alt_195)){ echo $editaHome->section_11_link_alt_195;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 11 link conteudo 195</label>
- <input type="text" class="form-control" name="section_11_link_conteudo_195" value="<?php if(isset($editaHome->section_11_link_conteudo_195) && !empty($editaHome->section_11_link_conteudo_195)){ echo $editaHome->section_11_link_conteudo_195;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 11 conteudo 196</label>
-  <input type="text" class="form-control" name="section_11_conteudo_196" value="<?php if(isset($editaHome->section_11_conteudo_196) && !empty($editaHome->section_11_conteudo_196)){ echo $editaHome->section_11_conteudo_196;}?>" >
+ <label class="mr-sm-2" for="">section 11 conteudo 146</label>
+  <input type="text" class="form-control" name="section_11_conteudo_146" value="<?php if(isset($editaHome->section_11_conteudo_146) && !empty($editaHome->section_11_conteudo_146)){ echo $editaHome->section_11_conteudo_146;}?>" >
    </div>
   </div>
 </div>
@@ -2156,95 +1573,21 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <div class="form-group row">
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 12 img 197 ()</label>
-   <input type="file" class="form-control" name="section_12_img_197" >
+<label class="mr-sm-2" for="">section 12 img 147 ()</label>
+   <input type="file" class="form-control" name="section_12_img_147" >
 </div>
  </div>
- <?php if(isset($editaHome->section_12_img_197) && !empty($editaHome->section_12_img_197)){ ?>
+ <?php if(isset($editaHome->section_12_img_147) && !empty($editaHome->section_12_img_147)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_12_img_197;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_12_img_147;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 12 image alt 197</label>
- <input type="text" class="form-control" name="section_12_image_alt_197" value="<?php if(isset($editaHome->section_12_image_alt_197) && !empty($editaHome->section_12_image_alt_197)){ echo $editaHome->section_12_image_alt_197;}?>" >
-</div>
- </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 12 img 198 ()</label>
-   <input type="file" class="form-control" name="section_12_img_198" >
-</div>
- </div>
- <?php if(isset($editaHome->section_12_img_198) && !empty($editaHome->section_12_img_198)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_12_img_198;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 12 image alt 198</label>
- <input type="text" class="form-control" name="section_12_image_alt_198" value="<?php if(isset($editaHome->section_12_image_alt_198) && !empty($editaHome->section_12_image_alt_198)){ echo $editaHome->section_12_image_alt_198;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 12 conteudo 199</label>
-  <input type="text" class="form-control" name="section_12_conteudo_199" value="<?php if(isset($editaHome->section_12_conteudo_199) && !empty($editaHome->section_12_conteudo_199)){ echo $editaHome->section_12_conteudo_199;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 12 link 200</label>
-<input type="text" class="form-control" name="section_12_link_200" value="<?php if(isset($editaHome->section_12_link_200) && !empty($editaHome->section_12_link_200)){ echo $editaHome->section_12_link_200;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 12 link alt 200</label>
-<input type="text" class="form-control" name="section_12_link_alt_200" value="<?php if(isset($editaHome->section_12_link_alt_200) && !empty($editaHome->section_12_link_alt_200)){ echo $editaHome->section_12_link_alt_200;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 12 link conteudo 200</label>
- <input type="text" class="form-control" name="section_12_link_conteudo_200" value="<?php if(isset($editaHome->section_12_link_conteudo_200) && !empty($editaHome->section_12_link_conteudo_200)){ echo $editaHome->section_12_link_conteudo_200;}?>" >
- </div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 12 conteudo 201</label>
-  <input type="text" class="form-control" name="section_12_conteudo_201" value="<?php if(isset($editaHome->section_12_conteudo_201) && !empty($editaHome->section_12_conteudo_201)){ echo $editaHome->section_12_conteudo_201;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 12 conteudo 202</label>
-  <input type="text" class="form-control" name="section_12_conteudo_202" value="<?php if(isset($editaHome->section_12_conteudo_202) && !empty($editaHome->section_12_conteudo_202)){ echo $editaHome->section_12_conteudo_202;}?>" >
-   </div>
-  </div>
- <div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 12 img 203 ()</label>
-   <input type="file" class="form-control" name="section_12_img_203" >
-</div>
- </div>
- <?php if(isset($editaHome->section_12_img_203) && !empty($editaHome->section_12_img_203)){ ?>
-<div class="col-md-2">
- <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_12_img_203;?>" width="100" alt="">
-</div>
-</div>
-<?php }?> 
-   <div class="col-md-6">
-  <div class="form-group">
-  <label class="mr-sm-2" for="">section 12 image alt 203</label>
- <input type="text" class="form-control" name="section_12_image_alt_203" value="<?php if(isset($editaHome->section_12_image_alt_203) && !empty($editaHome->section_12_image_alt_203)){ echo $editaHome->section_12_image_alt_203;}?>" >
+  <label class="mr-sm-2" for="">section 12 image alt 147</label>
+ <input type="text" class="form-control" name="section_12_image_alt_147" value="<?php if(isset($editaHome->section_12_image_alt_147) && !empty($editaHome->section_12_image_alt_147)){ echo $editaHome->section_12_image_alt_147;}?>" >
 </div>
  </div>
 </div>
@@ -2256,223 +1599,400 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <div class="form-group row">
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 204</label>
-  <input type="text" class="form-control" name="section_13_conteudo_204" value="<?php if(isset($editaHome->section_13_conteudo_204) && !empty($editaHome->section_13_conteudo_204)){ echo $editaHome->section_13_conteudo_204;}?>" >
+ <label class="mr-sm-2" for="">section 13 conteudo 148</label>
+  <input type="text" class="form-control" name="section_13_conteudo_148" value="<?php if(isset($editaHome->section_13_conteudo_148) && !empty($editaHome->section_13_conteudo_148)){ echo $editaHome->section_13_conteudo_148;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 205</label>
-  <input type="text" class="form-control" name="section_13_conteudo_205" value="<?php if(isset($editaHome->section_13_conteudo_205) && !empty($editaHome->section_13_conteudo_205)){ echo $editaHome->section_13_conteudo_205;}?>" >
+ <label class="mr-sm-2" for="">section 13 conteudo 149</label>
+  <input type="text" class="form-control" name="section_13_conteudo_149" value="<?php if(isset($editaHome->section_13_conteudo_149) && !empty($editaHome->section_13_conteudo_149)){ echo $editaHome->section_13_conteudo_149;}?>" >
    </div>
   </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 206</label>
-  <input type="text" class="form-control" name="section_13_conteudo_206" value="<?php if(isset($editaHome->section_13_conteudo_206) && !empty($editaHome->section_13_conteudo_206)){ echo $editaHome->section_13_conteudo_206;}?>" >
+ <label class="mr-sm-2" for="">section 13 conteudo 150</label>
+  <input type="text" class="form-control" name="section_13_conteudo_150" value="<?php if(isset($editaHome->section_13_conteudo_150) && !empty($editaHome->section_13_conteudo_150)){ echo $editaHome->section_13_conteudo_150;}?>" >
    </div>
   </div>
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 13 img 207 ()</label>
-   <input type="file" class="form-control" name="section_13_img_207" >
+<label class="mr-sm-2" for="">section 13 img 151 ()</label>
+   <input type="file" class="form-control" name="section_13_img_151" >
 </div>
  </div>
- <?php if(isset($editaHome->section_13_img_207) && !empty($editaHome->section_13_img_207)){ ?>
+ <?php if(isset($editaHome->section_13_img_151) && !empty($editaHome->section_13_img_151)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_13_img_207;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_13_img_151;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 13 image alt 207</label>
- <input type="text" class="form-control" name="section_13_image_alt_207" value="<?php if(isset($editaHome->section_13_image_alt_207) && !empty($editaHome->section_13_image_alt_207)){ echo $editaHome->section_13_image_alt_207;}?>" >
+  <label class="mr-sm-2" for="">section 13 image alt 151</label>
+ <input type="text" class="form-control" name="section_13_image_alt_151" value="<?php if(isset($editaHome->section_13_image_alt_151) && !empty($editaHome->section_13_image_alt_151)){ echo $editaHome->section_13_image_alt_151;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link 208</label>
-<input type="text" class="form-control" name="section_13_link_208" value="<?php if(isset($editaHome->section_13_link_208) && !empty($editaHome->section_13_link_208)){ echo $editaHome->section_13_link_208;}?>" >
+ <label class="mr-sm-2" for="">section 13 link 153</label>
+<input type="text" class="form-control" name="section_13_link_153" value="<?php if(isset($editaHome->section_13_link_153) && !empty($editaHome->section_13_link_153)){ echo $editaHome->section_13_link_153;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link alt 208</label>
-<input type="text" class="form-control" name="section_13_link_alt_208" value="<?php if(isset($editaHome->section_13_link_alt_208) && !empty($editaHome->section_13_link_alt_208)){ echo $editaHome->section_13_link_alt_208;}?>" >
+ <label class="mr-sm-2" for="">section 13 link alt 153</label>
+<input type="text" class="form-control" name="section_13_link_alt_153" value="<?php if(isset($editaHome->section_13_link_alt_153) && !empty($editaHome->section_13_link_alt_153)){ echo $editaHome->section_13_link_alt_153;}?>" >
 </div>
  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 209</label>
-  <input type="text" class="form-control" name="section_13_conteudo_209" value="<?php if(isset($editaHome->section_13_conteudo_209) && !empty($editaHome->section_13_conteudo_209)){ echo $editaHome->section_13_conteudo_209;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 210</label>
-  <input type="text" class="form-control" name="section_13_conteudo_210" value="<?php if(isset($editaHome->section_13_conteudo_210) && !empty($editaHome->section_13_conteudo_210)){ echo $editaHome->section_13_conteudo_210;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 211</label>
-  <input type="text" class="form-control" name="section_13_conteudo_211" value="<?php if(isset($editaHome->section_13_conteudo_211) && !empty($editaHome->section_13_conteudo_211)){ echo $editaHome->section_13_conteudo_211;}?>" >
-   </div>
-  </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link 212</label>
-<input type="text" class="form-control" name="section_13_link_212" value="<?php if(isset($editaHome->section_13_link_212) && !empty($editaHome->section_13_link_212)){ echo $editaHome->section_13_link_212;}?>" >
+ <label class="mr-sm-2" for="">section 13 link 154</label>
+<input type="text" class="form-control" name="section_13_link_154" value="<?php if(isset($editaHome->section_13_link_154) && !empty($editaHome->section_13_link_154)){ echo $editaHome->section_13_link_154;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link alt 212</label>
-<input type="text" class="form-control" name="section_13_link_alt_212" value="<?php if(isset($editaHome->section_13_link_alt_212) && !empty($editaHome->section_13_link_alt_212)){ echo $editaHome->section_13_link_alt_212;}?>" >
+ <label class="mr-sm-2" for="">section 13 link alt 154</label>
+<input type="text" class="form-control" name="section_13_link_alt_154" value="<?php if(isset($editaHome->section_13_link_alt_154) && !empty($editaHome->section_13_link_alt_154)){ echo $editaHome->section_13_link_alt_154;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 13 link conteudo 212</label>
- <input type="text" class="form-control" name="section_13_link_conteudo_212" value="<?php if(isset($editaHome->section_13_link_conteudo_212) && !empty($editaHome->section_13_link_conteudo_212)){ echo $editaHome->section_13_link_conteudo_212;}?>" >
- </div>
+ <label class="mr-sm-2" for="">section 13 link 155</label>
+<input type="text" class="form-control" name="section_13_link_155" value="<?php if(isset($editaHome->section_13_link_155) && !empty($editaHome->section_13_link_155)){ echo $editaHome->section_13_link_155;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 13 link alt 155</label>
+<input type="text" class="form-control" name="section_13_link_alt_155" value="<?php if(isset($editaHome->section_13_link_alt_155) && !empty($editaHome->section_13_link_alt_155)){ echo $editaHome->section_13_link_alt_155;}?>" >
+</div>
  </div>
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 13 img 213 ()</label>
-   <input type="file" class="form-control" name="section_13_img_213" >
+<label class="mr-sm-2" for="">section 13 img 156 ()</label>
+   <input type="file" class="form-control" name="section_13_img_156" >
 </div>
  </div>
- <?php if(isset($editaHome->section_13_img_213) && !empty($editaHome->section_13_img_213)){ ?>
+ <?php if(isset($editaHome->section_13_img_156) && !empty($editaHome->section_13_img_156)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_13_img_213;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_13_img_156;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 13 image alt 213</label>
- <input type="text" class="form-control" name="section_13_image_alt_213" value="<?php if(isset($editaHome->section_13_image_alt_213) && !empty($editaHome->section_13_image_alt_213)){ echo $editaHome->section_13_image_alt_213;}?>" >
+  <label class="mr-sm-2" for="">section 13 image alt 156</label>
+ <input type="text" class="form-control" name="section_13_image_alt_156" value="<?php if(isset($editaHome->section_13_image_alt_156) && !empty($editaHome->section_13_image_alt_156)){ echo $editaHome->section_13_image_alt_156;}?>" >
 </div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 13 link 214</label>
-<input type="text" class="form-control" name="section_13_link_214" value="<?php if(isset($editaHome->section_13_link_214) && !empty($editaHome->section_13_link_214)){ echo $editaHome->section_13_link_214;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link alt 214</label>
-<input type="text" class="form-control" name="section_13_link_alt_214" value="<?php if(isset($editaHome->section_13_link_alt_214) && !empty($editaHome->section_13_link_alt_214)){ echo $editaHome->section_13_link_alt_214;}?>" >
-</div>
- </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 215</label>
-  <input type="text" class="form-control" name="section_13_conteudo_215" value="<?php if(isset($editaHome->section_13_conteudo_215) && !empty($editaHome->section_13_conteudo_215)){ echo $editaHome->section_13_conteudo_215;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 216</label>
-  <input type="text" class="form-control" name="section_13_conteudo_216" value="<?php if(isset($editaHome->section_13_conteudo_216) && !empty($editaHome->section_13_conteudo_216)){ echo $editaHome->section_13_conteudo_216;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 217</label>
-  <input type="text" class="form-control" name="section_13_conteudo_217" value="<?php if(isset($editaHome->section_13_conteudo_217) && !empty($editaHome->section_13_conteudo_217)){ echo $editaHome->section_13_conteudo_217;}?>" >
-   </div>
-  </div>
-<div class="col-md-4">
-<div class="form-group">
- <label class="mr-sm-2" for="">section 13 link 218</label>
-<input type="text" class="form-control" name="section_13_link_218" value="<?php if(isset($editaHome->section_13_link_218) && !empty($editaHome->section_13_link_218)){ echo $editaHome->section_13_link_218;}?>" >
-</div>
-</div>
- <div class="col-md-4">
- <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link alt 218</label>
-<input type="text" class="form-control" name="section_13_link_alt_218" value="<?php if(isset($editaHome->section_13_link_alt_218) && !empty($editaHome->section_13_link_alt_218)){ echo $editaHome->section_13_link_alt_218;}?>" >
-</div>
- </div>
-<div class="col-md-4">
-<div class="form-group">
-<label class="mr-sm-2" for="">section 13 link conteudo 218</label>
- <input type="text" class="form-control" name="section_13_link_conteudo_218" value="<?php if(isset($editaHome->section_13_link_conteudo_218) && !empty($editaHome->section_13_link_conteudo_218)){ echo $editaHome->section_13_link_conteudo_218;}?>" >
- </div>
  </div>
  <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 13 img 219 ()</label>
-   <input type="file" class="form-control" name="section_13_img_219" >
+<label class="mr-sm-2" for="">section 13 img 157 ()</label>
+   <input type="file" class="form-control" name="section_13_img_157" >
 </div>
  </div>
- <?php if(isset($editaHome->section_13_img_219) && !empty($editaHome->section_13_img_219)){ ?>
+ <?php if(isset($editaHome->section_13_img_157) && !empty($editaHome->section_13_img_157)){ ?>
 <div class="col-md-2">
  <div class="form-group">
- <img src="../img/<?php echo $editaHome->section_13_img_219;?>" width="100" alt="">
+ <img src="../img/<?php echo $editaHome->section_13_img_157;?>" width="100" alt="">
 </div>
 </div>
 <?php }?> 
    <div class="col-md-6">
   <div class="form-group">
-  <label class="mr-sm-2" for="">section 13 image alt 219</label>
- <input type="text" class="form-control" name="section_13_image_alt_219" value="<?php if(isset($editaHome->section_13_image_alt_219) && !empty($editaHome->section_13_image_alt_219)){ echo $editaHome->section_13_image_alt_219;}?>" >
+  <label class="mr-sm-2" for="">section 13 image alt 157</label>
+ <input type="text" class="form-control" name="section_13_image_alt_157" value="<?php if(isset($editaHome->section_13_image_alt_157) && !empty($editaHome->section_13_image_alt_157)){ echo $editaHome->section_13_image_alt_157;}?>" >
 </div>
  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 13 conteudo 158</label>
+  <input type="text" class="form-control" name="section_13_conteudo_158" value="<?php if(isset($editaHome->section_13_conteudo_158) && !empty($editaHome->section_13_conteudo_158)){ echo $editaHome->section_13_conteudo_158;}?>" >
+   </div>
+  </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link 220</label>
-<input type="text" class="form-control" name="section_13_link_220" value="<?php if(isset($editaHome->section_13_link_220) && !empty($editaHome->section_13_link_220)){ echo $editaHome->section_13_link_220;}?>" >
+ <label class="mr-sm-2" for="">section 13 link 159</label>
+<input type="text" class="form-control" name="section_13_link_159" value="<?php if(isset($editaHome->section_13_link_159) && !empty($editaHome->section_13_link_159)){ echo $editaHome->section_13_link_159;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link alt 220</label>
-<input type="text" class="form-control" name="section_13_link_alt_220" value="<?php if(isset($editaHome->section_13_link_alt_220) && !empty($editaHome->section_13_link_alt_220)){ echo $editaHome->section_13_link_alt_220;}?>" >
+ <label class="mr-sm-2" for="">section 13 link alt 159</label>
+<input type="text" class="form-control" name="section_13_link_alt_159" value="<?php if(isset($editaHome->section_13_link_alt_159) && !empty($editaHome->section_13_link_alt_159)){ echo $editaHome->section_13_link_alt_159;}?>" >
 </div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 13 link conteudo 159</label>
+ <input type="text" class="form-control" name="section_13_link_conteudo_159" value="<?php if(isset($editaHome->section_13_link_conteudo_159) && !empty($editaHome->section_13_link_conteudo_159)){ echo $editaHome->section_13_link_conteudo_159;}?>" >
+ </div>
  </div>
   <div class="col-md-12">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 221</label>
-  <input type="text" class="form-control" name="section_13_conteudo_221" value="<?php if(isset($editaHome->section_13_conteudo_221) && !empty($editaHome->section_13_conteudo_221)){ echo $editaHome->section_13_conteudo_221;}?>" >
+ <label class="mr-sm-2" for="">section 13 conteudo 160</label>
+  <input type="text" class="form-control" name="section_13_conteudo_160" value="<?php if(isset($editaHome->section_13_conteudo_160) && !empty($editaHome->section_13_conteudo_160)){ echo $editaHome->section_13_conteudo_160;}?>" >
    </div>
   </div>
-  <div class="col-md-12">
+</div>
+<br>
+<hr>
+<h4 class="card-title">Section 14</h4>
+<hr>
+<br>
+<div class="form-group row">
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 14 img 161 ()</label>
+   <input type="file" class="form-control" name="section_14_img_161" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_14_img_161) && !empty($editaHome->section_14_img_161)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_14_img_161;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
   <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 222</label>
-  <input type="text" class="form-control" name="section_13_conteudo_222" value="<?php if(isset($editaHome->section_13_conteudo_222) && !empty($editaHome->section_13_conteudo_222)){ echo $editaHome->section_13_conteudo_222;}?>" >
-   </div>
-  </div>
-  <div class="col-md-12">
-  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 conteudo 223</label>
-  <input type="text" class="form-control" name="section_13_conteudo_223" value="<?php if(isset($editaHome->section_13_conteudo_223) && !empty($editaHome->section_13_conteudo_223)){ echo $editaHome->section_13_conteudo_223;}?>" >
-   </div>
-  </div>
+  <label class="mr-sm-2" for="">section 14 image alt 161</label>
+ <input type="text" class="form-control" name="section_14_image_alt_161" value="<?php if(isset($editaHome->section_14_image_alt_161) && !empty($editaHome->section_14_image_alt_161)){ echo $editaHome->section_14_image_alt_161;}?>" >
+</div>
+ </div>
 <div class="col-md-4">
 <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link 224</label>
-<input type="text" class="form-control" name="section_13_link_224" value="<?php if(isset($editaHome->section_13_link_224) && !empty($editaHome->section_13_link_224)){ echo $editaHome->section_13_link_224;}?>" >
+ <label class="mr-sm-2" for="">section 14 link 163</label>
+<input type="text" class="form-control" name="section_14_link_163" value="<?php if(isset($editaHome->section_14_link_163) && !empty($editaHome->section_14_link_163)){ echo $editaHome->section_14_link_163;}?>" >
 </div>
 </div>
  <div class="col-md-4">
  <div class="form-group">
- <label class="mr-sm-2" for="">section 13 link alt 224</label>
-<input type="text" class="form-control" name="section_13_link_alt_224" value="<?php if(isset($editaHome->section_13_link_alt_224) && !empty($editaHome->section_13_link_alt_224)){ echo $editaHome->section_13_link_alt_224;}?>" >
+ <label class="mr-sm-2" for="">section 14 link alt 163</label>
+<input type="text" class="form-control" name="section_14_link_alt_163" value="<?php if(isset($editaHome->section_14_link_alt_163) && !empty($editaHome->section_14_link_alt_163)){ echo $editaHome->section_14_link_alt_163;}?>" >
 </div>
  </div>
 <div class="col-md-4">
 <div class="form-group">
-<label class="mr-sm-2" for="">section 13 link conteudo 224</label>
- <input type="text" class="form-control" name="section_13_link_conteudo_224" value="<?php if(isset($editaHome->section_13_link_conteudo_224) && !empty($editaHome->section_13_link_conteudo_224)){ echo $editaHome->section_13_link_conteudo_224;}?>" >
+ <label class="mr-sm-2" for="">section 14 link 164</label>
+<input type="text" class="form-control" name="section_14_link_164" value="<?php if(isset($editaHome->section_14_link_164) && !empty($editaHome->section_14_link_164)){ echo $editaHome->section_14_link_164;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 14 link alt 164</label>
+<input type="text" class="form-control" name="section_14_link_alt_164" value="<?php if(isset($editaHome->section_14_link_alt_164) && !empty($editaHome->section_14_link_alt_164)){ echo $editaHome->section_14_link_alt_164;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 14 link 165</label>
+<input type="text" class="form-control" name="section_14_link_165" value="<?php if(isset($editaHome->section_14_link_165) && !empty($editaHome->section_14_link_165)){ echo $editaHome->section_14_link_165;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 14 link alt 165</label>
+<input type="text" class="form-control" name="section_14_link_alt_165" value="<?php if(isset($editaHome->section_14_link_alt_165) && !empty($editaHome->section_14_link_alt_165)){ echo $editaHome->section_14_link_alt_165;}?>" >
+</div>
+ </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 14 img 166 ()</label>
+   <input type="file" class="form-control" name="section_14_img_166" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_14_img_166) && !empty($editaHome->section_14_img_166)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_14_img_166;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 14 image alt 166</label>
+ <input type="text" class="form-control" name="section_14_image_alt_166" value="<?php if(isset($editaHome->section_14_image_alt_166) && !empty($editaHome->section_14_image_alt_166)){ echo $editaHome->section_14_image_alt_166;}?>" >
+</div>
+ </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 14 img 167 ()</label>
+   <input type="file" class="form-control" name="section_14_img_167" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_14_img_167) && !empty($editaHome->section_14_img_167)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_14_img_167;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 14 image alt 167</label>
+ <input type="text" class="form-control" name="section_14_image_alt_167" value="<?php if(isset($editaHome->section_14_image_alt_167) && !empty($editaHome->section_14_image_alt_167)){ echo $editaHome->section_14_image_alt_167;}?>" >
+</div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 14 conteudo 168</label>
+  <input type="text" class="form-control" name="section_14_conteudo_168" value="<?php if(isset($editaHome->section_14_conteudo_168) && !empty($editaHome->section_14_conteudo_168)){ echo $editaHome->section_14_conteudo_168;}?>" >
+   </div>
+  </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 14 link 169</label>
+<input type="text" class="form-control" name="section_14_link_169" value="<?php if(isset($editaHome->section_14_link_169) && !empty($editaHome->section_14_link_169)){ echo $editaHome->section_14_link_169;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 14 link alt 169</label>
+<input type="text" class="form-control" name="section_14_link_alt_169" value="<?php if(isset($editaHome->section_14_link_alt_169) && !empty($editaHome->section_14_link_alt_169)){ echo $editaHome->section_14_link_alt_169;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 14 link conteudo 169</label>
+ <input type="text" class="form-control" name="section_14_link_conteudo_169" value="<?php if(isset($editaHome->section_14_link_conteudo_169) && !empty($editaHome->section_14_link_conteudo_169)){ echo $editaHome->section_14_link_conteudo_169;}?>" >
  </div>
  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 14 conteudo 170</label>
+  <input type="text" class="form-control" name="section_14_conteudo_170" value="<?php if(isset($editaHome->section_14_conteudo_170) && !empty($editaHome->section_14_conteudo_170)){ echo $editaHome->section_14_conteudo_170;}?>" >
+   </div>
+  </div>
+</div>
+<br>
+<hr>
+<h4 class="card-title">Section 15</h4>
+<hr>
+<br>
+<div class="form-group row">
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 15 img 171 ()</label>
+   <input type="file" class="form-control" name="section_15_img_171" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_15_img_171) && !empty($editaHome->section_15_img_171)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_15_img_171;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 15 image alt 171</label>
+ <input type="text" class="form-control" name="section_15_image_alt_171" value="<?php if(isset($editaHome->section_15_image_alt_171) && !empty($editaHome->section_15_image_alt_171)){ echo $editaHome->section_15_image_alt_171;}?>" >
+</div>
+ </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 15 img 172 ()</label>
+   <input type="file" class="form-control" name="section_15_img_172" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_15_img_172) && !empty($editaHome->section_15_img_172)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_15_img_172;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 15 image alt 172</label>
+ <input type="text" class="form-control" name="section_15_image_alt_172" value="<?php if(isset($editaHome->section_15_image_alt_172) && !empty($editaHome->section_15_image_alt_172)){ echo $editaHome->section_15_image_alt_172;}?>" >
+</div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 15 conteudo 173</label>
+  <input type="text" class="form-control" name="section_15_conteudo_173" value="<?php if(isset($editaHome->section_15_conteudo_173) && !empty($editaHome->section_15_conteudo_173)){ echo $editaHome->section_15_conteudo_173;}?>" >
+   </div>
+  </div>
+<div class="col-md-4">
+<div class="form-group">
+ <label class="mr-sm-2" for="">section 15 link 174</label>
+<input type="text" class="form-control" name="section_15_link_174" value="<?php if(isset($editaHome->section_15_link_174) && !empty($editaHome->section_15_link_174)){ echo $editaHome->section_15_link_174;}?>" >
+</div>
+</div>
+ <div class="col-md-4">
+ <div class="form-group">
+ <label class="mr-sm-2" for="">section 15 link alt 174</label>
+<input type="text" class="form-control" name="section_15_link_alt_174" value="<?php if(isset($editaHome->section_15_link_alt_174) && !empty($editaHome->section_15_link_alt_174)){ echo $editaHome->section_15_link_alt_174;}?>" >
+</div>
+ </div>
+<div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 15 link conteudo 174</label>
+ <input type="text" class="form-control" name="section_15_link_conteudo_174" value="<?php if(isset($editaHome->section_15_link_conteudo_174) && !empty($editaHome->section_15_link_conteudo_174)){ echo $editaHome->section_15_link_conteudo_174;}?>" >
+ </div>
+ </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 15 conteudo 175</label>
+  <input type="text" class="form-control" name="section_15_conteudo_175" value="<?php if(isset($editaHome->section_15_conteudo_175) && !empty($editaHome->section_15_conteudo_175)){ echo $editaHome->section_15_conteudo_175;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 15 conteudo 176</label>
+  <input type="text" class="form-control" name="section_15_conteudo_176" value="<?php if(isset($editaHome->section_15_conteudo_176) && !empty($editaHome->section_15_conteudo_176)){ echo $editaHome->section_15_conteudo_176;}?>" >
+   </div>
+  </div>
+ <div class="col-md-4">
+<div class="form-group">
+<label class="mr-sm-2" for="">section 15 img 177 ()</label>
+   <input type="file" class="form-control" name="section_15_img_177" >
+</div>
+ </div>
+ <?php if(isset($editaHome->section_15_img_177) && !empty($editaHome->section_15_img_177)){ ?>
+<div class="col-md-2">
+ <div class="form-group">
+ <img src="../img/<?php echo $editaHome->section_15_img_177;?>" width="100" alt="">
+</div>
+</div>
+<?php }?> 
+   <div class="col-md-6">
+  <div class="form-group">
+  <label class="mr-sm-2" for="">section 15 image alt 177</label>
+ <input type="text" class="form-control" name="section_15_image_alt_177" value="<?php if(isset($editaHome->section_15_image_alt_177) && !empty($editaHome->section_15_image_alt_177)){ echo $editaHome->section_15_image_alt_177;}?>" >
+</div>
+ </div>
+</div>
+<br>
+<hr>
+<h4 class="card-title">Section 16</h4>
+<hr>
+<br>
+<div class="form-group row">
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 16 conteudo 178</label>
+  <input type="text" class="form-control" name="section_16_conteudo_178" value="<?php if(isset($editaHome->section_16_conteudo_178) && !empty($editaHome->section_16_conteudo_178)){ echo $editaHome->section_16_conteudo_178;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 16 conteudo 179</label>
+  <input type="text" class="form-control" name="section_16_conteudo_179" value="<?php if(isset($editaHome->section_16_conteudo_179) && !empty($editaHome->section_16_conteudo_179)){ echo $editaHome->section_16_conteudo_179;}?>" >
+   </div>
+  </div>
+  <div class="col-md-12">
+  <div class="form-group">
+ <label class="mr-sm-2" for="">section 16 conteudo 180</label>
+  <input type="text" class="form-control" name="section_16_conteudo_180" value="<?php if(isset($editaHome->section_16_conteudo_180) && !empty($editaHome->section_16_conteudo_180)){ echo $editaHome->section_16_conteudo_180;}?>" >
+   </div>
+  </div>
 </div>
 <div class="clearfix"></div>
  <div class="form-group row">
@@ -2480,6 +2000,30 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
  <h5>Informaçåo SEO</h5>
  </div>
  </div>
+<div class="form-group row">
+ <div class="col-md-12">
+<div class="form-group">
+<label class="mr-sm-2" for="">Meta Title</label>
+<textarea name="meta_title" class="form-control" id="ckeditor" cols="30" rows="4"><?php if(isset($editaHome->meta_title) && !empty($editaHome->meta_title)){ echo $editaHome->meta_title;}?></textarea>
+</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-12">
+<div class="form-group">
+<label class="mr-sm-2" for="">Meta Keywords</label>
+ <textarea name="meta_keywords" class="form-control" id="ckeditor" cols="30" rows="4"><?php if(isset($editaHome->meta_keywords) && !empty($editaHome->meta_keywords)){ echo $editaHome->meta_keywords;}?></textarea>
+</div>
+  </div>
+</div>
+<div class="form-group row">
+<div class="col-md-12">
+<div class="form-group">
+ <label class="mr-sm-2" for="">Meta Description</label>
+ <textarea name="meta_description" class="form-control" id="ckeditor" cols="30" rows="4"><?php if(isset($editaHome->meta_description) && !empty($editaHome->meta_description)){ echo $editaHome->meta_description;}?></textarea>
+</div>
+</div> 
+</div>
 </div>
 <div class="form-actions">
 <div class="text-right">
@@ -2489,10 +2033,11 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 </div>
 <input type="hidden" name="acao" value="editaHome">
 <input type="hidden" name="id" value="<?php if(isset($editaHome->id) && !empty($editaHome->id)){ echo $editaHome->id;}?>">
+<input type="hidden" name="section_1_img_3_Atual" value="<?php if(isset($editaHome->section_1_img_3) && !empty($editaHome->section_1_img_3)){ echo $editaHome->section_1_img_3;}?>">
 <input type="hidden" name="section_1_img_4_Atual" value="<?php if(isset($editaHome->section_1_img_4) && !empty($editaHome->section_1_img_4)){ echo $editaHome->section_1_img_4;}?>">
-<input type="hidden" name="section_1_img_5_Atual" value="<?php if(isset($editaHome->section_1_img_5) && !empty($editaHome->section_1_img_5)){ echo $editaHome->section_1_img_5;}?>">
-<input type="hidden" name="section_1_img_6_Atual" value="<?php if(isset($editaHome->section_1_img_6) && !empty($editaHome->section_1_img_6)){ echo $editaHome->section_1_img_6;}?>">
-<input type="hidden" name="section_1_img_11_Atual" value="<?php if(isset($editaHome->section_1_img_11) && !empty($editaHome->section_1_img_11)){ echo $editaHome->section_1_img_11;}?>">
+<input type="hidden" name="section_1_img_9_Atual" value="<?php if(isset($editaHome->section_1_img_9) && !empty($editaHome->section_1_img_9)){ echo $editaHome->section_1_img_9;}?>">
+<input type="hidden" name="section_1_img_10_Atual" value="<?php if(isset($editaHome->section_1_img_10) && !empty($editaHome->section_1_img_10)){ echo $editaHome->section_1_img_10;}?>">
+<input type="hidden" name="section_1_img_15_Atual" value="<?php if(isset($editaHome->section_1_img_15) && !empty($editaHome->section_1_img_15)){ echo $editaHome->section_1_img_15;}?>">
 <input type="hidden" name="section_1_img_16_Atual" value="<?php if(isset($editaHome->section_1_img_16) && !empty($editaHome->section_1_img_16)){ echo $editaHome->section_1_img_16;}?>">
 <input type="hidden" name="section_3_img_29_Atual" value="<?php if(isset($editaHome->section_3_img_29) && !empty($editaHome->section_3_img_29)){ echo $editaHome->section_3_img_29;}?>">
 <input type="hidden" name="section_3_img_31_Atual" value="<?php if(isset($editaHome->section_3_img_31) && !empty($editaHome->section_3_img_31)){ echo $editaHome->section_3_img_31;}?>">
@@ -2504,42 +2049,32 @@ data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="fu
 <input type="hidden" name="section_4_img_47_Atual" value="<?php if(isset($editaHome->section_4_img_47) && !empty($editaHome->section_4_img_47)){ echo $editaHome->section_4_img_47;}?>">
 <input type="hidden" name="section_4_img_48_Atual" value="<?php if(isset($editaHome->section_4_img_48) && !empty($editaHome->section_4_img_48)){ echo $editaHome->section_4_img_48;}?>">
 <input type="hidden" name="section_4_img_52_Atual" value="<?php if(isset($editaHome->section_4_img_52) && !empty($editaHome->section_4_img_52)){ echo $editaHome->section_4_img_52;}?>">
-<input type="hidden" name="section_4_img_59_Atual" value="<?php if(isset($editaHome->section_4_img_59) && !empty($editaHome->section_4_img_59)){ echo $editaHome->section_4_img_59;}?>">
-<input type="hidden" name="section_4_img_66_Atual" value="<?php if(isset($editaHome->section_4_img_66) && !empty($editaHome->section_4_img_66)){ echo $editaHome->section_4_img_66;}?>">
-<input type="hidden" name="section_7_img_111_Atual" value="<?php if(isset($editaHome->section_7_img_111) && !empty($editaHome->section_7_img_111)){ echo $editaHome->section_7_img_111;}?>">
-<input type="hidden" name="section_7_img_112_Atual" value="<?php if(isset($editaHome->section_7_img_112) && !empty($editaHome->section_7_img_112)){ echo $editaHome->section_7_img_112;}?>">
-<input type="hidden" name="section_7_img_113_Atual" value="<?php if(isset($editaHome->section_7_img_113) && !empty($editaHome->section_7_img_113)){ echo $editaHome->section_7_img_113;}?>">
-<input type="hidden" name="section_9_img_133_Atual" value="<?php if(isset($editaHome->section_9_img_133) && !empty($editaHome->section_9_img_133)){ echo $editaHome->section_9_img_133;}?>">
-<input type="hidden" name="section_9_img_134_Atual" value="<?php if(isset($editaHome->section_9_img_134) && !empty($editaHome->section_9_img_134)){ echo $editaHome->section_9_img_134;}?>">
-<input type="hidden" name="section_9_img_138_Atual" value="<?php if(isset($editaHome->section_9_img_138) && !empty($editaHome->section_9_img_138)){ echo $editaHome->section_9_img_138;}?>">
-<input type="hidden" name="section_9_img_139_Atual" value="<?php if(isset($editaHome->section_9_img_139) && !empty($editaHome->section_9_img_139)){ echo $editaHome->section_9_img_139;}?>">
-<input type="hidden" name="section_9_img_143_Atual" value="<?php if(isset($editaHome->section_9_img_143) && !empty($editaHome->section_9_img_143)){ echo $editaHome->section_9_img_143;}?>">
-<input type="hidden" name="section_9_img_144_Atual" value="<?php if(isset($editaHome->section_9_img_144) && !empty($editaHome->section_9_img_144)){ echo $editaHome->section_9_img_144;}?>">
-<input type="hidden" name="section_9_img_148_Atual" value="<?php if(isset($editaHome->section_9_img_148) && !empty($editaHome->section_9_img_148)){ echo $editaHome->section_9_img_148;}?>">
-<input type="hidden" name="section_9_img_149_Atual" value="<?php if(isset($editaHome->section_9_img_149) && !empty($editaHome->section_9_img_149)){ echo $editaHome->section_9_img_149;}?>">
-<input type="hidden" name="section_9_img_153_Atual" value="<?php if(isset($editaHome->section_9_img_153) && !empty($editaHome->section_9_img_153)){ echo $editaHome->section_9_img_153;}?>">
-<input type="hidden" name="section_9_img_154_Atual" value="<?php if(isset($editaHome->section_9_img_154) && !empty($editaHome->section_9_img_154)){ echo $editaHome->section_9_img_154;}?>">
-<input type="hidden" name="section_10_img_158_Atual" value="<?php if(isset($editaHome->section_10_img_158) && !empty($editaHome->section_10_img_158)){ echo $editaHome->section_10_img_158;}?>">
-<input type="hidden" name="section_10_img_159_Atual" value="<?php if(isset($editaHome->section_10_img_159) && !empty($editaHome->section_10_img_159)){ echo $editaHome->section_10_img_159;}?>">
-<input type="hidden" name="section_10_img_160_Atual" value="<?php if(isset($editaHome->section_10_img_160) && !empty($editaHome->section_10_img_160)){ echo $editaHome->section_10_img_160;}?>">
-<input type="hidden" name="section_10_img_161_Atual" value="<?php if(isset($editaHome->section_10_img_161) && !empty($editaHome->section_10_img_161)){ echo $editaHome->section_10_img_161;}?>">
-<input type="hidden" name="section_10_img_162_Atual" value="<?php if(isset($editaHome->section_10_img_162) && !empty($editaHome->section_10_img_162)){ echo $editaHome->section_10_img_162;}?>">
-<input type="hidden" name="section_10_img_163_Atual" value="<?php if(isset($editaHome->section_10_img_163) && !empty($editaHome->section_10_img_163)){ echo $editaHome->section_10_img_163;}?>">
-<input type="hidden" name="section_11_img_167_Atual" value="<?php if(isset($editaHome->section_11_img_167) && !empty($editaHome->section_11_img_167)){ echo $editaHome->section_11_img_167;}?>">
-<input type="hidden" name="section_11_img_172_Atual" value="<?php if(isset($editaHome->section_11_img_172) && !empty($editaHome->section_11_img_172)){ echo $editaHome->section_11_img_172;}?>">
-<input type="hidden" name="section_11_img_173_Atual" value="<?php if(isset($editaHome->section_11_img_173) && !empty($editaHome->section_11_img_173)){ echo $editaHome->section_11_img_173;}?>">
-<input type="hidden" name="section_11_img_177_Atual" value="<?php if(isset($editaHome->section_11_img_177) && !empty($editaHome->section_11_img_177)){ echo $editaHome->section_11_img_177;}?>">
-<input type="hidden" name="section_11_img_182_Atual" value="<?php if(isset($editaHome->section_11_img_182) && !empty($editaHome->section_11_img_182)){ echo $editaHome->section_11_img_182;}?>">
-<input type="hidden" name="section_11_img_183_Atual" value="<?php if(isset($editaHome->section_11_img_183) && !empty($editaHome->section_11_img_183)){ echo $editaHome->section_11_img_183;}?>">
-<input type="hidden" name="section_11_img_187_Atual" value="<?php if(isset($editaHome->section_11_img_187) && !empty($editaHome->section_11_img_187)){ echo $editaHome->section_11_img_187;}?>">
-<input type="hidden" name="section_11_img_192_Atual" value="<?php if(isset($editaHome->section_11_img_192) && !empty($editaHome->section_11_img_192)){ echo $editaHome->section_11_img_192;}?>">
-<input type="hidden" name="section_11_img_193_Atual" value="<?php if(isset($editaHome->section_11_img_193) && !empty($editaHome->section_11_img_193)){ echo $editaHome->section_11_img_193;}?>">
-<input type="hidden" name="section_12_img_197_Atual" value="<?php if(isset($editaHome->section_12_img_197) && !empty($editaHome->section_12_img_197)){ echo $editaHome->section_12_img_197;}?>">
-<input type="hidden" name="section_12_img_198_Atual" value="<?php if(isset($editaHome->section_12_img_198) && !empty($editaHome->section_12_img_198)){ echo $editaHome->section_12_img_198;}?>">
-<input type="hidden" name="section_12_img_203_Atual" value="<?php if(isset($editaHome->section_12_img_203) && !empty($editaHome->section_12_img_203)){ echo $editaHome->section_12_img_203;}?>">
-<input type="hidden" name="section_13_img_207_Atual" value="<?php if(isset($editaHome->section_13_img_207) && !empty($editaHome->section_13_img_207)){ echo $editaHome->section_13_img_207;}?>">
-<input type="hidden" name="section_13_img_213_Atual" value="<?php if(isset($editaHome->section_13_img_213) && !empty($editaHome->section_13_img_213)){ echo $editaHome->section_13_img_213;}?>">
-<input type="hidden" name="section_13_img_219_Atual" value="<?php if(isset($editaHome->section_13_img_219) && !empty($editaHome->section_13_img_219)){ echo $editaHome->section_13_img_219;}?>">
+<input type="hidden" name="section_5_img_59_Atual" value="<?php if(isset($editaHome->section_5_img_59) && !empty($editaHome->section_5_img_59)){ echo $editaHome->section_5_img_59;}?>">
+<input type="hidden" name="section_6_img_71_Atual" value="<?php if(isset($editaHome->section_6_img_71) && !empty($editaHome->section_6_img_71)){ echo $editaHome->section_6_img_71;}?>">
+<input type="hidden" name="section_6_img_73_Atual" value="<?php if(isset($editaHome->section_6_img_73) && !empty($editaHome->section_6_img_73)){ echo $editaHome->section_6_img_73;}?>">
+<input type="hidden" name="section_6_img_75_Atual" value="<?php if(isset($editaHome->section_6_img_75) && !empty($editaHome->section_6_img_75)){ echo $editaHome->section_6_img_75;}?>">
+<input type="hidden" name="section_6_img_77_Atual" value="<?php if(isset($editaHome->section_6_img_77) && !empty($editaHome->section_6_img_77)){ echo $editaHome->section_6_img_77;}?>">
+<input type="hidden" name="section_8_img_102_Atual" value="<?php if(isset($editaHome->section_8_img_102) && !empty($editaHome->section_8_img_102)){ echo $editaHome->section_8_img_102;}?>">
+<input type="hidden" name="section_8_img_104_Atual" value="<?php if(isset($editaHome->section_8_img_104) && !empty($editaHome->section_8_img_104)){ echo $editaHome->section_8_img_104;}?>">
+<input type="hidden" name="section_8_img_105_Atual" value="<?php if(isset($editaHome->section_8_img_105) && !empty($editaHome->section_8_img_105)){ echo $editaHome->section_8_img_105;}?>">
+<input type="hidden" name="section_8_img_106_Atual" value="<?php if(isset($editaHome->section_8_img_106) && !empty($editaHome->section_8_img_106)){ echo $editaHome->section_8_img_106;}?>">
+<input type="hidden" name="section_9_img_115_Atual" value="<?php if(isset($editaHome->section_9_img_115) && !empty($editaHome->section_9_img_115)){ echo $editaHome->section_9_img_115;}?>">
+<input type="hidden" name="section_10_img_132_Atual" value="<?php if(isset($editaHome->section_10_img_132) && !empty($editaHome->section_10_img_132)){ echo $editaHome->section_10_img_132;}?>">
+<input type="hidden" name="section_10_img_133_Atual" value="<?php if(isset($editaHome->section_10_img_133) && !empty($editaHome->section_10_img_133)){ echo $editaHome->section_10_img_133;}?>">
+<input type="hidden" name="section_10_img_137_Atual" value="<?php if(isset($editaHome->section_10_img_137) && !empty($editaHome->section_10_img_137)){ echo $editaHome->section_10_img_137;}?>">
+<input type="hidden" name="section_10_img_138_Atual" value="<?php if(isset($editaHome->section_10_img_138) && !empty($editaHome->section_10_img_138)){ echo $editaHome->section_10_img_138;}?>">
+<input type="hidden" name="section_11_img_142_Atual" value="<?php if(isset($editaHome->section_11_img_142) && !empty($editaHome->section_11_img_142)){ echo $editaHome->section_11_img_142;}?>">
+<input type="hidden" name="section_11_img_143_Atual" value="<?php if(isset($editaHome->section_11_img_143) && !empty($editaHome->section_11_img_143)){ echo $editaHome->section_11_img_143;}?>">
+<input type="hidden" name="section_12_img_147_Atual" value="<?php if(isset($editaHome->section_12_img_147) && !empty($editaHome->section_12_img_147)){ echo $editaHome->section_12_img_147;}?>">
+<input type="hidden" name="section_13_img_151_Atual" value="<?php if(isset($editaHome->section_13_img_151) && !empty($editaHome->section_13_img_151)){ echo $editaHome->section_13_img_151;}?>">
+<input type="hidden" name="section_13_img_156_Atual" value="<?php if(isset($editaHome->section_13_img_156) && !empty($editaHome->section_13_img_156)){ echo $editaHome->section_13_img_156;}?>">
+<input type="hidden" name="section_13_img_157_Atual" value="<?php if(isset($editaHome->section_13_img_157) && !empty($editaHome->section_13_img_157)){ echo $editaHome->section_13_img_157;}?>">
+<input type="hidden" name="section_14_img_161_Atual" value="<?php if(isset($editaHome->section_14_img_161) && !empty($editaHome->section_14_img_161)){ echo $editaHome->section_14_img_161;}?>">
+<input type="hidden" name="section_14_img_166_Atual" value="<?php if(isset($editaHome->section_14_img_166) && !empty($editaHome->section_14_img_166)){ echo $editaHome->section_14_img_166;}?>">
+<input type="hidden" name="section_14_img_167_Atual" value="<?php if(isset($editaHome->section_14_img_167) && !empty($editaHome->section_14_img_167)){ echo $editaHome->section_14_img_167;}?>">
+<input type="hidden" name="section_15_img_171_Atual" value="<?php if(isset($editaHome->section_15_img_171) && !empty($editaHome->section_15_img_171)){ echo $editaHome->section_15_img_171;}?>">
+<input type="hidden" name="section_15_img_172_Atual" value="<?php if(isset($editaHome->section_15_img_172) && !empty($editaHome->section_15_img_172)){ echo $editaHome->section_15_img_172;}?>">
+<input type="hidden" name="section_15_img_177_Atual" value="<?php if(isset($editaHome->section_15_img_177) && !empty($editaHome->section_15_img_177)){ echo $editaHome->section_15_img_177;}?>">
 </form>
 </div>
 </div>

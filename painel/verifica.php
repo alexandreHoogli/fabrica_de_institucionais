@@ -22,17 +22,13 @@ $verificaRestrito->restritoAdmin();
 $dadosUsuarioLogado = $verificaRestrito->rsDados($_SESSION['dadosLogado']->id);
 
 
-include "../Class/home.class.php";
-$home = Home::getInstance(Conexao::getInstance());
-include "../Class/price.class.php";
-$price = Price::getInstance(Conexao::getInstance());
-
 
 include "../Class/blog.class.php";
 $blog = Blog::getInstance(Conexao::getInstance());
 
+include "../Class/home.class.php";
+$home = Home::getInstance(Conexao::getInstance());
 function get_url()
 {
   return $_SERVER['SCRIPT_NAME'] . $_SERVER['REQUEST_URI'];
 }
-?>

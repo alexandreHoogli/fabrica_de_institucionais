@@ -1,7 +1,10 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<?php include 'head.php'; ?>
+<head>
+  <?php include 'head.php'; ?>
+</head>
+
 
 
 <body>
@@ -168,8 +171,7 @@
         <div class="row">
           <div class="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
             <div class="tp-about-right-box text-end tp-about-right-wrap p-relative">
-              <div class="tp-about-2-thumb-text text-start d-none d-lg-block"
-                data-background="assets/img/about/bg-1.jpg">
+              <div class="tp-about-2-thumb-text text-start d-none d-lg-block" data-background="assets/img/about/bg-1.jpg">
                 <h6><i class="purecounter" data-purecounter-duration="1" data-purecounter-end="35">0</i>+</h6>
                 <span>Years of experience</span>
               </div>
@@ -334,8 +336,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-xl-6 col-lg-6 offset-lg-6 offset-xl-6  wow tpfadeRight" data-wow-duration=".9s"
-            data-wow-delay=".7s">
+          <div class="col-xl-6 col-lg-6 offset-lg-6 offset-xl-6  wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s">
             <div class="tp-choose-content tp-choose-item-wrap z-index">
               <div class="tp-choose-section-box mb-30">
                 <span class="tp-section-subtitle text-color"><span>//</span>WHY CHOOSE OUR BIDDUT</span>
@@ -460,8 +461,7 @@
     <!-- step area end -->
 
     <!-- video area start -->
-    <div class="tp-video-3-area tp-video-3-bg jarallax p-relative fix pt-140"
-      data-background="assets/img/video/bg-3-1.jpg">
+    <div class="tp-video-3-area tp-video-3-bg jarallax p-relative fix pt-140" data-background="assets/img/video/bg-3-1.jpg">
       <div class="tp-video-3-play-box d-none d-lg-block">
         <a class="popup-video" href="https://www.youtube.com/watch?v=PO_fBTkoznc"><i class="fas fa-play"></i></a>
       </div>
@@ -509,13 +509,11 @@
               <div class="accordion" id="accordionExample">
                 <div class="accordion-items tp-faq-active">
                   <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-buttons " type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="accordion-buttons " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Can I get your service wheAn I need
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
                       Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
@@ -525,13 +523,11 @@
                 </div>
                 <div class="accordion-items">
                   <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       Can’t I just call a handyman to fix minor electrical problems?
                     </button>
                   </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
                       Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
@@ -541,13 +537,11 @@
                 </div>
                 <div class="accordion-items">
                   <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       Do I need to be present when your team is working?
                     </button>
                   </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
                       Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
@@ -557,13 +551,11 @@
                 </div>
                 <div class="accordion-items">
                   <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                       How do you handle emergency electrical issues?
                     </button>
                   </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExample">
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
                       Before phoning to confirm receipt of an application, the National Visa Center recommends waiting
@@ -573,13 +565,11 @@
                 </div>
                 <div class="accordion-items mb-0">
                   <h2 class="accordion-header" id="headingFour4">
-                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
+                    <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour4" aria-expanded="false" aria-controls="collapseFour4">
                       Are You Licensed and Insured?
                     </button>
                   </h2>
-                  <div id="collapseFour4" class="accordion-collapse collapse" aria-labelledby="headingFour4"
-                    data-bs-parent="#accordionExample">
+                  <div id="collapseFour4" class="accordion-collapse collapse" aria-labelledby="headingFour4" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       The transfer of an immigrant visa application from USCIS to the National takes about 30-60 days.
                       Before phoning to confirm receipt of an application, the National Visa Center recommends waiting

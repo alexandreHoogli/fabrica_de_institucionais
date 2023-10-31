@@ -1,4 +1,5 @@
 <?php
+include "includes.php"; 
 function gerarHtml($name, $body, $desc)
 {
 
@@ -17,6 +18,7 @@ function gerarHtml($name, $body, $desc)
     $texto_html_sem_comentarios = removeComentariosHTML($texto_html);
     $html = str_get_html($texto_html_sem_comentarios);
     $sections = $html->find('section');
+    $dados_tags = [];
 
     foreach ($sections as $index => $section) {
         $nomeVariavel = '$section_' . ($index + 1) . '_';
@@ -24,19 +26,31 @@ function gerarHtml($name, $body, $desc)
         foreach ($tags as $tag) {
             $tag_name = $tag->tag;
             if ($tag_name == 'a') {
+                $href = $tag->href;
+                $dados_tag['conteudo'] = $href;
                 $tag->outertext = substituirTagA($tag, $tabelaName, $nomeVariavel);
                 $contador_sequencia++;
             } elseif ($tag_name == 'img') {
+                $src = SITE_URL.'/'. $tag->src;
+                $dados_tag['conteudo'] = $src;
                 $nova_tag = substituirTagImg($tag, $tabelaName, $nomeVariavel);
                 $tag->outertext = $nova_tag;
                 $contador_sequencia++;
             } else {
+                $conteudo = $tag->innertext;
+                $dados_tag['conteudo'] = $conteudo;
                 $nova_tag = substituirConteudoPorPHP($tag, $tabelaName, $nomeVariavel);
                 $tag->outertext = $nova_tag;
                 $contador_sequencia++;
             }
+            $dados_tags[] = $dados_tag;
 
         }
+    }
+    foreach ($dados_tags as $tag) {
+        echo '<br>';
+        echo $tag['conteudo'];
+        echo '<br>';
     }
     $novo_html = $html->root->innertext;
     $nome_arquivo = $className . 'new.php';
@@ -225,16 +239,11 @@ function gerarHtml($name, $body, $desc)
             $linha3 = rtrim($linha3, ", ");
             $linha3 .= ")";
             fwrite($arquivo_config, $linha3);
-            // Adicione a condição WHERE com o placeholder do ID
-
             $linha4 = " VALUES (";
             foreach ($nomes_aleatorios as $nome_aleatorio) {
                 $linha4 .= " ?, ";
             }
-            // Remova a vírgula extra no final da string SQL
             $linha4 = rtrim($linha4, ", ");
-
-            // Adicione a condição WHERE com o placeholder do ID
             $linha4 .= ")\";";
             fwrite($arquivo_config, $linha4);
             $contador = 1;
@@ -283,7 +292,7 @@ function gerarHtml($name, $body, $desc)
             fwrite($arquivo_config, $linha);
         }
         $linhaumemeio = " \$id = filter_input(INPUT_POST, 'id');
-";
+        ";
         $linhaumemeio .= "  if (isset(\$_POST['pagina_individual']) && !empty(\$_POST['pagina_individual'])) {";
         $linhaumemeio .= " \$pagina_individual = \$_POST['pagina_individual']; ";
         $linhaumemeio .= " } else { ";
@@ -504,7 +513,7 @@ function gerarHtml($name, $body, $desc)
         echo 'Erro ao abrir o arquivo.';
     }
 
-    gerarB($tabelaName, $nomes_aleatorios);
+    gerarB($tabelaName, $nomes_aleatorios,$dados_tags);
 
 }
 function substituirConteudoPorPHP($tag, $tabelaName, $section)
@@ -604,12 +613,12 @@ function removeComentariosHTML($html)
 }
 require_once('./Connection/con-pdo.php');
 
-function gerarB($tabelaName, $nomes_aleatorios)
+function gerarB($tabelaName, $nomes_aleatorios, $dados_tags)
 {
     global $conn;
     try {
         // Nome da tabela a ser criada
-        $table_name = "tbl_" . $tabelaName . "";
+        $table_name = "tbl_" . $tabelaName;
 
         // Exclua a tabela se ela existir
         $sql_drop_table = "DROP TABLE IF EXISTS $table_name";
@@ -628,13 +637,31 @@ function gerarB($tabelaName, $nomes_aleatorios)
         $sql_create_table = rtrim($sql_create_table, ', ');
 
         $sql_create_table .= ")";
-
         $conn->exec($sql_create_table);
 
-        echo "Tabela criada com sucesso: $table_name<br>";
+        // Inserir os valores da matriz $nomes_aleatorios em cada campo
+        $sql_insert_data = "INSERT INTO $table_name (";
+        foreach ($nomes_aleatorios as $nome_aleatorio) {
+            $nome_variavel = substr($nome_aleatorio, 1);
+            $sql_insert_data .= "$nome_variavel, ";
+        }
+        $sql_insert_data = rtrim($sql_insert_data, ', ');
+        $sql_insert_data .= ") VALUES (";
+
+        foreach ($nomes_aleatorios as $nome_aleatorio) {
+            // Aqui você pode inserir os valores que deseja para cada campo.
+            // Neste exemplo, estou usando 'exemplo' como valor para todos os campos.
+            $sql_insert_data .= "'".$nome_aleatorio."', ";
+        }
+        $sql_insert_data = rtrim($sql_insert_data, ', ');
+        $sql_insert_data .= ")";
+        $conn->exec($sql_insert_data);
+
+        echo "Tabela criada com sucesso e dados inseridos: $table_name<br>";
     } catch (PDOException $e) {
         echo "Erro: " . $e->getMessage() . "<br>";
     }
 }
+
 
 ?>

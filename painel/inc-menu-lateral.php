@@ -2,8 +2,7 @@
     <div class="scroll-sidebar" data-sidebarbg="skin6">
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="." aria-expanded="false"><i
-                            data-feather="home" class="feather-icon"></i><span class="hide-menu">Principal</span></a>
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="." aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span class="hide-menu">Principal</span></a>
                 </li>
 
                 <li class="list-divider"></li>
@@ -24,8 +23,7 @@
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Configurações Site</span></li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i
-                            data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Blog </span></a>
+                    <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Blog </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
 
                         <li class="sidebar-item"> <a class="sidebar-link" href="editar-blog.php?pi=S&id=1">
@@ -43,19 +41,18 @@
                 </li>
 
 
+                
+        <li class="sidebar-item"> <a class="sidebar-link" href="editar-home.php?pi=S&id=1"> 
+            <i data-feather="file-text" class="feather-icon"></i>Home</a>
+        </li>
 
-
-                <li id="aqui" class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                        aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                            class="hide-menu">Configurações </span></a>
+        <li id="aqui" class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Configurações </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                        <li class="sidebar-item"><a href="configuracoes-aparencia.php" class="sidebar-link"><span
-                                    class="hide-menu">
+                        <li class="sidebar-item"><a href="configuracoes-aparencia.php" class="sidebar-link"><span class="hide-menu">
                                     Aparência
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"><a href="configuracoes.php" class="sidebar-link"><span
-                                    class="hide-menu">
+                        <li class="sidebar-item"><a href="configuracoes.php" class="sidebar-link"><span class="hide-menu">
                                     Configurações Gerais
                                 </span></a>
                         </li>
@@ -71,9 +68,7 @@
                 </li>
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
-                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="login.php?acao=logout"
-                        aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
-                            class="hide-menu">Logout</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="login.php?acao=logout" aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span class="hide-menu">Logout</span></a></li>
             </ul>
         </nav>
     </div>

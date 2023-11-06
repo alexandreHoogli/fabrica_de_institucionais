@@ -21,13 +21,6 @@ $blogs = Blogs::getInstance(Conexao::getInstance());
 $verificaRestrito->restritoAdmin();
 $dadosUsuarioLogado = $verificaRestrito->rsDados($_SESSION['dadosLogado']->id);
 
-
-
-include "../Class/blog.class.php";
-$blog = Blog::getInstance(Conexao::getInstance());
-
-include "../Class/home.class.php";
-$home = Home::getInstance(Conexao::getInstance());
 function get_url()
 {
   return $_SERVER['SCRIPT_NAME'] . $_SERVER['REQUEST_URI'];

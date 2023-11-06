@@ -17,14 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["arquivos_selecionados"
         $arquivo = str_replace('-', '_', $arquivo);
         $foreachElements = $dom->find('foreach');
         gerarHtml($arquivo, $body_element, $valor_dropdown);
-        $count = 1;
+        /*         $count = 1;
         if (count($foreachElements) > 0) {
             foreach ($foreachElements as $index => $foreachElement) {
                 $arquivo = $arquivo . '_foreach_' . $count;
                 gerarHtml($arquivo, $foreachElement, 'sim');
                 $count++;
             }
-        }
+        } */
     }
     $dados = "Linkado";
     header("Location: painel/pastas.php?dados=$dados");

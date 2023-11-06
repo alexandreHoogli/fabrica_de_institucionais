@@ -1,8 +1,8 @@
 <?php
 $hostname_conexao = "localhost";
-$database_conexao = "projeto_base";
-$username_conexao = "root";
-$password_conexao = '';
+$database_conexao = "hooglidev_demacol_novo";
+$username_conexao = "hooglidev_hoogli2" ;
+$password_conexao = 'Hoogli@2002';
 global $conn;
 
 try {

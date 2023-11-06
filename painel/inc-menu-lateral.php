@@ -22,6 +22,9 @@
                 </li>
                 <li class="list-divider"></li>
                 <li class="nav-small-cap"><span class="hide-menu">Configurações Site</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link" href="editar-home.php?pi=S&id=1"> 
+            <i data-feather="file-text" class="feather-icon"></i>Home</a>
+        </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Blog </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -40,11 +43,57 @@
                     </ul>
                 </li>
 
-
-                
-        <li class="sidebar-item"> <a class="sidebar-link" href="editar-home.php?pi=S&id=1"> 
-            <i data-feather="file-text" class="feather-icon"></i>Home</a>
+        
+        <li class="sidebar-item"> <a class="sidebar-link" href="editar-sobre.php?pi=S&id=1"> 
+            <i data-feather="file-text" class="feather-icon"></i>Sobre</a>
         </li>
+
+        
+        <li class="sidebar-item"> <a class="sidebar-link" href="editar-contato.php?pi=S&id=1"> 
+            <i data-feather="file-text" class="feather-icon"></i>Contato</a>
+        </li>
+
+        
+        <li class="sidebar-item"> 
+            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                <i data-feather="file-text" class="feather-icon"></i>
+                <span class="hide-menu">Desc_produtos</span>
+            </a>
+            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                <li class="sidebar-item"><a href="desc_produtos.php" class="sidebar-link"><span class="hide-menu">
+                    Listar Desc_produtos</span></a></li>
+                <li class="sidebar-item"><a href="add-desc_produtos.php" class="sidebar-link"><span class="hide-menu">
+                    Adicionar desc_produtos</span></a></li>
+            </ul>
+        </li>
+        
+        <li class="sidebar-item"> 
+            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                <i data-feather="file-text" class="feather-icon"></i>
+                <span class="hide-menu">Servicos</span>
+            </a>
+            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                <li class="sidebar-item"><a href="servicos.php" class="sidebar-link"><span class="hide-menu">
+                    Listar Servicos</span></a></li>
+                <li class="sidebar-item"><a href="add-servicos.php" class="sidebar-link"><span class="hide-menu">
+                    Adicionar servicos</span></a></li>
+            </ul>
+        </li>
+        
+        <li class="sidebar-item"> 
+            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+                <i data-feather="file-text" class="feather-icon"></i>
+                <span class="hide-menu">Servico_principal</span>
+            </a>
+            <ul aria-expanded="false" class="collapse first-level base-level-line">
+                <li class="sidebar-item"><a href="servico_principal.php" class="sidebar-link"><span class="hide-menu">
+                    Listar Servico_principal</span></a></li>
+                <li class="sidebar-item"><a href="add-servico_principal.php" class="sidebar-link"><span class="hide-menu">
+                    Adicionar servico_principal</span></a></li>
+            </ul>
+        </li>
+        
+
 
         <li id="aqui" class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span class="hide-menu">Configurações </span></a>
                     <ul aria-expanded="false" class="collapse  first-level base-level-line">

@@ -1,5 +1,5 @@
 <?php
-include "includes.php"; 
+include "includes.php";
 function gerarHtml($name, $body, $desc)
 {
 
@@ -18,6 +18,10 @@ function gerarHtml($name, $body, $desc)
     $texto_html_sem_comentarios = removeComentariosHTML($texto_html);
     $html = str_get_html($texto_html_sem_comentarios);
     $sections = $html->find('section');
+
+    if (empty($sections)) {
+        $sections = $html->find('foreach');
+    }
     $dados_tags = [];
 
     foreach ($sections as $index => $section) {
@@ -31,7 +35,7 @@ function gerarHtml($name, $body, $desc)
                 $tag->outertext = substituirTagA($tag, $tabelaName, $nomeVariavel);
                 $contador_sequencia++;
             } elseif ($tag_name == 'img') {
-                $src = SITE_URL.'/'. $tag->src;
+                $src = SITE_URL . '/' . $tag->src;
                 $dados_tag['conteudo'] = $src;
                 $nova_tag = substituirTagImg($tag, $tabelaName, $nomeVariavel);
                 $tag->outertext = $nova_tag;
@@ -44,7 +48,6 @@ function gerarHtml($name, $body, $desc)
                 $contador_sequencia++;
             }
             $dados_tags[] = $dados_tag;
-
         }
     }
     foreach ($dados_tags as $tag) {
@@ -258,7 +261,6 @@ function gerarHtml($name, $body, $desc)
                     fwrite($arquivo_config, '        $stm->bindValue(' . $contador . ', ' . $nome_aleatorio . ');' . PHP_EOL);
                     $contador++;
                 }
-
             }
             // Execute a consulta SQL
             fwrite($arquivo_config, '        $stm->execute();' . PHP_EOL);
@@ -362,7 +364,6 @@ function gerarHtml($name, $body, $desc)
                 fwrite($arquivo_config, '        $stm->bindValue(' . $contadorseq . ', ' . $nome_aleatorio . ');' . PHP_EOL);
                 $contadorseq++;
             }
-
         }
 
         fwrite($arquivo_config, '$stm->bindValue(' . $contadorseq . ', $id);' . PHP_EOL);
@@ -513,8 +514,7 @@ function gerarHtml($name, $body, $desc)
         echo 'Erro ao abrir o arquivo.';
     }
 
-    gerarB($tabelaName, $nomes_aleatorios,$dados_tags);
-
+    gerarB($tabelaName, $nomes_aleatorios, $dados_tags);
 }
 function substituirConteudoPorPHP($tag, $tabelaName, $section)
 {
@@ -557,7 +557,6 @@ function substituirConteudoPorPHP($tag, $tabelaName, $section)
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         }
     }
-
 }
 function substituirTagA($tag, $tabelaName, $section)
 {
@@ -591,7 +590,6 @@ function substituirTagA($tag, $tabelaName, $section)
         $aria_label = substituirConteudoPorPHP('alt', $tabelaName, $section);
         return '<a href="' . $href . '" aria-label="' . $aria_label . '" class="' . $classe_adicional . '">' . $conteudo . '</a>';
     }
-
 }
 
 function substituirTagImg($tag, $tabelaName, $section)
@@ -651,7 +649,7 @@ function gerarB($tabelaName, $nomes_aleatorios, $dados_tags)
         foreach ($nomes_aleatorios as $nome_aleatorio) {
             // Aqui você pode inserir os valores que deseja para cada campo.
             // Neste exemplo, estou usando 'exemplo' como valor para todos os campos.
-            $sql_insert_data .= "'".$nome_aleatorio."', ";
+            $sql_insert_data .= "'" . $nome_aleatorio . "', ";
         }
         $sql_insert_data = rtrim($sql_insert_data, ', ');
         $sql_insert_data .= ")";
@@ -662,6 +660,3 @@ function gerarB($tabelaName, $nomes_aleatorios, $dados_tags)
         echo "Erro: " . $e->getMessage() . "<br>";
     }
 }
-
-
-?>

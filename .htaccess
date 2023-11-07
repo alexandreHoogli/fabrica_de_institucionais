@@ -19,11 +19,10 @@ RewriteRule ^home$ index.php
 RewriteRule ^contato$ contato.php  
 RewriteRule ^blog$ blog.php 
 RewriteRule ^blog/([a-zA-Z-0-9-_]+)$ desc-blog.php?id=$1
-RewriteRule ^produto/([a-zA-Z-0-9-_]+)$ desc-produtos.php?id=$1
-RewriteRule ^produtos$ produtos.php
-RewriteRule ^servico/([a-zA-Z-0-9-_]+)$ desc-servicos.php?id=$1
-RewriteRule ^produtos-descritivo/([a-zA-Z-0-9-_]+)$ servico-principal.php?id=$1
-RewriteRule ^servicos$ servicos.php
+RewriteRule ^colunista/([a-zA-Z-0-9-_]+)$ desc-colunista.php?id=$1
+RewriteRule ^colunistas$ colunistas.php
+RewriteRule ^livro/([a-zA-Z-0-9-_]+)$ desc-livro.php?id=$1
+RewriteRule ^livros$ livros.php
 RewriteRule ^sobre$ sobre.php
 RewriteRule ^sucesso$ sucesso.php
 RewriteRule ^sitemap.xml$ sitemap.xml

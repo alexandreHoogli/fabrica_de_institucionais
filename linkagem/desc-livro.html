@@ -1,0 +1,169 @@
+<?php
+include "includes.php";
+$id = '';
+if (isset($_GET['id'])) {
+  if (empty($_GET['id'])) {
+    header('Location: /');
+  } else {
+    $id = $_GET['id'];
+  }
+} else {
+  header('Location: /');
+}
+
+include "Class/desc_colunista.class.php";
+$col = Desc_colunista::getInstance(Conexao::getInstance());
+$desc_colunista = $col->rsDados('', '', '', $id, '');
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <?php include 'head.php'; ?>
+
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <?php include 'header.php'; ?>
+
+
+
+    <div class="stricky-header stricked-menu main-menu">
+      <div class="sticky-header__content">
+
+      </div><!-- /.sticky-header__content -->
+    </div><!-- /.stricky-header -->
+    <section class="col-xl-4 col-lg-4 wow fadeInUp animated animated">
+        <div class="features-one__single">
+          <div class="features-one__single-img">
+            <img src="assets/images/feauters/features-v1-img1.jpg" alt="" />
+            <div class="features-one__single-title text-center">
+              <h3>Best QualityStandards</h3>
+            </div>
+          </div>
+          </a>
+        </div>
+      </section>
+    <!--Page Header Start-->
+    <section class="page-header clearfix" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+        <img src="" alt="">
+        <img src="" alt="">
+      <div class="container">
+        <div class="page-header__inner text-center clearfix">
+          <ul class="thm-breadcrumb">
+          </ul>
+          <h2>Agriculture Products</h2>
+        </div>
+      </div>
+    </section>
+    <!--Page Header End-->
+
+
+
+    <!--Start Services Details-->
+    <section class="services-details">
+      <div class="container">
+        <div class="row">
+          <!--Start Services Details Sidebar-->
+          <div class="col-xl-4 col-lg-4">
+            <div class="services-details__sidebar">
+              <!--Start Services Details Sidebar Single-->
+       
+              <!--End Services Details Sidebar Single-->
+
+              <!--Start Services Details Sidebar Single-->
+              <div class="services-details__sidebar-single">
+                <div
+                  class="services-details__sidebar-single-contact-box text-center wow fadeInUp animated animated animated"
+                  data-wow-delay="0.3s" data-wow-duration="1200m"
+                  style="background-image:url(assets/images/resources/services-details-contact-box-bg.jpg);">
+                  <img src="" alt="">
+                  <div class="icon">
+                    <span class="icon-phone-call-2"></span>
+                  </div>
+                  <div class="title">
+                    <h2>Selling products</h2>
+                  </div>
+                  <p class="phone">
+                    <a href="tel:123456789">666 888 0000</a>
+                  </p>
+                  <p>Call Us Anytime</p>
+                </div>
+              </div>
+              <!--End Services Details Sidebar Single-->
+
+              <!--Start Services Details Sidebar Single-->
+              <div class="services-details__sidebar-single">
+                <div class="services-details__sidebar-single-btn text-center wow fadeInUp animated animated animated"
+                  data-wow-delay="0.5s" data-wow-duration="1200m">
+                  <a href="#" class="thm-btn">download pdf file</a>
+                </div>
+              </div>
+              <!--End Services Details Sidebar Single-->
+            </div>
+          </div>
+          <!--End Services Details Sidebar-->
+
+          <!--Start Services Details Content-->
+          <div class="col-xl-8 col-lg-8">
+            <div class="services-details__content">
+              <div class="services-details__content-img">
+                <img src="assets/images/resources/services-details-content-agriculture.jpg" alt="" />
+              </div>
+              <h2 class="services-details__content-title">Agriculture Products</h2>
+              <p>zxczxcx</p>
+
+              <div class="services-details__content-text3">
+                <div class="img-box">
+                  <img src="assets/images/resources/services-details-content-agriculture-2.jpg" alt="" />
+                </div>
+                <div class="text-box">
+                  <ul>
+                    <li>
+                      <div class="icon">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                      </div>
+                      <div class="text">
+                        <p>Research beyond the business plan work here</p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="icon">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                      </div>
+                      <div class="text">
+                        <p>Marketing options and rates lipsum</p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="icon">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                      </div>
+                      <div class="text">
+                        <p>The ability to turnaround working on it</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <?php include "footer.php" ?>
+
+  </div>
+
+  <?php include "scripts.php" ?>
+
+
+</body>
+
+</html>

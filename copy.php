@@ -12,7 +12,7 @@
         width: 55px;
         position: absolute;
         margin-left: -4px;
-        margin-top: 5px;
+        margin-top: 11px;
     }
 
     @media(max-width:500px) {
@@ -119,14 +119,20 @@
 <div class="container">
     <div class="row ">
         <div class="col-md-3 mobile-banner">
-            <img loading=lazy src="<?php echo SITE_URL; ?>/img/<?php echo $infoSistema->logo_rodape; ?>" alt="Logo Rodapé" width="150" height="72">
+            <img loading=lazy src="<?php echo SITE_URL; ?>/img/<?php echo $infoSistema->logo_rodape; ?>"
+                alt="Logo Rodapé" width="150" height="72">
         </div>
         <div class="col-md-9 text-copy">
             <div id="copyright-hoogli" class="">
                 <div class="row">
                     <div class="light">
-                        <p>© 2009 - <?php echo date('Y'); ?> Feito com <i class="fa fa-heart pulse"></i> por<a href="https://www.hoogli.com.br/" arial-label="Link de encaminhamento para o site do desenvolvedor">
-                                <img src="<?php echo SITE_URL; ?>/flutuante/hoogli_logo.svg" alt="Hoogli" title="Hoogli"></a> Todos os direitos reservados.</p>
+                        <p>© 2009 -
+                            <?php echo date('Y'); ?> Feito com <i class="fa fa-heart pulse"></i> por<a
+                                href="https://www.hoogli.com.br/"
+                                arial-label="Link de encaminhamento para o site do desenvolvedor">
+                                <img src="<?php echo SITE_URL; ?>/flutuante/hoogli_logo.svg" alt="Hoogli"
+                                    title="Hoogli"></a> Todos os direitos reservados.
+                        </p>
                         <small>Este site está protegido pela Lei de Direitos Autorais. (Lei 9610 de 19/02/1998), sua
                             reprodução total ou parcial é proibida nos termos da Lei.</small>
                     </div>

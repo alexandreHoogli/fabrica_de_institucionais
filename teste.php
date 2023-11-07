@@ -11,20 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["arquivos_selecionados"
         $valor_dropdown = $arquivos_dropdown[$arquivo];
         $content = file_get_contents('./linkagem/' . $arquivo);
         $dom = str_get_html($content);
+
         $body_element = $dom->find('body', 0);
+
         $arquivo = pathinfo($arquivo, PATHINFO_FILENAME);
         $arquivo = strtolower($arquivo);
         $arquivo = str_replace('-', '_', $arquivo);
         $foreachElements = $dom->find('foreach');
         gerarHtml($arquivo, $body_element, $valor_dropdown);
-        /*         $count = 1;
-        if (count($foreachElements) > 0) {
-            foreach ($foreachElements as $index => $foreachElement) {
-                $arquivo = $arquivo . '_foreach_' . $count;
-                gerarHtml($arquivo, $foreachElement, 'sim');
-                $count++;
-            }
-        } */
     }
     $dados = "Linkado";
     header("Location: painel/pastas.php?dados=$dados");

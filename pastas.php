@@ -240,14 +240,14 @@ function gerarHtml($name, $body, $desc)
                 $linha3 .= $coluna_tabela . ", ";
             }
             $linha3 = rtrim($linha3, ", ");
-            $linha3 .= ")";
+            $linha3 .= ",pagina_individual)";
             fwrite($arquivo_config, $linha3);
             $linha4 = " VALUES (";
             foreach ($nomes_aleatorios as $nome_aleatorio) {
                 $linha4 .= " ?, ";
             }
             $linha4 = rtrim($linha4, ", ");
-            $linha4 .= ")\";";
+            $linha4 .= ",?)\";";
             fwrite($arquivo_config, $linha4);
             $contador = 1;
             fwrite($arquivo_config, '        $stm = $this->pdo->prepare($sql);' . PHP_EOL);
@@ -262,6 +262,7 @@ function gerarHtml($name, $body, $desc)
                     $contador++;
                 }
             }
+            fwrite($arquivo_config, '        $stm->execute(' . $contador . ', $pagina_individual);' . PHP_EOL);
             // Execute a consulta SQL
             fwrite($arquivo_config, '        $stm->execute();' . PHP_EOL);
             fwrite($arquivo_config, '$idBanner = $this->pdo->lastInsertId();' . PHP_EOL);
@@ -350,7 +351,7 @@ function gerarHtml($name, $body, $desc)
         $linha3 = rtrim($linha3, ", ");
 
         // Adicione a condição WHERE com o placeholder do ID
-        $linha3 .= " WHERE id=?\";";
+        $linha3 .= ",pagina_individual=? WHERE id=?\";";
         fwrite($arquivo_config, $linha3);
         fwrite($arquivo_config, '        $stm = $this->pdo->prepare($sql);' . PHP_EOL);
         $contadorseq = 1;
@@ -365,7 +366,8 @@ function gerarHtml($name, $body, $desc)
                 $contadorseq++;
             }
         }
-
+        fwrite($arquivo_config, '$stm->bindValue(' . $contadorseq . ', $pagina_individual);' . PHP_EOL);
+        $contadorseq++;
         fwrite($arquivo_config, '$stm->bindValue(' . $contadorseq . ', $id);' . PHP_EOL);
 
         // Execute a consulta SQL
@@ -630,7 +632,7 @@ function gerarB($tabelaName, $nomes_aleatorios, $dados_tags)
             $nome_variavel = substr($nome_aleatorio, 1);
             $sql_create_table .= "$nome_variavel TEXT, ";
         }
-
+        $sql_create_table .= "pagina_individual TEXT, ";
         // Remove a vírgula extra no final da string
         $sql_create_table = rtrim($sql_create_table, ', ');
 
@@ -643,6 +645,7 @@ function gerarB($tabelaName, $nomes_aleatorios, $dados_tags)
             $nome_variavel = substr($nome_aleatorio, 1);
             $sql_insert_data .= "$nome_variavel, ";
         }
+
         $sql_insert_data = rtrim($sql_insert_data, ', ');
         $sql_insert_data .= ") VALUES (";
 

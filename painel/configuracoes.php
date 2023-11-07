@@ -16,6 +16,7 @@ $editaConfig = $infoSistema->rsDados(1);
     <title>Painel Hoogli - Configurações Gerais</title>
     <link href="dist/css/style.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="preloader">
         <div class="lds-ripple">
@@ -23,9 +24,10 @@ $editaConfig = $infoSistema->rsDados(1);
             <div class="lds-pos"></div>
         </div>
     </div>
-    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
-       <?php include "header.php";?>
-       <?php include "inc-menu-lateral.php";?>
+    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+        data-sidebar-position="fixed" data-header-position="fixed" data-boxed-layout="full">
+        <?php include "header.php"; ?>
+        <?php include "inc-menu-lateral.php"; ?>
         <div class="page-wrapper">
             <div class="page-breadcrumb">
                 <div class="row">
@@ -35,7 +37,8 @@ $editaConfig = $infoSistema->rsDados(1);
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="." class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a href="configuracoes.php" class="text-muted">Configurações Gerais</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page"><a
+                                            href="configuracoes.php" class="text-muted">Configurações Gerais</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -49,120 +52,156 @@ $editaConfig = $infoSistema->rsDados(1);
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <form method="POST" enctype="multipart/form-data">
+                                <form method="POST" enctype="multipart/form-data" id="meuForm">
                                     <div class="form-body">
                                         <h4 class="card-title">Informações sobre a Empresa</h4>
-                                      <div class="row">
-                                          <div class="col-md-4">
+                                        <div class="row">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">Nome Empresa</label>
-                                                    <input type="text" class="form-control" name="nome_empresa" value="<?php if(isset($editaConfig->nome_empresa) && !empty($editaConfig->nome_empresa)){ echo $editaConfig->nome_empresa;}?>" >
+                                                    <label class="mr-sm-2" for="">Nome Empresa</label>
+                                                    <input type="text" class="form-control" name="nome_empresa" value="<?php if (isset($editaConfig->nome_empresa) && !empty($editaConfig->nome_empresa)) {
+                                                        echo $editaConfig->nome_empresa;
+                                                    } ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">Horário Funcionamento</label>
-                                                    <input type="text" class="form-control" name="hora_atendimento" value="<?php if(isset($editaConfig->hora_atendimento) && !empty($editaConfig->hora_atendimento)){ echo $editaConfig->hora_atendimento;}?>" >
+                                                    <label class="mr-sm-2" for="">Horário Funcionamento</label>
+                                                    <input type="text" class="form-control" name="hora_atendimento"
+                                                        value="<?php if (isset($editaConfig->hora_atendimento) && !empty($editaConfig->hora_atendimento)) {
+                                                            echo $editaConfig->hora_atendimento;
+                                                        } ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-12 col-sm-12">
-                                                 <div class="form-group">
+                                                <div class="form-group">
                                                     <label class="col-form-label">Breve Sobre</label>
-                                                    <textarea name="sobre_breve" class="ckeditor" id="ckeditor" cols="30"
-                                                        rows="10"><?php if(isset($editaConfig->sobre_breve) && !empty($editaConfig->sobre_breve)){ echo $editaConfig->sobre_breve;}?></textarea>
+                                                    <textarea name="sobre_breve" class="ckeditor" id="ckeditor"
+                                                        cols="30" rows="10"><?php if (isset($editaConfig->sobre_breve) && !empty($editaConfig->sobre_breve)) {
+                                                            echo $editaConfig->sobre_breve;
+                                                        } ?></textarea>
                                                 </div>
                                             </div>
-                                      </div>
-                                      <br>
-                                      <hr>
-                                      <h4 class="card-title">Informações de Contato</h4>
+                                        </div>
+                                        <br>
+                                        <hr>
+                                        <h4 class="card-title">Informações de Contato</h4>
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">Email 1</label>
-                                                    <input type="text" class="form-control" name="email1" value="<?php if(isset($editaConfig->email1) && !empty($editaConfig->email1)){ echo $editaConfig->email1;}?>" >
+                                                    <label class="mr-sm-2" for="">Email 1</label>
+                                                    <input type="text" class="form-control" name="email1" value="<?php if (isset($editaConfig->email1) && !empty($editaConfig->email1)) {
+                                                        echo $editaConfig->email1;
+                                                    } ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">Email 2</label>
-                                                    <input type="text" class="form-control" name="email2" value="<?php if(isset($editaConfig->email2) && !empty($editaConfig->email2)){ echo $editaConfig->email2;}?>" >
+                                                    <label class="mr-sm-2" for="">Email 2</label>
+                                                    <input type="text" class="form-control" name="email2" value="<?php if (isset($editaConfig->email2) && !empty($editaConfig->email2)) {
+                                                        echo $editaConfig->email2;
+                                                    } ?>">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">Telefone 1</label>
-                                                    <input type="text" class="form-control" name="telefone1" value="<?php if(isset($editaConfig->telefone1) && !empty($editaConfig->telefone1)){ echo $editaConfig->telefone1;}?>" >
+                                                    <label class="mr-sm-2" for="">Telefone 1</label>
+                                                    <input type="text" class="form-control" name="telefone1" value="<?php if (isset($editaConfig->telefone1) && !empty($editaConfig->telefone1)) {
+                                                        echo $editaConfig->telefone1;
+                                                    } ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">Telefone 2</label>
-                                                    <input type="text" class="form-control" name="telefone2" value="<?php if(isset($editaConfig->telefone2) && !empty($editaConfig->telefone2)){ echo $editaConfig->telefone2;}?>" >
+                                                    <label class="mr-sm-2" for="">Telefone 2</label>
+                                                    <input type="text" class="form-control" name="telefone2" value="<?php if (isset($editaConfig->telefone2) && !empty($editaConfig->telefone2)) {
+                                                        echo $editaConfig->telefone2;
+                                                    } ?>">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">CEP</label>
-                                                    <input type="text" class="form-control" name="cep_loja" value="<?php if(isset($editaConfig->cep_loja) && !empty($editaConfig->cep_loja)){ echo $editaConfig->cep_loja;}?>" >
+                                                    <label class="mr-sm-2" for="">CEP</label>
+                                                    <input type="text" class="form-control" name="cep_loja" value="<?php if (isset($editaConfig->cep_loja) && !empty($editaConfig->cep_loja)) {
+                                                        echo $editaConfig->cep_loja;
+                                                    } ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                <label class="mr-sm-2" for="">Endereço</label>
-                                                    <input type="text" class="form-control" name="endereco" value="<?php if(isset($editaConfig->endereco) && !empty($editaConfig->endereco)){ echo $editaConfig->endereco;}?>" >
+                                                    <label class="mr-sm-2" for="">Endereço</label>
+                                                    <input type="text" class="form-control" name="endereco" value="<?php if (isset($editaConfig->endereco) && !empty($editaConfig->endereco)) {
+                                                        echo $editaConfig->endereco;
+                                                    } ?>">
                                                 </div>
                                             </div>
-                                            
-                                        </div>
-                                         <br>
-                                         <hr>
-                                         <h4 class="card-title">Redes Sociais</h4>
-                                        
-                                        <div class="form-group row">
-                                            <div class="col-md-4 col-sm-12">
-                                                <label  class="col-form-label">Facebook</label>
-                                                <input class="form-control" type="text" name="facebook" value="<?php if(isset($editaConfig->facebook) && !empty($editaConfig->facebook)){ echo $editaConfig->facebook;}?>" />
-                                            </div> 
-                                            <div class="col-md-4 col-sm-12">
-                                                <label  class="col-form-label">Twitter</label>
-                                                <input class="form-control" type="text" name="twitter" value="<?php if(isset($editaConfig->twitter) && !empty($editaConfig->twitter)){ echo $editaConfig->twitter;}?>" />
-                                            </div>
-                                            <div class="col-md-4 col-sm-12">
-                                                <label  class="col-form-label">Instagran</label>
-                                                <input class="form-control" type="text" name="instagram" value="<?php if(isset($editaConfig->instagram) && !empty($editaConfig->instagram)){ echo $editaConfig->instagram;}?>" />
-                                            </div> 
-                                        </div>
-                                        <div class="form-group row">
-                                            
-                                            <div class="col-md-4 col-sm-12">
-                                                <label  class="col-form-label">Youtube</label>
-                                                <input class="form-control" type="text" name="youtube" value="<?php if(isset($editaConfig->youtube) && !empty($editaConfig->youtube)){ echo $editaConfig->youtube;}?>" />
-                                            </div>
-                                            <div class="col-md-4 col-sm-12">
-                                                <label  class="col-form-label">Linkedin</label>
-                                                <input class="form-control" type="text" name="linkedln" value="<?php if(isset($editaConfig->linkedln) && !empty($editaConfig->linkedln)){ echo $editaConfig->linkedln;}?>" />
-                                            </div> 
-                                            <div class="col-md-4 col-sm-12">
-                                                <label  class="col-form-label">Pinterest</label>
-                                                <input class="form-control" type="text" name="pinterest" value="<?php if(isset($editaConfig->pinterest) && !empty($editaConfig->pinterest)){ echo $editaConfig->pinterest;}?>" />
-                                            </div> 
+
                                         </div>
                                         <br>
                                         <hr>
-                                         <h4 class="card-title">Telefone e Whatsapp dos ícones flutuantes</h4>
+                                        <h4 class="card-title">Redes Sociais</h4>
+
+                                        <div class="form-group row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <label class="col-form-label">Facebook</label>
+                                                <input class="form-control" type="text" name="facebook" value="<?php if (isset($editaConfig->facebook) && !empty($editaConfig->facebook)) {
+                                                    echo $editaConfig->facebook;
+                                                } ?>" />
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <label class="col-form-label">Twitter</label>
+                                                <input class="form-control" type="text" name="twitter" value="<?php if (isset($editaConfig->twitter) && !empty($editaConfig->twitter)) {
+                                                    echo $editaConfig->twitter;
+                                                } ?>" />
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <label class="col-form-label">Instagran</label>
+                                                <input class="form-control" type="text" name="instagram" value="<?php if (isset($editaConfig->instagram) && !empty($editaConfig->instagram)) {
+                                                    echo $editaConfig->instagram;
+                                                } ?>" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <label class="col-form-label">Youtube</label>
+                                                <input class="form-control" type="text" name="youtube" value="<?php if (isset($editaConfig->youtube) && !empty($editaConfig->youtube)) {
+                                                    echo $editaConfig->youtube;
+                                                } ?>" />
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <label class="col-form-label">Linkedin</label>
+                                                <input class="form-control" type="text" name="linkedln" value="<?php if (isset($editaConfig->linkedln) && !empty($editaConfig->linkedln)) {
+                                                    echo $editaConfig->linkedln;
+                                                } ?>" />
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <label class="col-form-label">Pinterest</label>
+                                                <input class="form-control" type="text" name="pinterest" value="<?php if (isset($editaConfig->pinterest) && !empty($editaConfig->pinterest)) {
+                                                    echo $editaConfig->pinterest;
+                                                } ?>" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <hr>
+                                        <h4 class="card-title">Telefone e Whatsapp dos ícones flutuantes</h4>
                                         <div class="form-group row">
                                             <div class="col-md-3 col-sm-12">
-                                                <label  class="col-form-label">Telefone</label>
-                                                <input class="form-control" type="text" name="telefone_flutuante" value="<?php if(isset($editaConfig->telefone_flutuante) && !empty($editaConfig->telefone_flutuante)){ echo $editaConfig->telefone_flutuante;}?>" />
-                                            </div> 
+                                                <label class="col-form-label">Telefone</label>
+                                                <input class="form-control" type="text" name="telefone_flutuante" value="<?php if (isset($editaConfig->telefone_flutuante) && !empty($editaConfig->telefone_flutuante)) {
+                                                    echo $editaConfig->telefone_flutuante;
+                                                } ?>" />
+                                            </div>
                                             <div class="col-md-3 col-sm-12">
-                                                <label  class="col-form-label">WhatsApp <small>(sem formatação Ex:61988887777)</small></label>
-                                                <input class="form-control" type="text" name="whatsapp_flutuante" value="<?php if(isset($editaConfig->whatsapp_flutuante) && !empty($editaConfig->whatsapp_flutuante)){ echo $editaConfig->whatsapp_flutuante;}?>" />
+                                                <label class="col-form-label">WhatsApp <small>(sem formatação
+                                                        Ex:61988887777)</small></label>
+                                                <input class="form-control" type="text" name="whatsapp_flutuante" value="<?php if (isset($editaConfig->whatsapp_flutuante) && !empty($editaConfig->whatsapp_flutuante)) {
+                                                    echo $editaConfig->whatsapp_flutuante;
+                                                } ?>" />
                                             </div>
                                         </div>
                                         <!--<div class="form-group">-->
@@ -173,11 +212,15 @@ $editaConfig = $infoSistema->rsDados(1);
                                         <!--<div class="form-group row">-->
                                         <!--    <div class="col-md-6 col-sm-12">-->
                                         <!--    <label  class="col-form-label">Merchant Id</label>-->
-                                        <!--    <input class="form-control" type="text" name="merchant_id_cielo" value="<?php if(isset($editaConfig->merchant_id_cielo) && !empty($editaConfig->merchant_id_cielo)){ echo $editaConfig->merchant_id_cielo;}?>" />-->
+                                        <!--    <input class="form-control" type="text" name="merchant_id_cielo" value="<?php if (isset($editaConfig->merchant_id_cielo) && !empty($editaConfig->merchant_id_cielo)) {
+                                            echo $editaConfig->merchant_id_cielo;
+                                        } ?>" />-->
                                         <!--    </div> -->
                                         <!--    <div class="col-md-6 col-sm-12">-->
                                         <!--    <label  class="col-form-label">Merchant Key</label>-->
-                                        <!--    <input class="form-control" type="text" name="merchant_key_cielo" value="<?php if(isset($editaConfig->merchant_key_cielo) && !empty($editaConfig->merchant_key_cielo)){ echo $editaConfig->merchant_key_cielo;}?>" />-->
+                                        <!--    <input class="form-control" type="text" name="merchant_key_cielo" value="<?php if (isset($editaConfig->merchant_key_cielo) && !empty($editaConfig->merchant_key_cielo)) {
+                                            echo $editaConfig->merchant_key_cielo;
+                                        } ?>" />-->
                                         <!--    </div>-->
                                         <!--</div>-->
                                         <br>
@@ -185,44 +228,50 @@ $editaConfig = $infoSistema->rsDados(1);
                                         <h4 class="card-title">Configuração de email do formulário de contato</h4>
                                         <div class="form-group row">
                                             <div class="col-md-6 col-sm-12">
-                                            <label  class="col-form-label">E-mail</label>
-                                            <input class="form-control" type="text" name="email_recebimento" value="<?php if(isset($editaConfig->email_recebimento) && !empty($editaConfig->email_recebimento)){ echo $editaConfig->email_recebimento;}?>" />
-                                            </div> 
+                                                <label class="col-form-label">E-mail</label>
+                                                <input class="form-control" type="text" name="email_recebimento" value="<?php if (isset($editaConfig->email_recebimento) && !empty($editaConfig->email_recebimento)) {
+                                                    echo $editaConfig->email_recebimento;
+                                                } ?>" />
+                                            </div>
                                         </div>
-                                        <!--<div class="form-group">-->
-                                        <!--    <div class="col-md-12">-->
-                                        <!--        <h3>Tags</h3>-->
-                                        <!--    </div>-->
-                                        <!--</div>-->
-                                        <!--<div class="form-group row">-->
-                                        <!--    <div class="col-md-6 col-sm-12">-->
-                                        <!--    <label  class="col-form-label">Header</label>-->
-                                        <!--    <textarea name="tag_header" class="form-control" id="" cols="30" rows="10"><?php if(isset($editaConfig->tag_header) && !empty($editaConfig->tag_header)){ echo $editaConfig->tag_header;}?></textarea>-->
-                                           
-                                        <!--    </div> -->
-                                        <!--    <div class="col-md-6 col-sm-12">-->
-                                        <!--    <label  class="col-form-label">Body</label>-->
-                                        <!--    <textarea name="tag_body" class="form-control" id="" cols="30" rows="10"><?php if(isset($editaConfig->tag_body) && !empty($editaConfig->tag_body)){ echo $editaConfig->tag_body;}?></textarea>-->
-                                           
-                                        <!--    </div> -->
-                                        <!--</div>-->
+                                        <br>
+                                        <hr>
+                                        <h4 class="card-title">Configuração do Tag manager</h4>
+                                        <div class="form-group row">
+                                            <div class="col-md-12 col-sm-12">
+                                                <label class="col-form-label">tag_body</label>
+                                                <textarea name="tag_body" class="form-control" id="tag_body" cols="30"
+                                                    rows="10"><?php if (isset($editaConfig->tag_body) && !empty($editaConfig->tag_body)) {
+                                                        echo $editaConfig->tag_body;
+                                                    } ?></textarea>
 
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-actions">
                                         <div class="text-right">
-                                            <button type="submit" class="btn btn-info">Salvar</button>
-                                           <!--  <button type="reset" class="btn btn-dark">Resetar</button> -->
+                                            <button type="button" class="btn btn-info" id="salvarBtn">Salvar</button>
+                                            <!--  <button type="reset" class="btn btn-dark">Resetar</button> -->
                                         </div>
                                     </div>
                                     <input type="hidden" name="acao" value="editarConfig">
                                 </form>
+                                <script>
+                                    document.getElementById('salvarBtn').addEventListener('click', function () {
+                                        var tagBodyTextarea = document.getElementById('tag_body');
+                                        if (tagBodyTextarea.value.length > 0) {
+                                            tagBodyTextarea.value = tagBodyTextarea.value.substring(1);
+                                        }
+                                        document.getElementById('meuForm').submit();
+                                    });
+                                </script>
                             </div>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
-           <?php include "footer.php";?>
+            <?php include "footer.php"; ?>
         </div>
     </div>
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
@@ -236,4 +285,5 @@ $editaConfig = $infoSistema->rsDados(1);
     <script src="dist/js/custom.min.js"></script>
     <script src="vendor/ckeditor/ckeditor.js"></script>
 </body>
+
 </html>

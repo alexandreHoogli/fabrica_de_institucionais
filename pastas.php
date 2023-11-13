@@ -3,7 +3,7 @@ include "includes.php";
 function gerarHtml($name, $body, $desc)
 {
 
-    global $contador, $contador_sequencia, $nomes_aleatorios;
+    global $contador, $contador_sequencia, $nomes_aleatorios, $dados_bd;
     $contador_sequencia = 1;
     require_once('./simple_html_dom.php');
     require_once('backend.php');
@@ -22,39 +22,30 @@ function gerarHtml($name, $body, $desc)
     if (empty($sections)) {
         $sections = $html->find('foreach');
     }
-    $dados_tags = [];
-
+    $dados_bd = [];
     foreach ($sections as $index => $section) {
         $nomeVariavel = '$section_' . ($index + 1) . '_';
-        $tags = $section->find('p, a, span, h1, h2, h3, h4, h5, img,strong,button');
+        $tags = $section->find('p, a, span, h1, h2, h3, h4, h5, h6, img, strong, button,textarea');
         foreach ($tags as $tag) {
             $tag_name = $tag->tag;
             if ($tag_name == 'a') {
-                $href = $tag->href;
-                $dados_tag['conteudo'] = $href;
                 $tag->outertext = substituirTagA($tag, $tabelaName, $nomeVariavel);
                 $contador_sequencia++;
             } elseif ($tag_name == 'img') {
-                $src = SITE_URL . '/' . $tag->src;
-                $dados_tag['conteudo'] = $src;
                 $nova_tag = substituirTagImg($tag, $tabelaName, $nomeVariavel);
                 $tag->outertext = $nova_tag;
                 $contador_sequencia++;
             } else {
-                $conteudo = $tag->innertext;
-                $dados_tag['conteudo'] = $conteudo;
                 $nova_tag = substituirConteudoPorPHP($tag, $tabelaName, $nomeVariavel);
                 $tag->outertext = $nova_tag;
                 $contador_sequencia++;
             }
-            $dados_tags[] = $dados_tag;
         }
     }
-    foreach ($dados_tags as $tag) {
-        echo '<br>';
-        echo $tag['conteudo'];
-        echo '<br>';
-    }
+    gerarB($tabelaName, $nomes_aleatorios, $dados_bd);
+
+    exit;
+
     $novo_html = $html->root->innertext;
     $nome_arquivo = $className . 'new.php';
     $classArquivo = './Class/' . $tabelaName . '.class.php';
@@ -240,14 +231,14 @@ function gerarHtml($name, $body, $desc)
                 $linha3 .= $coluna_tabela . ", ";
             }
             $linha3 = rtrim($linha3, ", ");
-            $linha3 .= ")";
+            $linha3 .= ",pagina_individual)";
             fwrite($arquivo_config, $linha3);
             $linha4 = " VALUES (";
             foreach ($nomes_aleatorios as $nome_aleatorio) {
                 $linha4 .= " ?, ";
             }
             $linha4 = rtrim($linha4, ", ");
-            $linha4 .= ")\";";
+            $linha4 .= ",?)\";";
             fwrite($arquivo_config, $linha4);
             $contador = 1;
             fwrite($arquivo_config, '        $stm = $this->pdo->prepare($sql);' . PHP_EOL);
@@ -262,6 +253,7 @@ function gerarHtml($name, $body, $desc)
                     $contador++;
                 }
             }
+            fwrite($arquivo_config, '        $stm->execute(' . $contador . ', $pagina_individual);' . PHP_EOL);
             // Execute a consulta SQL
             fwrite($arquivo_config, '        $stm->execute();' . PHP_EOL);
             fwrite($arquivo_config, '$idBanner = $this->pdo->lastInsertId();' . PHP_EOL);
@@ -350,7 +342,7 @@ function gerarHtml($name, $body, $desc)
         $linha3 = rtrim($linha3, ", ");
 
         // Adicione a condição WHERE com o placeholder do ID
-        $linha3 .= " WHERE id=?\";";
+        $linha3 .= ",pagina_individual=? WHERE id=?\";";
         fwrite($arquivo_config, $linha3);
         fwrite($arquivo_config, '        $stm = $this->pdo->prepare($sql);' . PHP_EOL);
         $contadorseq = 1;
@@ -365,7 +357,8 @@ function gerarHtml($name, $body, $desc)
                 $contadorseq++;
             }
         }
-
+        fwrite($arquivo_config, '$stm->bindValue(' . $contadorseq . ', $pagina_individual);' . PHP_EOL);
+        $contadorseq++;
         fwrite($arquivo_config, '$stm->bindValue(' . $contadorseq . ', $id);' . PHP_EOL);
 
         // Execute a consulta SQL
@@ -465,7 +458,7 @@ function gerarHtml($name, $body, $desc)
     file_put_contents($edit, $formularioEdit);
 
     $menuLateralFile = './painel/inc-menu-lateral.php';
-
+    $menuLateralContent = file_get_contents($menuLateralFile);
     if ($desc == 'sim') {
         $itemAdicionado = '
         <li class="sidebar-item"> 
@@ -481,17 +474,27 @@ function gerarHtml($name, $body, $desc)
             </ul>
         </li>
         ';
+        $posição = strpos($menuLateralContent, $itemAdicionado);
+
+        if ($posição !== false) {
+            $menuLateralContentModificado = substr_replace($menuLateralContent, '', $posição, strlen($itemAdicionado));
+            file_put_contents($menuLateralFile, $menuLateralContentModificado);
+        }
     } else {
         $itemAdicionado = '
         <li class="sidebar-item"> <a class="sidebar-link" href="editar-' . $tabelaName . '.php?pi=S&id=1"> 
             <i data-feather="file-text" class="feather-icon"></i>' . $className . '</a>
         </li>
-
         ';
+        $posição = strpos($menuLateralContent, $itemAdicionado);
+
+        if ($posição !== false) {
+            $menuLateralContentModificado = substr_replace($menuLateralContent, '', $posição, strlen($itemAdicionado));
+            file_put_contents($menuLateralFile, $menuLateralContentModificado);
+        }
     }
 
-    // Abra o arquivo inc-menu-lateral.php para leitura
-    $menuLateralContent = file_get_contents($menuLateralFile);
+
 
     if ($menuLateralContent !== false) {
         // Encontre a posição da tag <li id="aqui"
@@ -514,45 +517,61 @@ function gerarHtml($name, $body, $desc)
         echo 'Erro ao abrir o arquivo.';
     }
 
-    gerarB($tabelaName, $nomes_aleatorios, $dados_tags);
+    gerarB($tabelaName, $nomes_aleatorios, $dados_bd);
 }
 function substituirConteudoPorPHP($tag, $tabelaName, $section)
 {
-    global $nomes_aleatorios, $contador_sequencia;
+    global $nomes_aleatorios, $contador_sequencia, $dados_bd;
+    if (isset($tag->innertext)) {
+        $conteudo = $tag->innertext;
+    } else {
+        $conteudo = "Texto";
+    }
     if ($tag == 'alt') {
         $nome_aleatorio = $section . 'link_alt_' . $contador_sequencia;
         $nomes_aleatorios[] = $nome_aleatorio;
+        $dados_bd[$nome_aleatorio] = $nome_aleatorio;
         $nome_variavel = substr($nome_aleatorio, 1);
         return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
     } elseif ($tag == 'conteudo') {
+
         $nome_aleatorio = $section . 'link_conteudo_' . $contador_sequencia;
         $nomes_aleatorios[] = $nome_aleatorio;
+        $dados_bd[$nome_aleatorio] = $conteudo;
         $nome_variavel = substr($nome_aleatorio, 1);
         return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
     } elseif ($tag == 'img_alt') {
         $nome_aleatorio = $section . 'image_alt_' . $contador_sequencia;
         $nomes_aleatorios[] = $nome_aleatorio;
+        $dados_bd[$nome_aleatorio] = $nome_aleatorio;
         $nome_variavel = substr($nome_aleatorio, 1);
         return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
     } else {
         if ($tag->tag == 'a') {
+
             $nome_aleatorio = $section . 'link_' . $contador_sequencia;
             $nomes_aleatorios[] = $nome_aleatorio;
+            $dados_bd[$nome_aleatorio] = $conteudo;
             $nome_variavel = substr($nome_aleatorio, 1);
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         } elseif ($tag->tag == 'img') {
+            $src = substr($tag->src, 1);
+            $src = SITE_URL . $src;
             $nome_aleatorio = $section . 'img_' . $contador_sequencia;
             $nomes_aleatorios[] = $nome_aleatorio;
+            $dados_bd[$nome_aleatorio] = $src;
             $nome_variavel = substr($nome_aleatorio, 1);
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         } elseif ($tag->tag == 'button') {
             $nome_aleatorio = $section . 'button' . $contador_sequencia;
             $nomes_aleatorios[] = $nome_aleatorio;
+            $dados_bd[$nome_aleatorio] = $conteudo;
             $nome_variavel = substr($nome_aleatorio, 1);
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         } else {
             $nome_aleatorio = $section . 'conteudo_' . $contador_sequencia;
             $nomes_aleatorios[] = $nome_aleatorio;
+            $dados_bd[$nome_aleatorio] = $conteudo;
             $nome_variavel = substr($nome_aleatorio, 1);
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         }
@@ -611,45 +630,39 @@ function removeComentariosHTML($html)
 }
 require_once('./Connection/con-pdo.php');
 
-function gerarB($tabelaName, $nomes_aleatorios, $dados_tags)
+function gerarB($tabelaName, $nomes_aleatorios, $dados_bd)
 {
     global $conn;
+
     try {
-        // Nome da tabela a ser criada
         $table_name = "tbl_" . $tabelaName;
 
-        // Exclua a tabela se ela existir
         $sql_drop_table = "DROP TABLE IF EXISTS $table_name";
         $conn->exec($sql_drop_table);
 
         $sql_create_table = "CREATE TABLE IF NOT EXISTS $table_name (
-        id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    ";
+            id INT(11) AUTO_INCREMENT PRIMARY KEY,
+        ";
 
         foreach ($nomes_aleatorios as $nome_aleatorio) {
             $nome_variavel = substr($nome_aleatorio, 1);
             $sql_create_table .= "$nome_variavel TEXT, ";
         }
-
-        // Remove a vírgula extra no final da string
-        $sql_create_table = rtrim($sql_create_table, ', ');
-
+        $sql_create_table .= "pagina_individual TEXT";
         $sql_create_table .= ")";
         $conn->exec($sql_create_table);
 
-        // Inserir os valores da matriz $nomes_aleatorios em cada campo
         $sql_insert_data = "INSERT INTO $table_name (";
-        foreach ($nomes_aleatorios as $nome_aleatorio) {
-            $nome_variavel = substr($nome_aleatorio, 1);
+
+        foreach ($dados_bd as $key => $value) {
+            $nome_variavel = substr($key, 1);
             $sql_insert_data .= "$nome_variavel, ";
         }
+
         $sql_insert_data = rtrim($sql_insert_data, ', ');
         $sql_insert_data .= ") VALUES (";
-
-        foreach ($nomes_aleatorios as $nome_aleatorio) {
-            // Aqui você pode inserir os valores que deseja para cada campo.
-            // Neste exemplo, estou usando 'exemplo' como valor para todos os campos.
-            $sql_insert_data .= "'" . $nome_aleatorio . "', ";
+        foreach ($dados_bd as $key => $value) {
+            $sql_insert_data .= "'" . $value . "', ";
         }
         $sql_insert_data = rtrim($sql_insert_data, ', ');
         $sql_insert_data .= ")";
@@ -660,3 +673,4 @@ function gerarB($tabelaName, $nomes_aleatorios, $dados_tags)
         echo "Erro: " . $e->getMessage() . "<br>";
     }
 }
+

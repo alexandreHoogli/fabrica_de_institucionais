@@ -42,9 +42,7 @@ function gerarHtml($name, $body, $desc)
             }
         }
     }
-    gerarB($tabelaName, $nomes_aleatorios, $dados_bd);
 
-    exit;
 
     $novo_html = $html->root->innertext;
     $nome_arquivo = $className . 'new.php';
@@ -346,7 +344,6 @@ function gerarHtml($name, $body, $desc)
         fwrite($arquivo_config, $linha3);
         fwrite($arquivo_config, '        $stm = $this->pdo->prepare($sql);' . PHP_EOL);
         $contadorseq = 1;
-        // Bind das variáveis geradas aos placeholders
         foreach ($nomes_aleatorios as $nome_aleatorio) {
             $nome_variavel = substr($nome_aleatorio, 1);
             if (strpos($nome_variavel, 'img') !== false) {
@@ -518,6 +515,7 @@ function gerarHtml($name, $body, $desc)
     }
 
     gerarB($tabelaName, $nomes_aleatorios, $dados_bd);
+
 }
 function substituirConteudoPorPHP($tag, $tabelaName, $section)
 {
@@ -530,11 +528,10 @@ function substituirConteudoPorPHP($tag, $tabelaName, $section)
     if ($tag == 'alt') {
         $nome_aleatorio = $section . 'link_alt_' . $contador_sequencia;
         $nomes_aleatorios[] = $nome_aleatorio;
-        $dados_bd[$nome_aleatorio] = $nome_aleatorio;
+        $dados_bd[$nome_aleatorio] = $conteudo;
         $nome_variavel = substr($nome_aleatorio, 1);
         return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
     } elseif ($tag == 'conteudo') {
-
         $nome_aleatorio = $section . 'link_conteudo_' . $contador_sequencia;
         $nomes_aleatorios[] = $nome_aleatorio;
         $dados_bd[$nome_aleatorio] = $conteudo;
@@ -543,7 +540,7 @@ function substituirConteudoPorPHP($tag, $tabelaName, $section)
     } elseif ($tag == 'img_alt') {
         $nome_aleatorio = $section . 'image_alt_' . $contador_sequencia;
         $nomes_aleatorios[] = $nome_aleatorio;
-        $dados_bd[$nome_aleatorio] = $nome_aleatorio;
+        $dados_bd[$nome_aleatorio] = $conteudo;
         $nome_variavel = substr($nome_aleatorio, 1);
         return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
     } else {
@@ -555,11 +552,11 @@ function substituirConteudoPorPHP($tag, $tabelaName, $section)
             $nome_variavel = substr($nome_aleatorio, 1);
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         } elseif ($tag->tag == 'img') {
-            $src = substr($tag->src, 1);
-            $src = SITE_URL . $src;
+            $pattern = '/assets\/images\//';
+            $newSrc = preg_replace($pattern, '', $tag->src);
             $nome_aleatorio = $section . 'img_' . $contador_sequencia;
             $nomes_aleatorios[] = $nome_aleatorio;
-            $dados_bd[$nome_aleatorio] = $src;
+            $dados_bd[$nome_aleatorio] = $newSrc;
             $nome_variavel = substr($nome_aleatorio, 1);
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         } elseif ($tag->tag == 'button') {

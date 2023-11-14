@@ -519,6 +519,7 @@ function gerarHtml($name, $body, $desc)
 }
 function substituirConteudoPorPHP($tag, $tabelaName, $section)
 {
+
     global $nomes_aleatorios, $contador_sequencia, $dados_bd;
     if (isset($tag->innertext)) {
         $conteudo = $tag->innertext;
@@ -545,7 +546,6 @@ function substituirConteudoPorPHP($tag, $tabelaName, $section)
         return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
     } else {
         if ($tag->tag == 'a') {
-
             $nome_aleatorio = $section . 'link_' . $contador_sequencia;
             $nomes_aleatorios[] = $nome_aleatorio;
             $dados_bd[$nome_aleatorio] = $conteudo;
@@ -561,6 +561,12 @@ function substituirConteudoPorPHP($tag, $tabelaName, $section)
             return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
         } elseif ($tag->tag == 'button') {
             $nome_aleatorio = $section . 'button' . $contador_sequencia;
+            $nomes_aleatorios[] = $nome_aleatorio;
+            $dados_bd[$nome_aleatorio] = $conteudo;
+            $nome_variavel = substr($nome_aleatorio, 1);
+            return '<?php echo $' . $tabelaName . '->' . $nome_variavel . ' ?>';
+        } elseif ($tag->tag == 'textarea') {
+            $nome_aleatorio = $section . 'textarea_' . $contador_sequencia;
             $nomes_aleatorios[] = $nome_aleatorio;
             $dados_bd[$nome_aleatorio] = $conteudo;
             $nome_variavel = substr($nome_aleatorio, 1);
@@ -593,18 +599,17 @@ function substituirTagA($tag, $tabelaName, $section)
             $href = substituirConteudoPorPHP($tag, $tabelaName, $section);
             $aria_label = substituirConteudoPorPHP('alt', $tabelaName, $section);
             $conteudo = substituirConteudoPorPHP('conteudo', $tabelaName, $section);
-            return '<a href="' . $href . '" aria-label="' . $aria_label . '" class="' . $classe_adicional . '"><i ' . $parte_i . $conteudo . '</a>';
+            return '<a href="' . $conteudo . '" aria-label="' . $aria_label . '" class="' . $classe_adicional . '"><i ' . $parte_i . $href . '</a>';
         } else {
             $href = substituirConteudoPorPHP($tag, $tabelaName, $section);
             $aria_label = substituirConteudoPorPHP('alt', $tabelaName, $section);
             $conteudo = substituirConteudoPorPHP('conteudo', $tabelaName, $section);
-            return '<a href="' . $href . '" aria-label="' . $aria_label . '" class="' . $classe_adicional . '">' . $conteudo . '</a>';
+            return '<a href="' . $conteudo . '" aria-label="' . $aria_label . '" class="' . $classe_adicional . '">' . $href . '</a>';
         }
     } else {
-        echo $conteudo;
         $href = substituirConteudoPorPHP($tag, $tabelaName, $section);
         $aria_label = substituirConteudoPorPHP('alt', $tabelaName, $section);
-        return '<a href="' . $href . '" aria-label="' . $aria_label . '" class="' . $classe_adicional . '">' . $conteudo . '</a>';
+        return '<a href="' . $conteudo . '" aria-label="' . $aria_label . '" class="' . $classe_adicional . '">' . $href . '</a>';
     }
 }
 

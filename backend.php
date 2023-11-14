@@ -103,6 +103,12 @@ function gerarAddDinamico($campos, $nome)
         $html .= ' <label class="col-form-label">' . $nomeCampo . '</label>' . PHP_EOL;
         $html .= '<input class="form-control" type="text" name="' . $campoName . '" />' . PHP_EOL;
         $html .= '</div>' . PHP_EOL;
+      } elseif ($campo == 'textarea') {
+        $html .= '<div class="col-md-12 col-sm-12">' . PHP_EOL;
+        $html .= ' <label class="col-form-label">' . $nomeCampo . '</label>' . PHP_EOL;
+        $html .= ' <textarea name="' . $campoName . '"class="ckeditor" id="ckeditor" cols="30"
+        rows="10"></textarea>' . PHP_EOL;
+        $html .= '</div>' . PHP_EOL;
       } elseif ($campo == 'link_conteudo') {
         $html .= '<div class="col-md-4 col-sm-12">' . PHP_EOL;
         $html .= '   <label class="col-form-label">' . $nomeCampo . '</label>' . PHP_EOL;
@@ -300,6 +306,9 @@ function gerarEditDinamico($campos, $nome)
           $partsAfterSecondUnderscore = array_slice($parts, 2);
           $campo = implode('_', $partsAfterSecondUnderscore);
         }
+
+
+
         if ($campo == 'link') {
           $html .= '<div class="col-md-4">' . PHP_EOL;
           $html .= '<div class="form-group">' . PHP_EOL;
@@ -308,6 +317,14 @@ function gerarEditDinamico($campos, $nome)
           $html .= '</div>' . PHP_EOL;
           $html .= '</div>' . PHP_EOL;
 
+        } elseif ($campo == 'textarea') {
+          $html .= ' <div class="col-md-12">' . PHP_EOL;
+          $html .= ' <div class="form-group">' . PHP_EOL;
+          $html .= ' <label class="col-form-label" for="">' . $nomeCampo . '</label>' . PHP_EOL;
+          $html .= '<textarea name="' . $campoName . '" class="ckeditor" id="ckeditor" cols="30"
+          rows="10"><?php if(isset(' . $dit . '->' . $campoName . ') && !empty(' . $dit . '->' . $campoName . ')){ echo ' . $dit . '->' . $campoName . ';}?></textarea>' . PHP_EOL;
+          $html .= '</div>' . PHP_EOL;
+          $html .= ' </div>' . PHP_EOL;
         } elseif ($campo == 'link_alt') {
           $html .= ' <div class="col-md-4">' . PHP_EOL;
           $html .= ' <div class="form-group">' . PHP_EOL;
@@ -315,8 +332,6 @@ function gerarEditDinamico($campos, $nome)
           $html .= '<input type="text" class="form-control" name="' . $campoName . '" value="<?php if(isset(' . $dit . '->' . $campoName . ') && !empty(' . $dit . '->' . $campoName . ')){ echo ' . $dit . '->' . $campoName . ';}?>" >' . PHP_EOL;
           $html .= '</div>' . PHP_EOL;
           $html .= ' </div>' . PHP_EOL;
-
-
         } elseif ($campo == 'link_conteudo') {
           $html .= '<div class="col-md-4">' . PHP_EOL;
           $html .= '<div class="form-group">' . PHP_EOL;

@@ -42,9 +42,15 @@ function gerarHtml($name, $body, $desc)
             }
         }
     }
+    $incl = includ($tabelaName, $desc);
+    $head = head($tabelaName);
+    $bod = body($tabelaName);
 
+    $novo_html = $incl;
+    $novo_html .= $head;
+    $novo_html .= $bod;
+    $novo_html .= $html->root->innertext;
 
-    $novo_html = $html->root->innertext;
     $nome_arquivo = $className . 'new.php';
     $classArquivo = './Class/' . $tabelaName . '.class.php';
     if ($desc == 'sim') {

@@ -568,5 +568,97 @@ function principal($nome)
   return $html;
 }
 
+function includ($nome, $desc)
+{
+  if ($desc == 'sim') {
+    $className = ucfirst($nome);
+    $html = '<?php include "includes.php";' . PHP_EOL;
+    $html .= 'include "Class/' . $className . '.class.php";' . PHP_EOL;
+    $html .= '$' . $className . ' = ' . $className . '::getInstance(Conexao::getInstance());' . PHP_EOL;
+    $html .= '$puxa' . $className . ' = $' . $nome . '->rsDados(1);' . PHP_EOL;
+    $html .= '?>' . PHP_EOL;
+  } else {
+    $className = ucfirst($nome);
+    $html = '<?php include "includes.php";' . PHP_EOL;
+    $html .= '$id = \'\';' . PHP_EOL;
+    $html .= 'if (isset($_GET[\'id\'])) {' . PHP_EOL;
+    $html .= 'if (empty($_GET[\'id\'])) {' . PHP_EOL;
+    $html .= 'header(\'Location: /\');' . PHP_EOL;
+    $html .= ' } else {' . PHP_EOL;
+    $html .= ' $id = $_GET[\'id\'];' . PHP_EOL;
+    $html .= '}' . PHP_EOL;
+    $html .= ' } else {' . PHP_EOL;
+    $html .= ' header(\'Location: /\');' . PHP_EOL;
+    $html .= '   }' . PHP_EOL;
+    $html .= 'include "Class/' . $className . '.class.php";' . PHP_EOL;
+    $html .= '$' . $className . ' = ' . $className . '::getInstance(Conexao::getInstance());' . PHP_EOL;
+    $html .= '$puxa' . $className . ' = $' . $nome . '->rsDados(\'\', \'\', \'\', \'\', \'\',$id);' . PHP_EOL;
+    $html .= '?>' . PHP_EOL;
+  }
+  return $html;
+}
+
+function head($nome)
+{
+  $className = ucfirst($nome);
+  $html = '<head>' . PHP_EOL;
+  $html .= ' <?php include \'head.php\'; ?>' . PHP_EOL;
+  $html .= '<title>' . PHP_EOL;
+  $html .= '<?php if (isset($' . $nome . '->meta_title) && !empty($' . $nome . '->meta_title)) {' . PHP_EOL;
+  $html .= 'echo $' . $nome . '->meta_title;' . PHP_EOL;
+  $html .= '} ?>' . PHP_EOL;
+  $html .= '</title>' . PHP_EOL;
+  $html .= '<meta name="description" content="<?php if (isset($' . $nome . '->meta_description) && !empty($' . $nome . '->meta_description)) {
+    echo $' . $nome . '->meta_description;
+} ?>" />' . PHP_EOL;
+  $html .= '<meta name="keywords" content="<?php if (isset($' . $nome . '->meta_keywords) && !empty($' . $nome . '->meta_keywords)) {
+    echo $' . $nome . '->meta_keywords;
+} ?>">' . PHP_EOL;
+  $html .= '<meta name="twitter:card" content="<?php if (isset($' . $nome . '->meta_title) && !empty($' . $nome . '->meta_title)) {
+    echo $' . $nome . '->meta_title;
+} ?>" />' . PHP_EOL;
+  $html .= '<meta name="twitter:site" content="<?php echo SITE_URL; ?>" />
+  <meta name="twitter:creator" content="Hoogli" />
+  <meta property="og:title" content="<?php if (isset($' . $nome . '->meta_title) && !empty($' . $nome . '->meta_title)) {
+      echo $' . $nome . '->meta_title;
+  } ?>" />' . PHP_EOL;
+  $html .= '<meta property="og:type" content="website" />
+  <meta property="og:url" content="<?php echo SITE_URL; ?>" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image" content="<?php echo SITE_URL; ?>/img/<?php echo $infoSistema->favicon; ?>" />' . PHP_EOL;
+  $html .= '<meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:description" content="<?php if (isset($' . $nome . '->meta_description) && !empty($' . $nome . '->meta_description)) {
+      echo $' . $nome . '->meta_description;
+  } ?>" />' . PHP_EOL;
+  $html .= '<meta property="og:determiner" content="A" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="<?php echo $infoSistema->nome_empresa ?>" />' . PHP_EOL;
+  $html .= '</head>' . PHP_EOL;
+  return $html;
+}
+function body($nome)
+{
+  $className = ucfirst($nome);
+  $html = '<?php include \'header.php\'; ?>' . PHP_EOL;
+  $html .= '    <style>
+  .image_single_home {
+      background-image: url(<?php echo SITE_URL . \' / img / \' . $' . $nome . '->section_1_img_3 ?>);
+      background-position-y: center;
+      background-size: cover;
+  }
+
+  @media (max-width:600px) {
+      .image_single_home {
+          background-image: url(<?php echo SITE_URL . \' / img / \' . $' . $nome . '->section_1_img_4 ?>);
+          background-position-y: center;
+          background-size: cover;
+      }
+  }
+</style>' . PHP_EOL;
+  $html .= ' <?php include "footer.php" ?>' . PHP_EOL;
+  $html .= '<?php include "scripts.php" ?>' . PHP_EOL;
+  return $html;
+}
 
 ?>
